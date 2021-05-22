@@ -1,0 +1,67 @@
+[
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5-moje/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5-moje/build -I/home/adam/Programowanie_Obiektowe/zad5-moje/include -I/home/adam/Programowanie_Obiektowe/zad5-moje/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/main.dir/app/main.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/app/main.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5-moje/app/main.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5-moje/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5-moje/build -I/home/adam/Programowanie_Obiektowe/zad5-moje/include -I/home/adam/Programowanie_Obiektowe/zad5-moje/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/example.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/src/example.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5-moje/src/example.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5-moje/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5-moje/build -I/home/adam/Programowanie_Obiektowe/zad5-moje/include -I/home/adam/Programowanie_Obiektowe/zad5-moje/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/src/lacze_do_gnuplota.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5-moje/src/lacze_do_gnuplota.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5-moje/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5-moje/build -I/home/adam/Programowanie_Obiektowe/zad5-moje/include -I/home/adam/Programowanie_Obiektowe/zad5-moje/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/matrix3.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/src/matrix3.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5-moje/src/matrix3.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5-moje/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5-moje/build -I/home/adam/Programowanie_Obiektowe/zad5-moje/include -I/home/adam/Programowanie_Obiektowe/zad5-moje/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/vector3.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/src/vector3.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5-moje/src/vector3.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5-moje/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5-moje/build -I/home/adam/Programowanie_Obiektowe/zad5-moje/include -I/home/adam/Programowanie_Obiektowe/zad5-moje/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Prostopadl.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/src/Prostopadl.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5-moje/src/Prostopadl.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5-moje/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5-moje/build -I/home/adam/Programowanie_Obiektowe/zad5-moje/include -I/home/adam/Programowanie_Obiektowe/zad5-moje/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Drone.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/src/Drone.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5-moje/src/Drone.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5-moje/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5-moje/build -I/home/adam/Programowanie_Obiektowe/zad5-moje/include -I/home/adam/Programowanie_Obiektowe/zad5-moje/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/GranBlock.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/src/GranBlock.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5-moje/src/GranBlock.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5-moje/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5-moje/build -I/home/adam/Programowanie_Obiektowe/zad5-moje/include -I/home/adam/Programowanie_Obiektowe/zad5-moje/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Block.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/src/Block.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5-moje/src/Block.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5-moje/build/tests",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5-moje/build -I/home/adam/Programowanie_Obiektowe/zad5-moje/include -I/home/adam/Programowanie_Obiektowe/zad5-moje/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/dummy.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/tests/dummy.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5-moje/tests/dummy.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5-moje/build/tests",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5-moje/build -I/home/adam/Programowanie_Obiektowe/zad5-moje/include -I/home/adam/Programowanie_Obiektowe/zad5-moje/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/test1.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/tests/test1.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5-moje/tests/test1.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5-moje/build/tests",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5-moje/build -I/home/adam/Programowanie_Obiektowe/zad5-moje/include -I/home/adam/Programowanie_Obiektowe/zad5-moje/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/TestMat3.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/tests/TestMat3.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5-moje/tests/TestMat3.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5-moje/build/tests",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5-moje/build -I/home/adam/Programowanie_Obiektowe/zad5-moje/include -I/home/adam/Programowanie_Obiektowe/zad5-moje/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/TestVec3.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/tests/TestVec3.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5-moje/tests/TestVec3.cpp"
+}
+]
