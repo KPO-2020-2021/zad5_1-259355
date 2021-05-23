@@ -92,6 +92,12 @@ stdexcept
 matrix.hh
 ../include/matrix.hh
 
+../include/scena.hh
+Prostopadl.hh
+../include/Prostopadl.hh
+Drone.hh
+../include/Drone.hh
+
 ../include/size.hh
 
 ../include/vector.hh
@@ -104,7 +110,7 @@ math.h
 iomanip
 -
 
-/home/adam/Programowanie_Obiektowe/zad5-moje/src/Drone.cpp
-Drone.hh
-/home/adam/Programowanie_Obiektowe/zad5-moje/src/Drone.hh
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/src/scena.cpp
+scena.hh
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/src/scena.hh
 

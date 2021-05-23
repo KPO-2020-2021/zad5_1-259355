@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adam/Programowanie_Obiektowe/zad5-moje
+CMAKE_SOURCE_DIR = /home/adam/Programowanie_Obiektowe/zad5_1-259355
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adam/Programowanie_Obiektowe/zad5-moje/build
+CMAKE_BINARY_DIR = /home/adam/Programowanie_Obiektowe/zad5_1-259355/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -91,9 +91,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles /home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles /home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -766,6 +766,33 @@ src/matrix3.cpp.s:
 	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/matrix3.cpp.s
 .PHONY : src/matrix3.cpp.s
 
+src/scena.o: src/scena.cpp.o
+
+.PHONY : src/scena.o
+
+# target to build an object file
+src/scena.cpp.o:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/scena.cpp.o
+.PHONY : src/scena.cpp.o
+
+src/scena.i: src/scena.cpp.i
+
+.PHONY : src/scena.i
+
+# target to preprocess a source file
+src/scena.cpp.i:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/scena.cpp.i
+.PHONY : src/scena.cpp.i
+
+src/scena.s: src/scena.cpp.s
+
+.PHONY : src/scena.s
+
+# target to generate assembly for a file
+src/scena.cpp.s:
+	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/scena.cpp.s
+.PHONY : src/scena.cpp.s
+
 src/vector3.o: src/vector3.cpp.o
 
 .PHONY : src/vector3.o
@@ -859,6 +886,9 @@ help:
 	@echo "... src/matrix3.o"
 	@echo "... src/matrix3.i"
 	@echo "... src/matrix3.s"
+	@echo "... src/scena.o"
+	@echo "... src/scena.i"
+	@echo "... src/scena.s"
 	@echo "... src/vector3.o"
 	@echo "... src/vector3.i"
 	@echo "... src/vector3.s"

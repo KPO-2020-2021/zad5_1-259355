@@ -52,8 +52,10 @@ const char *NamesFilesProp_V2[] = {SZESCIAN_ZM_V2,ROTORY_1_V2,ROTORY_2_V2,ROTORY
 
 PzG::LaczeDoGNUPlota  Lacze;  // Ta zmienna jest potrzebna do wizualizacji
                                 // rysunku Prostopadla
-Drone drone1, drone2;
-drone1.Init();
+
+scena Scena;
+
+Scena.drone1.Init();
 
    //-------------------------------------------------------
    //  Wspolrzedne wierzcholkow beda zapisywane w pliku "Prostopadl.dat"
@@ -125,8 +127,12 @@ drone1.Init();
     // }
 ;
   // drone1.Engage1(0,20,20,0);
-  drone1.Engage2(0,20,20,0, NamesFilesLoc_V1, NamesFilesProp_V1);
-  drone2.Engage2(0,20,60,0, NamesFilesLoc_V2, NamesFilesProp_V2);
+  Scena.drone1.Engage2(0,20,20,0, NamesFilesLoc_V1, NamesFilesProp_V1);
+  double arg1[] = {20,20,0};
+  Scena.drone1.position_V1[0] = arg1;
+  Scena.drone2.Engage2(0,20,60,0, NamesFilesLoc_V2, NamesFilesProp_V2);
+  double arg2[] = {20,60,0};
+  Scena.drone2.position_V2[0] = arg2;
   Lacze.Rysuj();
 
   double choice_drone;
@@ -142,9 +148,13 @@ drone1.Init();
         cout << "Enter the lenght of the flight: ";
         cin >> lenght;
         if(choice_drone == 1){
-          drone1.Relocate(choice_drone, angle, lenght, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);}
+          Scena.Make_Path(Lacze, choice_drone, Path_V1, lenght, angle);
+          Lacze.Rysuj();
+          Scena.drone1.Relocate(choice_drone, angle, lenght, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);}
         else if(choice_drone == 2){
-          drone2.Relocate(choice_drone, angle,lenght, Lacze, NamesFilesLoc_V2, NamesFilesProp_V2);
+          Scena.Make_Path(Lacze, choice_drone, Path_V2, lenght, angle);
+          Lacze.Rysuj();
+          Scena.drone2.Relocate(choice_drone, angle,lenght, Lacze, NamesFilesLoc_V2, NamesFilesProp_V2);
         }
         else{
           cout << "You have choosen wrong drone " << endl;
@@ -162,6 +172,7 @@ drone1.Init();
         break;
       }
       case 'a':{
+        choice_drone = '_';
         cout << "choose which drone would you fly" << endl;
         cin >> choice_drone;
         if(choice_drone == 1){

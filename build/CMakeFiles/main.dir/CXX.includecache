@@ -106,9 +106,9 @@ math.h
 iomanip
 -
 
-/home/adam/Programowanie_Obiektowe/zad5-moje/app/main.cpp
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/app/main.cpp
 ../tests/doctest/doctest.h
-/home/adam/Programowanie_Obiektowe/zad5-moje/tests/doctest/doctest.h
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/doctest/doctest.h
 iostream
 -
 iomanip
@@ -126,23 +126,23 @@ cassert
 unistd.h
 -
 scena.hh
-/home/adam/Programowanie_Obiektowe/zad5-moje/app/scena.hh
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/app/scena.hh
 exampleConfig.h
-/home/adam/Programowanie_Obiektowe/zad5-moje/app/exampleConfig.h
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/app/exampleConfig.h
 example.h
-/home/adam/Programowanie_Obiektowe/zad5-moje/app/example.h
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/app/example.h
 vector.hh
-/home/adam/Programowanie_Obiektowe/zad5-moje/app/vector.hh
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/app/vector.hh
 Prostopadl.hh
-/home/adam/Programowanie_Obiektowe/zad5-moje/app/Prostopadl.hh
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/app/Prostopadl.hh
 Drone.hh
-/home/adam/Programowanie_Obiektowe/zad5-moje/app/Drone.hh
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/app/Drone.hh
 matrix.hh
-/home/adam/Programowanie_Obiektowe/zad5-moje/app/matrix.hh
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/app/matrix.hh
 ../include/lacze_do_gnuplota.hh
-/home/adam/Programowanie_Obiektowe/zad5-moje/include/lacze_do_gnuplota.hh
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/include/lacze_do_gnuplota.hh
 
-/home/adam/Programowanie_Obiektowe/zad5-moje/include/lacze_do_gnuplota.hh
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/include/lacze_do_gnuplota.hh
 string
 -
 list
@@ -150,7 +150,7 @@ list
 vector
 -
 
-/home/adam/Programowanie_Obiektowe/zad5-moje/tests/doctest/doctest.h
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/doctest/doctest.h
 signal.h
 -
 iosfwd
@@ -164,7 +164,7 @@ ciso646
 type_traits
 -
 doctest_fwd.h
-/home/adam/Programowanie_Obiektowe/zad5-moje/tests/doctest/doctest_fwd.h
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/doctest/doctest_fwd.h
 ctime
 -
 cmath

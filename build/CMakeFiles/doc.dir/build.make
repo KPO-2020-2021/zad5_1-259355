@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adam/Programowanie_Obiektowe/zad5-moje
+CMAKE_SOURCE_DIR = /home/adam/Programowanie_Obiektowe/zad5_1-259355
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adam/Programowanie_Obiektowe/zad5-moje/build
+CMAKE_BINARY_DIR = /home/adam/Programowanie_Obiektowe/zad5_1-259355/build
 
 # Utility rule file for doc.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/adam/Programowanie_Obiektowe/zad5-moje/build
 include CMakeFiles/doc.dir/progress.make
 
 CMakeFiles/doc:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[1;35mGenerating API documentation with Doxygen (open ./html/index.html to view)."
-	/usr/local/bin/doxygen /home/adam/Programowanie_Obiektowe/zad5-moje/build/Doxyfile &> doxygen.log
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[1;35mGenerating API documentation with Doxygen (open ./html/index.html to view)."
+	/usr/local/bin/doxygen /home/adam/Programowanie_Obiektowe/zad5_1-259355/build/Doxyfile &> doxygen.log
 
 doc: CMakeFiles/doc
 doc: CMakeFiles/doc.dir/build.make
@@ -72,6 +72,6 @@ CMakeFiles/doc.dir/clean:
 .PHONY : CMakeFiles/doc.dir/clean
 
 CMakeFiles/doc.dir/depend:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adam/Programowanie_Obiektowe/zad5-moje /home/adam/Programowanie_Obiektowe/zad5-moje /home/adam/Programowanie_Obiektowe/zad5-moje/build /home/adam/Programowanie_Obiektowe/zad5-moje/build /home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles/doc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adam/Programowanie_Obiektowe/zad5_1-259355 /home/adam/Programowanie_Obiektowe/zad5_1-259355 /home/adam/Programowanie_Obiektowe/zad5_1-259355/build /home/adam/Programowanie_Obiektowe/zad5_1-259355/build /home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/doc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doc.dir/depend
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adam/Programowanie_Obiektowe/zad5-moje
+CMAKE_SOURCE_DIR = /home/adam/Programowanie_Obiektowe/zad5_1-259355
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adam/Programowanie_Obiektowe/zad5-moje/build
+CMAKE_BINARY_DIR = /home/adam/Programowanie_Obiektowe/zad5_1-259355/build
 
 # Utility rule file for coverage.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/adam/Programowanie_Obiektowe/zad5-moje/build
 include tests/CMakeFiles/coverage.dir/progress.make
 
 tests/CMakeFiles/coverage:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build/tests && echo [31mCode\ coverage\ only\ available\ in\ coverage\ builds.
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build/tests && echo [32mMake\ a\ new\ build\ directory\ and\ rerun\ cmake\ with\ -DCMAKE_BUILD_TYPE=Coverage\ to\ enable\ this\ target.[m
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build/tests && echo [31mCode\ coverage\ only\ available\ in\ coverage\ builds.
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build/tests && echo [32mMake\ a\ new\ build\ directory\ and\ rerun\ cmake\ with\ -DCMAKE_BUILD_TYPE=Coverage\ to\ enable\ this\ target.[m
 
 coverage: tests/CMakeFiles/coverage
 coverage: tests/CMakeFiles/coverage.dir/build.make
@@ -68,10 +68,10 @@ tests/CMakeFiles/coverage.dir/build: coverage
 .PHONY : tests/CMakeFiles/coverage.dir/build
 
 tests/CMakeFiles/coverage.dir/clean:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build/tests && $(CMAKE_COMMAND) -P CMakeFiles/coverage.dir/cmake_clean.cmake
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build/tests && $(CMAKE_COMMAND) -P CMakeFiles/coverage.dir/cmake_clean.cmake
 .PHONY : tests/CMakeFiles/coverage.dir/clean
 
 tests/CMakeFiles/coverage.dir/depend:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adam/Programowanie_Obiektowe/zad5-moje /home/adam/Programowanie_Obiektowe/zad5-moje/tests /home/adam/Programowanie_Obiektowe/zad5-moje/build /home/adam/Programowanie_Obiektowe/zad5-moje/build/tests /home/adam/Programowanie_Obiektowe/zad5-moje/build/tests/CMakeFiles/coverage.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adam/Programowanie_Obiektowe/zad5_1-259355 /home/adam/Programowanie_Obiektowe/zad5_1-259355/tests /home/adam/Programowanie_Obiektowe/zad5_1-259355/build /home/adam/Programowanie_Obiektowe/zad5_1-259355/build/tests /home/adam/Programowanie_Obiektowe/zad5_1-259355/build/tests/CMakeFiles/coverage.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/CMakeFiles/coverage.dir/depend
 

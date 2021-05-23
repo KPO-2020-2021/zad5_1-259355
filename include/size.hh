@@ -7,6 +7,9 @@ constexpr double MIN_DIFF = 0.000000001;
 #define SZESCIAN_WZ "../bryly_wzorcowe/szescian.dat"
 #define PLASZCZYZNA_WZ "../bryly_wzorcowe/plaszczyzna.dat"
 #define ROTORY_BEF "../bryly_wzorcowe/graniastoslup6.dat"
+#define Path_V1 "../dat/path_of_the_drone1.dat"
+#define Path_V2 "../dat/path_of_the_drone2.dat"
+
 #define SZESCIAN_ZM "../dat/szescian_zm.dat"
 #define SZESCIAN_ZM_V2 "../dat/szescian_zm_v2.dat"
 #define SZESCIAN_ZM_LOC "../dat/szescian_zm_loc.dat"

@@ -1,4 +1,4 @@
-# Install script for directory: /home/adam/Programowanie_Obiektowe/zad5-moje/tests
+# Install script for directory: /home/adam/Programowanie_Obiektowe/zad5_1-259355/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

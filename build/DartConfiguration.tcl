@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/adam/Programowanie_Obiektowe/zad5-moje
-BuildDirectory: /home/adam/Programowanie_Obiektowe/zad5-moje/build
+SourceDirectory: /home/adam/Programowanie_Obiektowe/zad5_1-259355
+BuildDirectory: /home/adam/Programowanie_Obiektowe/zad5_1-259355/build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -26,7 +26,7 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/adam/Programowanie_Obiektowe/zad5-moje"
+ConfigureCommand: "/usr/bin/cmake" "/home/adam/Programowanie_Obiektowe/zad5_1-259355"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
@@ -57,9 +57,9 @@ P4UpdateOptions:
 P4UpdateCustom: 
 
 # Generic update command
-UpdateCommand: 
+UpdateCommand: /usr/bin/git
 UpdateOptions: 
-UpdateType: 
+UpdateType: git
 
 # Compiler info
 Compiler: /usr/bin/c++

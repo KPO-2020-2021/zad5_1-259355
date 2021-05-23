@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adam/Programowanie_Obiektowe/zad5-moje
+CMAKE_SOURCE_DIR = /home/adam/Programowanie_Obiektowe/zad5_1-259355
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adam/Programowanie_Obiektowe/zad5-moje/build
+CMAKE_BINARY_DIR = /home/adam/Programowanie_Obiektowe/zad5_1-259355/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -91,14 +91,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles /home/adam/Programowanie_Obiektowe/zad5-moje/build/tests/CMakeFiles/progress.marks
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f CMakeFiles/Makefile2 tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles 0
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles /home/adam/Programowanie_Obiektowe/zad5_1-259355/build/tests/CMakeFiles/progress.marks
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f CMakeFiles/Makefile2 tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f CMakeFiles/Makefile2 tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -108,22 +108,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tests/CMakeFiles/coverage.dir/rule:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/coverage.dir/rule
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/coverage.dir/rule
 .PHONY : tests/CMakeFiles/coverage.dir/rule
 
 # Convenience name for target.
@@ -133,12 +133,12 @@ coverage: tests/CMakeFiles/coverage.dir/rule
 
 # fast build rule for target.
 coverage/fast:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f tests/CMakeFiles/coverage.dir/build.make tests/CMakeFiles/coverage.dir/build
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/coverage.dir/build.make tests/CMakeFiles/coverage.dir/build
 .PHONY : coverage/fast
 
 # Convenience name for target.
 tests/CMakeFiles/unit_tests.dir/rule:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/unit_tests.dir/rule
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/unit_tests.dir/rule
 .PHONY : tests/CMakeFiles/unit_tests.dir/rule
 
 # Convenience name for target.
@@ -148,7 +148,7 @@ unit_tests: tests/CMakeFiles/unit_tests.dir/rule
 
 # fast build rule for target.
 unit_tests/fast:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/build
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/build
 .PHONY : unit_tests/fast
 
 TestMat3.o: TestMat3.cpp.o
@@ -157,7 +157,7 @@ TestMat3.o: TestMat3.cpp.o
 
 # target to build an object file
 TestMat3.cpp.o:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/TestMat3.cpp.o
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/TestMat3.cpp.o
 .PHONY : TestMat3.cpp.o
 
 TestMat3.i: TestMat3.cpp.i
@@ -166,7 +166,7 @@ TestMat3.i: TestMat3.cpp.i
 
 # target to preprocess a source file
 TestMat3.cpp.i:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/TestMat3.cpp.i
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/TestMat3.cpp.i
 .PHONY : TestMat3.cpp.i
 
 TestMat3.s: TestMat3.cpp.s
@@ -175,7 +175,7 @@ TestMat3.s: TestMat3.cpp.s
 
 # target to generate assembly for a file
 TestMat3.cpp.s:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/TestMat3.cpp.s
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/TestMat3.cpp.s
 .PHONY : TestMat3.cpp.s
 
 TestVec3.o: TestVec3.cpp.o
@@ -184,7 +184,7 @@ TestVec3.o: TestVec3.cpp.o
 
 # target to build an object file
 TestVec3.cpp.o:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/TestVec3.cpp.o
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/TestVec3.cpp.o
 .PHONY : TestVec3.cpp.o
 
 TestVec3.i: TestVec3.cpp.i
@@ -193,7 +193,7 @@ TestVec3.i: TestVec3.cpp.i
 
 # target to preprocess a source file
 TestVec3.cpp.i:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/TestVec3.cpp.i
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/TestVec3.cpp.i
 .PHONY : TestVec3.cpp.i
 
 TestVec3.s: TestVec3.cpp.s
@@ -202,7 +202,7 @@ TestVec3.s: TestVec3.cpp.s
 
 # target to generate assembly for a file
 TestVec3.cpp.s:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/TestVec3.cpp.s
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/TestVec3.cpp.s
 .PHONY : TestVec3.cpp.s
 
 dummy.o: dummy.cpp.o
@@ -211,7 +211,7 @@ dummy.o: dummy.cpp.o
 
 # target to build an object file
 dummy.cpp.o:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/dummy.cpp.o
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/dummy.cpp.o
 .PHONY : dummy.cpp.o
 
 dummy.i: dummy.cpp.i
@@ -220,7 +220,7 @@ dummy.i: dummy.cpp.i
 
 # target to preprocess a source file
 dummy.cpp.i:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/dummy.cpp.i
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/dummy.cpp.i
 .PHONY : dummy.cpp.i
 
 dummy.s: dummy.cpp.s
@@ -229,7 +229,7 @@ dummy.s: dummy.cpp.s
 
 # target to generate assembly for a file
 dummy.cpp.s:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/dummy.cpp.s
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/dummy.cpp.s
 .PHONY : dummy.cpp.s
 
 test1.o: test1.cpp.o
@@ -238,7 +238,7 @@ test1.o: test1.cpp.o
 
 # target to build an object file
 test1.cpp.o:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test1.cpp.o
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test1.cpp.o
 .PHONY : test1.cpp.o
 
 test1.i: test1.cpp.i
@@ -247,7 +247,7 @@ test1.i: test1.cpp.i
 
 # target to preprocess a source file
 test1.cpp.i:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test1.cpp.i
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test1.cpp.i
 .PHONY : test1.cpp.i
 
 test1.s: test1.cpp.s
@@ -256,7 +256,7 @@ test1.s: test1.cpp.s
 
 # target to generate assembly for a file
 test1.cpp.s:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test1.cpp.s
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test1.cpp.s
 .PHONY : test1.cpp.s
 
 # Help Target
@@ -293,6 +293,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -102,3 +102,5 @@ void Drone::Relocate(double drone_num, double angle, double lenght_of_path, PzG:
     }
 
 }
+
+

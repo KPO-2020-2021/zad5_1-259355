@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adam/Programowanie_Obiektowe/zad5-moje
+CMAKE_SOURCE_DIR = /home/adam/Programowanie_Obiektowe/zad5_1-259355
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adam/Programowanie_Obiektowe/zad5-moje/build
+CMAKE_BINARY_DIR = /home/adam/Programowanie_Obiektowe/zad5_1-259355/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/program.dir/depend.make
@@ -59,107 +59,120 @@ include CMakeFiles/program.dir/flags.make
 
 CMakeFiles/program.dir/src/example.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/example.cpp.o: ../src/example.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/program.dir/src/example.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/example.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/src/example.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/program.dir/src/example.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/example.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/example.cpp
 
 CMakeFiles/program.dir/src/example.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/example.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5-moje/src/example.cpp > CMakeFiles/program.dir/src/example.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/example.cpp > CMakeFiles/program.dir/src/example.cpp.i
 
 CMakeFiles/program.dir/src/example.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/example.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5-moje/src/example.cpp -o CMakeFiles/program.dir/src/example.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/example.cpp -o CMakeFiles/program.dir/src/example.cpp.s
 
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: ../src/lacze_do_gnuplota.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/src/lacze_do_gnuplota.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/lacze_do_gnuplota.cpp
 
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5-moje/src/lacze_do_gnuplota.cpp > CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/lacze_do_gnuplota.cpp > CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.i
 
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5-moje/src/lacze_do_gnuplota.cpp -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/lacze_do_gnuplota.cpp -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.s
 
 CMakeFiles/program.dir/src/matrix3.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/matrix3.cpp.o: ../src/matrix3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/program.dir/src/matrix3.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/matrix3.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/src/matrix3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/program.dir/src/matrix3.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/matrix3.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/matrix3.cpp
 
 CMakeFiles/program.dir/src/matrix3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/matrix3.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5-moje/src/matrix3.cpp > CMakeFiles/program.dir/src/matrix3.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/matrix3.cpp > CMakeFiles/program.dir/src/matrix3.cpp.i
 
 CMakeFiles/program.dir/src/matrix3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/matrix3.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5-moje/src/matrix3.cpp -o CMakeFiles/program.dir/src/matrix3.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/matrix3.cpp -o CMakeFiles/program.dir/src/matrix3.cpp.s
 
 CMakeFiles/program.dir/src/vector3.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/vector3.cpp.o: ../src/vector3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/program.dir/src/vector3.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/vector3.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/src/vector3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/program.dir/src/vector3.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/vector3.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/vector3.cpp
 
 CMakeFiles/program.dir/src/vector3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/vector3.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5-moje/src/vector3.cpp > CMakeFiles/program.dir/src/vector3.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/vector3.cpp > CMakeFiles/program.dir/src/vector3.cpp.i
 
 CMakeFiles/program.dir/src/vector3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/vector3.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5-moje/src/vector3.cpp -o CMakeFiles/program.dir/src/vector3.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/vector3.cpp -o CMakeFiles/program.dir/src/vector3.cpp.s
 
 CMakeFiles/program.dir/src/Prostopadl.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Prostopadl.cpp.o: ../src/Prostopadl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/program.dir/src/Prostopadl.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/Prostopadl.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/src/Prostopadl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/program.dir/src/Prostopadl.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/Prostopadl.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/Prostopadl.cpp
 
 CMakeFiles/program.dir/src/Prostopadl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Prostopadl.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5-moje/src/Prostopadl.cpp > CMakeFiles/program.dir/src/Prostopadl.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/Prostopadl.cpp > CMakeFiles/program.dir/src/Prostopadl.cpp.i
 
 CMakeFiles/program.dir/src/Prostopadl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Prostopadl.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5-moje/src/Prostopadl.cpp -o CMakeFiles/program.dir/src/Prostopadl.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/Prostopadl.cpp -o CMakeFiles/program.dir/src/Prostopadl.cpp.s
 
 CMakeFiles/program.dir/src/Drone.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Drone.cpp.o: ../src/Drone.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/program.dir/src/Drone.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/Drone.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/src/Drone.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/program.dir/src/Drone.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/Drone.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/Drone.cpp
 
 CMakeFiles/program.dir/src/Drone.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Drone.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5-moje/src/Drone.cpp > CMakeFiles/program.dir/src/Drone.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/Drone.cpp > CMakeFiles/program.dir/src/Drone.cpp.i
 
 CMakeFiles/program.dir/src/Drone.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Drone.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5-moje/src/Drone.cpp -o CMakeFiles/program.dir/src/Drone.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/Drone.cpp -o CMakeFiles/program.dir/src/Drone.cpp.s
 
 CMakeFiles/program.dir/src/GranBlock.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/GranBlock.cpp.o: ../src/GranBlock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/program.dir/src/GranBlock.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/GranBlock.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/src/GranBlock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/program.dir/src/GranBlock.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/GranBlock.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/GranBlock.cpp
 
 CMakeFiles/program.dir/src/GranBlock.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/GranBlock.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5-moje/src/GranBlock.cpp > CMakeFiles/program.dir/src/GranBlock.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/GranBlock.cpp > CMakeFiles/program.dir/src/GranBlock.cpp.i
 
 CMakeFiles/program.dir/src/GranBlock.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/GranBlock.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5-moje/src/GranBlock.cpp -o CMakeFiles/program.dir/src/GranBlock.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/GranBlock.cpp -o CMakeFiles/program.dir/src/GranBlock.cpp.s
 
 CMakeFiles/program.dir/src/Block.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Block.cpp.o: ../src/Block.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/program.dir/src/Block.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/Block.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5-moje/src/Block.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/program.dir/src/Block.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/Block.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/Block.cpp
 
 CMakeFiles/program.dir/src/Block.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Block.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5-moje/src/Block.cpp > CMakeFiles/program.dir/src/Block.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/Block.cpp > CMakeFiles/program.dir/src/Block.cpp.i
 
 CMakeFiles/program.dir/src/Block.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Block.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5-moje/src/Block.cpp -o CMakeFiles/program.dir/src/Block.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/Block.cpp -o CMakeFiles/program.dir/src/Block.cpp.s
+
+CMakeFiles/program.dir/src/scena.cpp.o: CMakeFiles/program.dir/flags.make
+CMakeFiles/program.dir/src/scena.cpp.o: ../src/scena.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/program.dir/src/scena.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/scena.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/scena.cpp
+
+CMakeFiles/program.dir/src/scena.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/scena.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/scena.cpp > CMakeFiles/program.dir/src/scena.cpp.i
+
+CMakeFiles/program.dir/src/scena.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/scena.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/scena.cpp -o CMakeFiles/program.dir/src/scena.cpp.s
 
 program: CMakeFiles/program.dir/src/example.cpp.o
 program: CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o
@@ -169,6 +182,7 @@ program: CMakeFiles/program.dir/src/Prostopadl.cpp.o
 program: CMakeFiles/program.dir/src/Drone.cpp.o
 program: CMakeFiles/program.dir/src/GranBlock.cpp.o
 program: CMakeFiles/program.dir/src/Block.cpp.o
+program: CMakeFiles/program.dir/src/scena.cpp.o
 program: CMakeFiles/program.dir/build.make
 
 .PHONY : program
@@ -183,6 +197,6 @@ CMakeFiles/program.dir/clean:
 .PHONY : CMakeFiles/program.dir/clean
 
 CMakeFiles/program.dir/depend:
-	cd /home/adam/Programowanie_Obiektowe/zad5-moje/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adam/Programowanie_Obiektowe/zad5-moje /home/adam/Programowanie_Obiektowe/zad5-moje /home/adam/Programowanie_Obiektowe/zad5-moje/build /home/adam/Programowanie_Obiektowe/zad5-moje/build /home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles/program.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adam/Programowanie_Obiektowe/zad5_1-259355 /home/adam/Programowanie_Obiektowe/zad5_1-259355 /home/adam/Programowanie_Obiektowe/zad5_1-259355/build /home/adam/Programowanie_Obiektowe/zad5_1-259355/build /home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/program.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/program.dir/depend
 

@@ -4,14 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/adam/Programowanie_Obiektowe/zad5-moje/src/Block.cpp" "/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles/program.dir/src/Block.cpp.o"
-  "/home/adam/Programowanie_Obiektowe/zad5-moje/src/Drone.cpp" "/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles/program.dir/src/Drone.cpp.o"
-  "/home/adam/Programowanie_Obiektowe/zad5-moje/src/GranBlock.cpp" "/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles/program.dir/src/GranBlock.cpp.o"
-  "/home/adam/Programowanie_Obiektowe/zad5-moje/src/Prostopadl.cpp" "/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles/program.dir/src/Prostopadl.cpp.o"
-  "/home/adam/Programowanie_Obiektowe/zad5-moje/src/example.cpp" "/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles/program.dir/src/example.cpp.o"
-  "/home/adam/Programowanie_Obiektowe/zad5-moje/src/lacze_do_gnuplota.cpp" "/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
-  "/home/adam/Programowanie_Obiektowe/zad5-moje/src/matrix3.cpp" "/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles/program.dir/src/matrix3.cpp.o"
-  "/home/adam/Programowanie_Obiektowe/zad5-moje/src/vector3.cpp" "/home/adam/Programowanie_Obiektowe/zad5-moje/build/CMakeFiles/program.dir/src/vector3.cpp.o"
+  "/home/adam/Programowanie_Obiektowe/zad5_1-259355/src/Block.cpp" "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/program.dir/src/Block.cpp.o"
+  "/home/adam/Programowanie_Obiektowe/zad5_1-259355/src/Drone.cpp" "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/program.dir/src/Drone.cpp.o"
+  "/home/adam/Programowanie_Obiektowe/zad5_1-259355/src/GranBlock.cpp" "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/program.dir/src/GranBlock.cpp.o"
+  "/home/adam/Programowanie_Obiektowe/zad5_1-259355/src/Prostopadl.cpp" "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/program.dir/src/Prostopadl.cpp.o"
+  "/home/adam/Programowanie_Obiektowe/zad5_1-259355/src/example.cpp" "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/program.dir/src/example.cpp.o"
+  "/home/adam/Programowanie_Obiektowe/zad5_1-259355/src/lacze_do_gnuplota.cpp" "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
+  "/home/adam/Programowanie_Obiektowe/zad5_1-259355/src/matrix3.cpp" "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/program.dir/src/matrix3.cpp.o"
+  "/home/adam/Programowanie_Obiektowe/zad5_1-259355/src/scena.cpp" "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/program.dir/src/scena.cpp.o"
+  "/home/adam/Programowanie_Obiektowe/zad5_1-259355/src/vector3.cpp" "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/program.dir/src/vector3.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

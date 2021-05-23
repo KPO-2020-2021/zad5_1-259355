@@ -771,8 +771,8 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT = /home/adam/Programowanie_Obiektowe/zad5-moje/README.md
-INPUT                  += /home/adam/Programowanie_Obiektowe/zad5-moje/include/ /home/adam/Programowanie_Obiektowe/zad5-moje/src
+INPUT = /home/adam/Programowanie_Obiektowe/zad5_1-259355/README.md
+INPUT                  += /home/adam/Programowanie_Obiektowe/zad5_1-259355/include/ /home/adam/Programowanie_Obiektowe/zad5_1-259355/src
 
 
 FILE_PATTERNS += *.md *.markdown
@@ -924,7 +924,7 @@ FILTER_SOURCE_PATTERNS =
 # (index.html). This can be useful if you have a project on for instance GitHub
 # and want to reuse the introduction page also for the doxygen output.
 
-USE_MDFILE_AS_MAINPAGE = /home/adam/Programowanie_Obiektowe/zad5-moje/README.md
+USE_MDFILE_AS_MAINPAGE = /home/adam/Programowanie_Obiektowe/zad5_1-259355/README.md
 
 
 #---------------------------------------------------------------------------

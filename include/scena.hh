@@ -13,11 +13,11 @@
 class scena : public Drone{
 
     public:
-    Prostopadl pro;
+    Drone drone1;
     
-    Prostopadl pro2;
+    Drone drone2;
 
-    
+    void Make_Path(PzG::LaczeDoGNUPlota &Lacze, double choosen_drone, const char *Name_of_Path, double lenght_of_path, double angletemp);
     
 };
 
