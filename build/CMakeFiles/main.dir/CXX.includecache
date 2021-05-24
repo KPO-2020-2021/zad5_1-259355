@@ -11,6 +11,8 @@ GranBlock.hh
 ../include/GranBlock.hh
 Vector3.hh
 ../include/Vector3.hh
+matrix3.hh
+../include/matrix3.hh
 
 ../include/Drone.hh
 Prostopadl.hh
@@ -21,10 +23,6 @@ Vector3.hh
 ../include/Vector3.hh
 
 ../include/GranBlock.hh
-Prostopadl.hh
-../include/Prostopadl.hh
-Block.hh
-../include/Block.hh
 Vector3.hh
 ../include/Vector3.hh
 iostream

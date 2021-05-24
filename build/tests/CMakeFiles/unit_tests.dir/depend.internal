@@ -22,7 +22,6 @@ tests/CMakeFiles/unit_tests.dir/dummy.cpp.o
  /home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/doctest/doctest.h
  /home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/dummy.cpp
 tests/CMakeFiles/unit_tests.dir/test1.cpp.o
- ../include/Block.hh
  ../include/GranBlock.hh
  ../include/Prostopadl.hh
  ../include/Vector3.hh

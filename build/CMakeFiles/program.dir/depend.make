@@ -3,9 +3,7 @@
 
 CMakeFiles/program.dir/src/Block.cpp.o: ../include/Block.hh
 CMakeFiles/program.dir/src/Block.cpp.o: ../include/GranBlock.hh
-CMakeFiles/program.dir/src/Block.cpp.o: ../include/Prostopadl.hh
 CMakeFiles/program.dir/src/Block.cpp.o: ../include/Vector3.hh
-CMakeFiles/program.dir/src/Block.cpp.o: ../include/lacze_do_gnuplota.hh
 CMakeFiles/program.dir/src/Block.cpp.o: ../include/matrix.hh
 CMakeFiles/program.dir/src/Block.cpp.o: ../include/matrix3.hh
 CMakeFiles/program.dir/src/Block.cpp.o: ../include/size.hh
@@ -24,18 +22,12 @@ CMakeFiles/program.dir/src/Drone.cpp.o: ../include/size.hh
 CMakeFiles/program.dir/src/Drone.cpp.o: ../include/vector.hh
 CMakeFiles/program.dir/src/Drone.cpp.o: ../src/Drone.cpp
 
-CMakeFiles/program.dir/src/GranBlock.cpp.o: ../include/Block.hh
 CMakeFiles/program.dir/src/GranBlock.cpp.o: ../include/GranBlock.hh
-CMakeFiles/program.dir/src/GranBlock.cpp.o: ../include/Prostopadl.hh
 CMakeFiles/program.dir/src/GranBlock.cpp.o: ../include/Vector3.hh
-CMakeFiles/program.dir/src/GranBlock.cpp.o: ../include/lacze_do_gnuplota.hh
-CMakeFiles/program.dir/src/GranBlock.cpp.o: ../include/matrix.hh
-CMakeFiles/program.dir/src/GranBlock.cpp.o: ../include/matrix3.hh
 CMakeFiles/program.dir/src/GranBlock.cpp.o: ../include/size.hh
 CMakeFiles/program.dir/src/GranBlock.cpp.o: ../include/vector.hh
 CMakeFiles/program.dir/src/GranBlock.cpp.o: ../src/GranBlock.cpp
 
-CMakeFiles/program.dir/src/Prostopadl.cpp.o: ../include/Block.hh
 CMakeFiles/program.dir/src/Prostopadl.cpp.o: ../include/GranBlock.hh
 CMakeFiles/program.dir/src/Prostopadl.cpp.o: ../include/Prostopadl.hh
 CMakeFiles/program.dir/src/Prostopadl.cpp.o: ../include/Vector3.hh

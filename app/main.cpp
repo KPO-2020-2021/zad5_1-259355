@@ -105,41 +105,23 @@ Scena.drone1.Init();
   cout << "p - parameters of the flight" << endl;
   cout << "k - end" << endl;
 
-  // cout << "Choose the figure ('1', '2')" << endl;
-    // char fig = '_';
-    // while( fig != '1' && fig != '2'){
-    //   cin >> fig;
-    //   switch(fig){
-    //     case '1':{
-    //       // file = "../datasets/Prostopadl.dat";
-    //       // cout << "you have chosen first one" << endl;
-    //       // pro = sc.pro;
-    //       break;}
-    //     case '2':{
-    //       // file = "../datasets/Prostopadl1.dat";
-    //       // cout << "you have chosen second one" << endl;
-    //       // pro = sc.pro2;
-    //       break;}
-    //     default:{
-    //       cout << "Wrong option try again" << endl;
-    //       break;}
-    //   }
-    // }
-;
-  // drone1.Engage1(0,20,20,0);
-  Scena.drone1.Engage2(0,20,20,0, NamesFilesLoc_V1, NamesFilesProp_V1);
   double arg1[] = {20,20,0};
-  Scena.drone1.position_V1[0] = arg1;
-  Scena.drone2.Engage2(0,20,60,0, NamesFilesLoc_V2, NamesFilesProp_V2);
+  Scena.drone1.position[0] = arg1;
+  Scena.drone1.Engage2(0,20,20,0, NamesFilesLoc_V1, NamesFilesProp_V1);
   double arg2[] = {20,60,0};
-  Scena.drone2.position_V2[0] = arg2;
+  Scena.drone2.position[0] = arg2;
+  Scena.drone2.Engage2(0,20,60,0, NamesFilesLoc_V2, NamesFilesProp_V2);
   Lacze.Rysuj();
+
+  Scena.drone1.position[1] = Scena.drone1.position[0];
+  Scena.drone2.position[1] = Scena.drone2.position[0];
 
   double choice_drone;
 
   char choice = 'a';
   while (choice != 'k'){
-
+  
+    Lacze.Rysuj();
     switch( choice ){
       case 'p':{ 
         double angle, lenght;
@@ -159,6 +141,9 @@ Scena.drone1.Init();
         else{
           cout << "You have choosen wrong drone " << endl;
         }
+        // Scena.drone1.Engage2(Scena.drone1.position[1][0],Scena.drone1.position[1][1],Scena.drone1.position[1][2],0, NamesFilesLoc_V1, NamesFilesProp_V1);
+  
+        // Scena.drone2.Engage2(Scena.drone2.position[1][0],Scena.drone2.position[1][1],Scena.drone2.position[1][2],0, NamesFilesLoc_V2, NamesFilesProp_V2);
       break;}
       case 'm':{
         cout << "m - menu" << endl;

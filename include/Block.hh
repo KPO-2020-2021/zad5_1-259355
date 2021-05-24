@@ -2,8 +2,9 @@
 
 #include "GranBlock.hh"
 #include "Vector3.hh"
+#include "matrix3.hh"
 
-class Block
+class Block : public GranBlock
 {
     private:
 

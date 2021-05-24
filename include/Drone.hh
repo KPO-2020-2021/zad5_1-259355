@@ -18,9 +18,7 @@ class Drone: public Block, public Prostopadl
 
     public:
 
-    Vector3 position_V1[2];
-
-    Vector3 position_V2[2];
+    Vector3 position[2];
 
     Prostopadl corp[NOPOINTS];
 

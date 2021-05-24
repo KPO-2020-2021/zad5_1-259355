@@ -4,9 +4,7 @@
 CMakeFiles/program.dir/src/Block.cpp.o
  ../include/Block.hh
  ../include/GranBlock.hh
- ../include/Prostopadl.hh
  ../include/Vector3.hh
- ../include/lacze_do_gnuplota.hh
  ../include/matrix.hh
  ../include/matrix3.hh
  ../include/size.hh
@@ -25,18 +23,12 @@ CMakeFiles/program.dir/src/Drone.cpp.o
  ../include/vector.hh
  /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/Drone.cpp
 CMakeFiles/program.dir/src/GranBlock.cpp.o
- ../include/Block.hh
  ../include/GranBlock.hh
- ../include/Prostopadl.hh
  ../include/Vector3.hh
- ../include/lacze_do_gnuplota.hh
- ../include/matrix.hh
- ../include/matrix3.hh
  ../include/size.hh
  ../include/vector.hh
  /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/GranBlock.cpp
 CMakeFiles/program.dir/src/Prostopadl.cpp.o
- ../include/Block.hh
  ../include/GranBlock.hh
  ../include/Prostopadl.hh
  ../include/Vector3.hh

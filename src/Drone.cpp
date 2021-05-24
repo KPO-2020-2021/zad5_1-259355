@@ -38,6 +38,7 @@ void Drone::Engage2(double angle, double x_position, double y_position, double z
     for(unsigned int Idx = 1; NamesFilesLocal[Idx]!= nullptr; ++Idx){
         this->rotor[Idx].InitOne(NamesFilesLocal[Idx], NamesFilesProper[Idx], SKALA_JED, x_position, y_position, z_position, angle);
     }
+    
 }
 
 
@@ -82,11 +83,12 @@ void Drone::Relocate(double drone_num, double angle, double lenght_of_path, PzG:
     double y_of_turn = 1;
 
     x_of_turn = this->x_of_end(x_position,angletemp,lenght_of_path);
+    x_of_turn = (x_of_turn - x_position)/60;
     y_of_turn = this->y_of_end(y_position,angletemp,lenght_of_path);
-    y_of_turn = (y_of_turn - y_position)/(x_of_turn - x_position);
+    y_of_turn = (y_of_turn - y_position)/60;
 
     std::cout << "Going forward ..." << std::endl;
-    for(int i = 0; i <= x_of_turn; x_position += 1, y_position += y_of_turn, ++i){
+    for(int i = 0; i <= 60; x_position += x_of_turn, y_position += y_of_turn, ++i){
         this->Engage2(angletemp,x_position,y_position,z_position, NamesFilesLocal, NamesFilesProper);
         usleep(100000);
         Lacze.Rysuj();

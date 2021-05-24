@@ -21,7 +21,7 @@
  */
  
 
-class Prostopadl
+class Prostopadl : public GranBlock
 {
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych

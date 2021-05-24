@@ -1,7 +1,5 @@
 #pragma once
 
-#include "Prostopadl.hh"
-#include "Block.hh"
 #include "Vector3.hh"
 #include <iostream>
 #include <fstream>
