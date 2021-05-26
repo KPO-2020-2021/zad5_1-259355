@@ -87,38 +87,8 @@ const double &Block::operator () (unsigned int row, unsigned int column) const {
 
 Block Block::InitOne(const char * StrmWe, const char * StrmWy, double scalex, double scaley, double scalez,
  double trans_x, double trans_y, double trans_z, double angle){
-    
-    std::ifstream FileWe(StrmWe);
-    std::ofstream FileWy(StrmWy);
 
-    Matrix3 matrixturn;
-    FileWe.clear();
-    FileWe.seekg(0);
-    double x,y,z;
-    assert(FileWe.good());
-    assert(FileWy.good());
-    matrixturn.angle = angle;
-    matrixturn.toradians();
-    for(int i = 0; i < 28; ++i){
-        FileWe >> x >> y >> z;
-        double arg[] = {x,y,z};
-        Vector3 vec = Vector3(arg);
-        this->rotor[i] = vec;
-        vec = matrixturn.after_z() * vec;   
-        x = vec[0];
-        y = vec[1];
-        z = vec[2]; 
-        rotor[i][0] = x * scalex + trans_x ;
-        rotor[i][1] = y * scaley + trans_y ;
-        rotor[i][2] = z * scalez + trans_z ;
-
-        if(i%4 == 0){
-        FileWy << std::endl;
-        FileWy << rotor[i][0] << " " << rotor[i][1] << " " << rotor[i][2] << std::endl;
-        }
-        else{
-        FileWy << rotor[i][0] << " " << rotor[i][1] << " " << rotor[i][2] << std::endl;}
-    } 
+    this->Init_The_Figure(StrmWe,StrmWy,28,scalex,scaley,scalez, trans_x, trans_y, trans_z,angle);
 
     return *this;
 }

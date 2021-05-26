@@ -123,6 +123,7 @@ Scena.drone1.Init();
   
     Lacze.Rysuj();
     switch( choice ){
+
       case 'p':{ 
         double angle, lenght;
         cout << "Enter the direction (angle in degrees): ";
@@ -132,48 +133,48 @@ Scena.drone1.Init();
         if(choice_drone == 1){
           Scena.Make_Path(Lacze, choice_drone, Path_V1, lenght, angle);
           Lacze.Rysuj();
-          Scena.drone1.Relocate(choice_drone, angle, lenght, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);}
+          Scena.drone1.Relocate(Scena.drone1.position[0], choice_drone, angle, lenght, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);
+          Scena.drone1.position[0] = Scena.drone1.position[1];}
         else if(choice_drone == 2){
           Scena.Make_Path(Lacze, choice_drone, Path_V2, lenght, angle);
           Lacze.Rysuj();
-          Scena.drone2.Relocate(choice_drone, angle,lenght, Lacze, NamesFilesLoc_V2, NamesFilesProp_V2);
+          Scena.drone2.Relocate(Scena.drone2.position[0],choice_drone, angle,lenght, Lacze, NamesFilesLoc_V2, NamesFilesProp_V2);
+          Scena.drone2.position[0] = Scena.drone2.position[1];
         }
         else{
           cout << "You have choosen wrong drone " << endl;
         }
-        // Scena.drone1.Engage2(Scena.drone1.position[1][0],Scena.drone1.position[1][1],Scena.drone1.position[1][2],0, NamesFilesLoc_V1, NamesFilesProp_V1);
-  
-        // Scena.drone2.Engage2(Scena.drone2.position[1][0],Scena.drone2.position[1][1],Scena.drone2.position[1][2],0, NamesFilesLoc_V2, NamesFilesProp_V2);
       break;}
+
       case 'm':{
         cout << "m - menu" << endl;
         cout << "a - choose active drone" << endl;
         cout << "p - parameters of the flight" << endl;
         cout << "k - end" << endl;
-        break;
-      }
+        break;}
+
       case 'k':{
         cout << "the end" << endl;
-        break;
-      }
+        break;}
+
       case 'a':{
         choice_drone = '_';
         cout << "choose which drone would you fly" << endl;
         cin >> choice_drone;
         if(choice_drone == 1){
           cout << "You have choosen first drone at the position: " << endl;
-          cout << " 20 20 0" << endl;}
+          cout << Scena.drone1.position[0] << endl;
+          }
         else if(choice_drone == 2){
           cout << "You have choosen first drone at the position: " << endl;
-          cout << " 20 60 0" << endl;
+          cout << Scena.drone2.position[0] << endl;
         } 
         else{
           cout << "You have choosen wrong one, try again: " << endl;
           choice = 'a';
         }
-        
-        break;
-      }
+        break;}
+
       default:{
         cout << "Wrong Option" << endl;
       }}

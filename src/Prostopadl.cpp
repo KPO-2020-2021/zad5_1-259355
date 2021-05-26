@@ -298,43 +298,14 @@ Prostopadl Prostopadl::operator - (const Vector3 vec2){
     return *this;
 }
 
-Prostopadl Prostopadl::InitPros(std::istream &StrmWe, std::ostream &StrmWY, 
+Prostopadl Prostopadl::InitPros(const char * StrmWe, const char * StrmWY, 
 double scalex, double scaley, double scalez, double angle, double tranx, double trany, double tranz){
     
-    double x,y,z;
-
-    StrmWe.clear();
-    StrmWe.seekg(0);
-    assert(StrmWe.good());
-
-    matrixtmp.angle = angle;
-    matrixtmp.toradians();
-
-    for(int i = 0; i < NOPOINTS; ++i){
-
-        StrmWe >> x >> y >> z;
-        double arg[] = {x,y,z};
-        Vector3 vec = Vector3(arg);
-        this->pro[i] = vec;
-        vec = matrixtmp.after_z() * vec;
-
-        x = vec[0];
-        y = vec[1];
-        z = vec[2];     
-        
-        pro[i][0] = x * scalex + tranx;
-        pro[i][1] = y * scaley + trany;
-        pro[i][2] = z * scalez + tranz;
-
-        if(i%4 == 0){
-            StrmWY << std::endl;
-            StrmWY << pro[i][0] << " " << pro[i][1] << " " << pro[i][2] << std::endl;
-            }
-            else{
-            StrmWY << pro[i][0] << " " << pro[i][1] << " " << pro[i][2] << std::endl;}    } 
+    this->Init_The_Figure(StrmWe,StrmWY,NOPOINTS,scalex,scaley,scalez, tranx, trany, tranz,angle);
 
     return *this;
 }
+
 
 double Prostopadl::x_of_end(double x_position, double angle, double lenght){
 

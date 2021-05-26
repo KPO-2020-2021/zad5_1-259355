@@ -9,6 +9,8 @@
 ../include/GranBlock.hh
 Vector3.hh
 ../include/Vector3.hh
+matrix3.hh
+../include/matrix3.hh
 iostream
 -
 fstream

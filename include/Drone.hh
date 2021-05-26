@@ -16,11 +16,11 @@ class Drone: public Block, public Prostopadl
 
     Block rotor_V2[4];
 
+    Prostopadl corp[NOPOINTS];
+
     public:
 
     Vector3 position[2];
-
-    Prostopadl corp[NOPOINTS];
 
     void Init();
 
@@ -28,7 +28,7 @@ class Drone: public Block, public Prostopadl
 
     void Init_position(const char * StrmWe, const char * StrmWy, double x_position, double y_position, double z_position, double angle);
 
-    void Relocate(double drone_num, double angle, double lenght_of_path, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[]);
+    void Relocate(Vector3 begin_position,double drone_num, double angle, double lenght_of_path, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[]);
 
 
 };

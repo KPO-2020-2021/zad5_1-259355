@@ -4,11 +4,11 @@ void Drone::Init(){
 
     static double angle_rotors = 0;
 
-    std::ifstream FileWe_Prostopadl(SZESCIAN_WZ);
-    std::ofstream FileWy_Prostopadl(SZESCIAN_ZM_LOC);
-    std::ofstream FileWy_V2_Prostopadl(SZESCIAN_ZM_LOC_V2);
-    this->InitPros(FileWe_Prostopadl,FileWy_Prostopadl, PROSTOPADL_SCALE, 0, 0, 0, 2);
-    this->InitPros(FileWe_Prostopadl,FileWy_V2_Prostopadl, PROSTOPADL_SCALE, 0, 0, 0, 2);
+    // std::ifstream FileWe_Prostopadl(SZESCIAN_WZ);
+    // std::ofstream FileWy_Prostopadl(SZESCIAN_ZM_LOC);
+    // std::ofstream FileWy_V2_Prostopadl(SZESCIAN_ZM_LOC_V2);
+    this->InitPros(SZESCIAN_WZ,SZESCIAN_ZM_LOC, PROSTOPADL_SCALE, 0, 0, 0, 2);
+    this->InitPros(SZESCIAN_WZ,SZESCIAN_ZM_LOC_V2, PROSTOPADL_SCALE, 0, 0, 0, 2);
 
     this->rotor_V2[0].InitOne(ROTORY_BEF, ROTORYLOC_1_V2, ROTATOR_SCALE, TRANSLATION_LEFT_FRONT, angle_rotors);
     this->rotor_V2[1].InitOne(ROTORY_BEF, ROTORYLOC_2_V2, ROTATOR_SCALE, TRANSLATION_RIGHT_FRONT, angle_rotors);
@@ -30,10 +30,10 @@ void Drone::Engage2(double angle, double x_position, double y_position, double z
 
     this->Init();
 
-    std::ifstream FileWe_Prostopadl(NamesFilesLocal[0]);
-    std::ofstream FileWy_Prostopadl(NamesFilesProper[0]);
+    // std::ifstream FileWe_Prostopadl(NamesFilesLocal[0]);
+    // std::ofstream FileWy_Prostopadl(NamesFilesProper[0]);
 
-    this->InitPros(FileWe_Prostopadl,FileWy_Prostopadl, SKALA_JED, angle, x_position, y_position, z_position);
+    this->InitPros(NamesFilesLocal[0],NamesFilesProper[0], SKALA_JED, angle, x_position, y_position, z_position);
     
     for(unsigned int Idx = 1; NamesFilesLocal[Idx]!= nullptr; ++Idx){
         this->rotor[Idx].InitOne(NamesFilesLocal[Idx], NamesFilesProper[Idx], SKALA_JED, x_position, y_position, z_position, angle);
@@ -44,20 +44,20 @@ void Drone::Engage2(double angle, double x_position, double y_position, double z
 
 
 
-void Drone::Relocate(double drone_num, double angle, double lenght_of_path, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[])
+void Drone::Relocate(Vector3 begin_position,double drone_num, double angle, double lenght_of_path, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[])
 {
 
     double x_position, y_position, z_position;
-
+    std::cout << begin_position << std::endl;
     if(drone_num == 1){
-        x_position = 20;
-        y_position = 20;
-        z_position = 0;
+        x_position = begin_position[0];
+        y_position = begin_position[1];
+        z_position = begin_position[2];
     }
     else if(drone_num == 2){
-        x_position = 20;
-        y_position = 60;
-        z_position = 0;
+        x_position = begin_position[0];
+        y_position = begin_position[1];
+        z_position = begin_position[2];
     }
     else{}
 

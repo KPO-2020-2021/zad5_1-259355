@@ -25,6 +25,8 @@ CMakeFiles/program.dir/src/Drone.cpp.o
 CMakeFiles/program.dir/src/GranBlock.cpp.o
  ../include/GranBlock.hh
  ../include/Vector3.hh
+ ../include/matrix.hh
+ ../include/matrix3.hh
  ../include/size.hh
  ../include/vector.hh
  /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/GranBlock.cpp
