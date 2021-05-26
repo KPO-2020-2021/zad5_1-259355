@@ -84,7 +84,19 @@ const double &Block::operator () (unsigned int row, unsigned int column) const {
 }
 
 
-
+/**
+ * Funkcja inicjujaca poszczegolne Blocki - rotory
+ * @param const char *StrmWe
+ * @param const char *StrmWy
+ * @param double scalex
+ * @param double scaley
+ * @param double scalez
+ * @param double angle
+ * @param double trans_x
+ * @param double trans_y
+ * @param double trans_z
+ * @return Block rotor
+ */
 Block Block::InitOne(const char * StrmWe, const char * StrmWy, double scalex, double scaley, double scalez,
  double trans_x, double trans_y, double trans_z, double angle){
 

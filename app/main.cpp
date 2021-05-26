@@ -55,8 +55,6 @@ PzG::LaczeDoGNUPlota  Lacze;  // Ta zmienna jest potrzebna do wizualizacji
 
 scena Scena;
 
-Scena.drone1.Init();
-
    //-------------------------------------------------------
    //  Wspolrzedne wierzcholkow beda zapisywane w pliku "Prostopadl.dat"
    //  Ponizsze metody powoduja, ze dane z pliku beda wizualizowane
@@ -134,12 +132,15 @@ Scena.drone1.Init();
           Scena.Make_Path(Lacze, choice_drone, Path_V1, lenght, angle);
           Lacze.Rysuj();
           Scena.drone1.Relocate(Scena.drone1.position[0], choice_drone, angle, lenght, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);
-          Scena.drone1.position[0] = Scena.drone1.position[1];}
+          Scena.drone1.position[0] = Scena.drone1.position[1];
+          Lacze.UsunOstatniaNazwe();
+          }
         else if(choice_drone == 2){
           Scena.Make_Path(Lacze, choice_drone, Path_V2, lenght, angle);
           Lacze.Rysuj();
           Scena.drone2.Relocate(Scena.drone2.position[0],choice_drone, angle,lenght, Lacze, NamesFilesLoc_V2, NamesFilesProp_V2);
           Scena.drone2.position[0] = Scena.drone2.position[1];
+          Lacze.UsunOstatniaNazwe();
         }
         else{
           cout << "You have choosen wrong drone " << endl;

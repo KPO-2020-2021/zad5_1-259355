@@ -1,54 +1,65 @@
 #include "Drone.hh"
 
-void Drone::Init(){
+/**
+ * Funkcja inicjujaca poczatkowego drona 
+ * Inicjuje prostopadaloscian (cialo drona)
+ * Inicjuje poszczegolne rotory oraz odpowiada za animacje ich obrotu
+ */
+void Drone::Init(const char *NamesFilesLocal[]){
 
     static double angle_rotors = 0;
 
-    // std::ifstream FileWe_Prostopadl(SZESCIAN_WZ);
-    // std::ofstream FileWy_Prostopadl(SZESCIAN_ZM_LOC);
-    // std::ofstream FileWy_V2_Prostopadl(SZESCIAN_ZM_LOC_V2);
-    this->InitPros(SZESCIAN_WZ,SZESCIAN_ZM_LOC, PROSTOPADL_SCALE, 0, 0, 0, 2);
-    this->InitPros(SZESCIAN_WZ,SZESCIAN_ZM_LOC_V2, PROSTOPADL_SCALE, 0, 0, 0, 2);
+    this->InitPros(SZESCIAN_WZ,NamesFilesLocal[0], PROSTOPADL_SCALE, 0, 0, 0, 2);
 
-    this->rotor_V2[0].InitOne(ROTORY_BEF, ROTORYLOC_1_V2, ROTATOR_SCALE, TRANSLATION_LEFT_FRONT, angle_rotors);
-    this->rotor_V2[1].InitOne(ROTORY_BEF, ROTORYLOC_2_V2, ROTATOR_SCALE, TRANSLATION_RIGHT_FRONT, angle_rotors);
-    this->rotor_V2[2].InitOne(ROTORY_BEF, ROTORYLOC_3_V2, ROTATOR_SCALE, TRANSLATION_LEFT_BACK, angle_rotors);
-    this->rotor_V2[3].InitOne(ROTORY_BEF, ROTORYLOC_4_V2, ROTATOR_SCALE, TRANSLATION_RIGHT_BACK, angle_rotors);
-
-    this->rotor[0].InitOne(ROTORY_BEF, ROTORYLOC_1, ROTATOR_SCALE, TRANSLATION_LEFT_FRONT, angle_rotors);
-    this->rotor[1].InitOne(ROTORY_BEF, ROTORYLOC_2, ROTATOR_SCALE, TRANSLATION_RIGHT_FRONT, angle_rotors);
-    this->rotor[2].InitOne(ROTORY_BEF, ROTORYLOC_3, ROTATOR_SCALE, TRANSLATION_LEFT_BACK, angle_rotors);
-    this->rotor[3].InitOne(ROTORY_BEF, ROTORYLOC_4, ROTATOR_SCALE, TRANSLATION_RIGHT_BACK, angle_rotors);
+    this->rotor[0].InitOne(ROTORY_BEF, NamesFilesLocal[1], ROTATOR_SCALE, TRANSLATION_LEFT_FRONT, angle_rotors);
+    this->rotor[1].InitOne(ROTORY_BEF, NamesFilesLocal[2], ROTATOR_SCALE, TRANSLATION_RIGHT_FRONT, angle_rotors);
+    this->rotor[2].InitOne(ROTORY_BEF, NamesFilesLocal[3], ROTATOR_SCALE, TRANSLATION_LEFT_BACK, angle_rotors);
+    this->rotor[3].InitOne(ROTORY_BEF, NamesFilesLocal[4], ROTATOR_SCALE, TRANSLATION_RIGHT_BACK, angle_rotors);
 
     #define TURN_OF_ROTOR 10
 
     angle_rotors += TURN_OF_ROTOR;
 }
 
+/**
+ * Funkcja inicjujaca drona
+ * Inicjuje prostopadaloscian (cialo drona), obraca go i odpowiada za sposob przelotu
+ * Inicjuje poszczegolne rotory oraz odpowiada za ich sposob przelotu wzgledem ciala oraz ich poczatkowy obrot
+ * @param double angle
+ * @param double x_position
+ * @param double y_position
+ * @param double z_position
+ * @param const char *NamesFilesLocal[]
+ * @param const char *NamesFilesProper[]
+ */
 void Drone::Engage2(double angle, double x_position, double y_position, double z_position, const char *NamesFilesLocal[], const char *NamesFilesProper[]){
     #define SKALA_JED 1,1,1
 
-    this->Init();
-
-    // std::ifstream FileWe_Prostopadl(NamesFilesLocal[0]);
-    // std::ofstream FileWy_Prostopadl(NamesFilesProper[0]);
+    this->Init(NamesFilesLocal);
 
     this->InitPros(NamesFilesLocal[0],NamesFilesProper[0], SKALA_JED, angle, x_position, y_position, z_position);
     
     for(unsigned int Idx = 1; NamesFilesLocal[Idx]!= nullptr; ++Idx){
         this->rotor[Idx].InitOne(NamesFilesLocal[Idx], NamesFilesProper[Idx], SKALA_JED, x_position, y_position, z_position, angle);
     }
-    
 }
 
-
-
-
+/**
+ * Funkcja inicjujaca drona
+ * Inicjuje prostopadaloscian (cialo drona), obraca go i odpowiada za sposob przelotu
+ * Inicjuje poszczegolne rotory oraz odpowiada za ich sposob przelotu wzgledem ciala oraz ich poczatkowy obrot
+ * @param Vector3 begin_position
+ * @param double drone_num
+ * @param double angle
+ * @param double lenght_of_path
+ * @param PzG::LaczeDoGNUPlota &Lacze
+ * @param const char *NamesFilesLocal[]
+ * @param const char *NamesFilesProper[]
+ */
 void Drone::Relocate(Vector3 begin_position,double drone_num, double angle, double lenght_of_path, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[])
 {
 
     double x_position, y_position, z_position;
-    std::cout << begin_position << std::endl;
     if(drone_num == 1){
         x_position = begin_position[0];
         y_position = begin_position[1];

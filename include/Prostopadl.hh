@@ -17,10 +17,9 @@
  * \brief Klasa Prostopadloscianu
  * 
  * Klasa pozwalajaca operowac na wierzcholkach prostopadloscianu 
+ * Klasa dziedziczy po klasie GranBlock
  * 
  */
- 
-
 class Prostopadl : public GranBlock
 {
   /*
@@ -39,8 +38,6 @@ class Prostopadl : public GranBlock
   Vector3 mid; /**< Wspolrzedne srodka prostopadloscianu*/
 
   Vector3 angles; /**< katy obrotu */
-
-  Vector3 anglesagain; /**< Kat obrotu ponownego */
 
   Matrix3 matrixtmp;  /**< Macierz obrotu */
 
@@ -81,7 +78,5 @@ class Prostopadl : public GranBlock
 };
 
 std::ostream& operator << ( std::ostream &stream, const Prostopadl &Pr); ///<Operator wyswietlania wierzcholkow
-
-// bool operator == (const double temp1, const double temp2);
 
 #endif

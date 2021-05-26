@@ -83,6 +83,12 @@ const double &GranBlock::operator () (unsigned int row, unsigned int column) con
     return figure[row][column];
 }
 
+/**
+ * Funkcja obracajaca punkty x i y wokol osi Oz
+ * @param double angle
+ * @param double &x_position
+ * @param double &y_position
+ */
 void GranBlock::TurnByOZ(double angle, double &x_position, double &y_position){
 
     angle = this->toradians(angle);
@@ -94,11 +100,30 @@ void GranBlock::TurnByOZ(double angle, double &x_position, double &y_position){
 
 }
 
+/**
+ * Funkcja zmieniajaca liczbe na radiany
+ * @param double angle
+ * @return double angle
+ */
 double GranBlock::toradians(double angle){
     angle = (angle * M_PI)/180;
     return angle;
 }
 
+/**
+ * Funkcja inicjujaca poszczegolne Blocki - rotory
+ * @param const char *StrmWe
+ * @param const char *StrmWy
+ * @param double num_of_peak
+ * @param double scalex
+ * @param double scaley
+ * @param double scalez
+ * @param double angle
+ * @param double trans_x
+ * @param double trans_y
+ * @param double trans_z
+ * @return GranBlock figure
+ */
 GranBlock GranBlock::Init_The_Figure(const char * StrmWe, const char * StrmWy, double num_of_peak, double scalex, double scaley, double scalez,
  double trans_x, double trans_y, double trans_z, double angle){
     

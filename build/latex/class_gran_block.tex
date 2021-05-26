@@ -1,0 +1,206 @@
+\hypertarget{class_gran_block}{}\doxysection{Gran\+Block Class Reference}
+\label{class_gran_block}\index{GranBlock@{GranBlock}}
+
+
+Klasa Drona.  
+
+
+
+
+{\ttfamily \#include $<$Gran\+Block.\+hh$>$}
+
+Inheritance diagram for Gran\+Block\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_gran_block}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gran_block_a46b4304be219cb3a38e11338c12dcd70}{Gran\+Block}} ()
+\item 
+\mbox{\hyperlink{class_gran_block_a5a2a756f0d70a7c6734ef796acb86f7c}{Gran\+Block}} (\mbox{\hyperlink{class_vector}{Vector3}} tmp\mbox{[}28\mbox{]})
+\item 
+double \& \mbox{\hyperlink{class_gran_block_aefd384925df4e1707bd83f3109232d71}{operator()}} (unsigned int row, unsigned int column)
+\begin{DoxyCompactList}\small\item\em Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach figury. \end{DoxyCompactList}\item 
+const double \& \mbox{\hyperlink{class_gran_block_a4cdae3499ab5adacd957c911f2c1609b}{operator()}} (unsigned int row, unsigned int column) const
+\begin{DoxyCompactList}\small\item\em Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach figury. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_vector}{Vector3}} \& \mbox{\hyperlink{class_gran_block_aa80f2397b9320b441f758c9b33aece26}{operator()}} (unsigned int row) const
+\begin{DoxyCompactList}\small\item\em Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach figury. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_gran_block_ad21b52edcc318cfe4b8c1330063f5bd3}{toradians}} (double angle)
+\begin{DoxyCompactList}\small\item\em Funkcja zmieniajaca kat na radiany. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gran_block_a67a64dd8da0a4ea2982c830acdd6be83}{Turn\+By\+OZ}} (double angle, double \&x\+\_\+position, double \&y\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Funkcja dokonujaca obrotu wokol osi Oz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_gran_block}{Gran\+Block}} \mbox{\hyperlink{class_gran_block_a18953375ddaf2d0a452e3cd01bbf50c7}{Init\+\_\+\+The\+\_\+\+Figure}} (const char $\ast$Strm\+We, const char $\ast$Strm\+Wy, double num\+\_\+of\+\_\+peak, double scalex, double scaley, double scalez, double trans\+\_\+x, double trans\+\_\+y, double trans\+\_\+z, double angle)
+\begin{DoxyCompactList}\small\item\em Funkcja inicjujaca figury i odpowiednio je zmienia, obraca, wykonuje translacje i skaluje. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa Drona. 
+
+Klasa pozwalajaca operowac na figurze 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_gran_block_a46b4304be219cb3a38e11338c12dcd70}\label{class_gran_block_a46b4304be219cb3a38e11338c12dcd70}} 
+\index{GranBlock@{GranBlock}!GranBlock@{GranBlock}}
+\index{GranBlock@{GranBlock}!GranBlock@{GranBlock}}
+\doxysubsubsection{\texorpdfstring{GranBlock()}{GranBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Gran\+Block\+::\+Gran\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Konstruktor poczatkowy \mbox{\Hypertarget{class_gran_block_a5a2a756f0d70a7c6734ef796acb86f7c}\label{class_gran_block_a5a2a756f0d70a7c6734ef796acb86f7c}} 
+\index{GranBlock@{GranBlock}!GranBlock@{GranBlock}}
+\index{GranBlock@{GranBlock}!GranBlock@{GranBlock}}
+\doxysubsubsection{\texorpdfstring{GranBlock()}{GranBlock()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Gran\+Block\+::\+Gran\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector3}}}]{tmp\mbox{[}28\mbox{]} }\end{DoxyParamCaption})}
+
+Konstruktor
+
+Metoda przyjmujaca jeden argument pozwalajaca poruszac sie po tablicy wierzcholkow 
+\begin{DoxyParams}{Parameters}
+{\em tablica} & wektorow 3D \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gran_block_a18953375ddaf2d0a452e3cd01bbf50c7}\label{class_gran_block_a18953375ddaf2d0a452e3cd01bbf50c7}} 
+\index{GranBlock@{GranBlock}!Init\_The\_Figure@{Init\_The\_Figure}}
+\index{Init\_The\_Figure@{Init\_The\_Figure}!GranBlock@{GranBlock}}
+\doxysubsubsection{\texorpdfstring{Init\_The\_Figure()}{Init\_The\_Figure()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_gran_block}{Gran\+Block}} Gran\+Block\+::\+Init\+\_\+\+The\+\_\+\+Figure (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Strm\+We,  }\item[{const char $\ast$}]{Strm\+Wy,  }\item[{double}]{num\+\_\+of\+\_\+peak,  }\item[{double}]{scalex,  }\item[{double}]{scaley,  }\item[{double}]{scalez,  }\item[{double}]{trans\+\_\+x,  }\item[{double}]{trans\+\_\+y,  }\item[{double}]{trans\+\_\+z,  }\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+Funkcja inicjujaca figury i odpowiednio je zmienia, obraca, wykonuje translacje i skaluje. 
+
+Funkcja inicjujaca poszczegolne Blocki -\/ rotory 
+\begin{DoxyParams}{Parameters}
+{\em const} & char $\ast$\+Strm\+We \\
+\hline
+{\em const} & char $\ast$\+Strm\+Wy \\
+\hline
+{\em double} & num\+\_\+of\+\_\+peak \\
+\hline
+{\em double} & scalex \\
+\hline
+{\em double} & scaley \\
+\hline
+{\em double} & scalez \\
+\hline
+{\em double} & angle \\
+\hline
+{\em double} & trans\+\_\+x \\
+\hline
+{\em double} & trans\+\_\+y \\
+\hline
+{\em double} & trans\+\_\+z \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_gran_block}{Gran\+Block}} figure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gran_block_aa80f2397b9320b441f758c9b33aece26}\label{class_gran_block_aa80f2397b9320b441f758c9b33aece26}} 
+\index{GranBlock@{GranBlock}!operator()@{operator()}}
+\index{operator()@{operator()}!GranBlock@{GranBlock}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector}{Vector3}} \& Gran\+Block\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{row }\end{DoxyParamCaption}) const}
+
+
+
+Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach figury. 
+
+Funktor Wektora (const) pilnujacy czy nie wychodzimy poza tablice wektora 
+\begin{DoxyParams}{Parameters}
+{\em int} & numer wiersza \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+wektor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gran_block_aefd384925df4e1707bd83f3109232d71}\label{class_gran_block_aefd384925df4e1707bd83f3109232d71}} 
+\index{GranBlock@{GranBlock}!operator()@{operator()}}
+\index{operator()@{operator()}!GranBlock@{GranBlock}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily double \& Gran\+Block\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{row,  }\item[{unsigned int}]{column }\end{DoxyParamCaption})}
+
+
+
+Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach figury. 
+
+Przeciazenie operatora indeksowania pilnujaca czy nie wychodzi poza zakres Przyjmuje dwa argument\+: 
+\begin{DoxyParams}{Parameters}
+{\em int} & numer wiersza \\
+\hline
+{\em int} & numer kolumny \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tablica wierzcholkow 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gran_block_a4cdae3499ab5adacd957c911f2c1609b}\label{class_gran_block_a4cdae3499ab5adacd957c911f2c1609b}} 
+\index{GranBlock@{GranBlock}!operator()@{operator()}}
+\index{operator()@{operator()}!GranBlock@{GranBlock}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily const double \& Gran\+Block\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{row,  }\item[{unsigned int}]{column }\end{DoxyParamCaption}) const}
+
+
+
+Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach figury. 
+
+Przeciazenie operatora () (const) indeksowania dla Gran\+Blocka z odpowiednimi zabezpieczeniami 
+\begin{DoxyParams}{Parameters}
+{\em int} & numer wiersza \\
+\hline
+{\em int} & numer kolumny \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tablica wierzcholkow 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gran_block_ad21b52edcc318cfe4b8c1330063f5bd3}\label{class_gran_block_ad21b52edcc318cfe4b8c1330063f5bd3}} 
+\index{GranBlock@{GranBlock}!toradians@{toradians}}
+\index{toradians@{toradians}!GranBlock@{GranBlock}}
+\doxysubsubsection{\texorpdfstring{toradians()}{toradians()}}
+{\footnotesize\ttfamily double Gran\+Block\+::toradians (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+Funkcja zmieniajaca kat na radiany. 
+
+Funkcja zmieniajaca liczbe na radiany 
+\begin{DoxyParams}{Parameters}
+{\em double} & angle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gran_block_a67a64dd8da0a4ea2982c830acdd6be83}\label{class_gran_block_a67a64dd8da0a4ea2982c830acdd6be83}} 
+\index{GranBlock@{GranBlock}!TurnByOZ@{TurnByOZ}}
+\index{TurnByOZ@{TurnByOZ}!GranBlock@{GranBlock}}
+\doxysubsubsection{\texorpdfstring{TurnByOZ()}{TurnByOZ()}}
+{\footnotesize\ttfamily void Gran\+Block\+::\+Turn\+By\+OZ (\begin{DoxyParamCaption}\item[{double}]{angle,  }\item[{double \&}]{x\+\_\+position,  }\item[{double \&}]{y\+\_\+position }\end{DoxyParamCaption})}
+
+
+
+Funkcja dokonujaca obrotu wokol osi Oz. 
+
+Funkcja obracajaca punkty x i y wokol osi Oz 
+\begin{DoxyParams}{Parameters}
+{\em double} & angle \\
+\hline
+{\em double} & \&x\+\_\+position \\
+\hline
+{\em double} & \&y\+\_\+position \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/adam/\+Programowanie\+\_\+\+Obiektowe/zad5\+\_\+1-\/259355/include/Gran\+Block.\+hh\item 
+/home/adam/\+Programowanie\+\_\+\+Obiektowe/zad5\+\_\+1-\/259355/src/Gran\+Block.\+cpp\end{DoxyCompactItemize}

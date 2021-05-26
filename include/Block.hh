@@ -4,6 +4,13 @@
 #include "Vector3.hh"
 #include "matrix3.hh"
 
+/**
+ * \brief Klasa Block
+ * 
+ * Klasa pozwalajaca operowac na Blocku - Rotorze 
+ * Klasa dziedziczy po klasie GranBlock
+ * 
+ */
 class Block : public GranBlock
 {
     private:
@@ -12,18 +19,18 @@ class Block : public GranBlock
     
     public:
 
-    Block();
+    Block();    /**< Konstruktor poczatkowy */
 
-    Block(Vector3 tmp[28]);  
+    Block(Vector3 tmp[28]);     /**< Konstruktor */
 
-    double &operator()(unsigned int row, unsigned int column); 
+    double &operator()(unsigned int row, unsigned int column); ///<Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach Blocku
 
-    const double &operator () (unsigned int row, unsigned int column) const;
+    const double &operator () (unsigned int row, unsigned int column) const;    ///<Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach Blocku
 
-    const Vector3 &operator () (unsigned int row) const;
+    const Vector3 &operator () (unsigned int row) const;    ///<Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach Blocku
 
     Block InitOne (const char * StrmWe, const char * StrmWy, 
     double scalex, double scaley, double scalez, double trans_x, 
-    double trans_y, double trans_z, double angle);
+    double trans_y, double trans_z, double angle);  ///<Funkcja inicjujaca figure 
 
 };

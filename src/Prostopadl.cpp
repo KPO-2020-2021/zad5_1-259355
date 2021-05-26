@@ -268,6 +268,11 @@ void Prostopadl::turning(Prostopadl &pro, const char *sNazwaPliku, double const 
   }
 }
 
+/**
+ * Przeciazenie operatora porownania wierzcholkow prostopadloscianu
+ * @param const Protokat &Pr
+ * @return True or False
+ */
 bool Prostopadl::operator == (const Prostopadl &Pr){
     int k = 0;
     for(int i = 0; i < NOPOINTS; ++i){
@@ -282,6 +287,11 @@ bool Prostopadl::operator == (const Prostopadl &Pr){
     }
 }
 
+/**
+ * Przeciazanie operatora dodawania do wierzcholkow prostopadloscianu vectora3D
+ * @param const Vector3 vec2
+ * @return Prostopadl pro
+ */
 Prostopadl Prostopadl::operator + (const Vector3 vec2){
     for (int i = 0; i < NOPOINTS; ++i){
         for (int j = 0; j < SIZE; ++j){
@@ -290,6 +300,11 @@ Prostopadl Prostopadl::operator + (const Vector3 vec2){
     return *this;
 }
 
+/**
+ * Przeciazanie operatora odejmowania do wierzcholkow prostopadloscianu vectora3D
+ * @param const Vector3 vec2
+ * @return Prostopadl pro
+ */
 Prostopadl Prostopadl::operator - (const Vector3 vec2){
     for (int i = 0; i < NOPOINTS; ++i){
         for (int j = 0; j < SIZE; ++j){
@@ -298,6 +313,19 @@ Prostopadl Prostopadl::operator - (const Vector3 vec2){
     return *this;
 }
 
+/**
+ * Funkcja inicjujaca prostopadloscian odpowiednio wyskalowany, przetransponowany i obrocony
+ * @param const char *StrmWe
+ * @param const char *StrmWY
+ * @param double scalex
+ * @param double scaley
+ * @param double scalez
+ * @param double angle
+ * @param double tranx
+ * @param double trany
+ * @param double tranz
+ * @return Prostopadl pro
+ */
 Prostopadl Prostopadl::InitPros(const char * StrmWe, const char * StrmWY, 
 double scalex, double scaley, double scalez, double angle, double tranx, double trany, double tranz){
     
@@ -306,7 +334,13 @@ double scalex, double scaley, double scalez, double angle, double tranx, double 
     return *this;
 }
 
-
+/**
+ * Funkcja obliczajaca punkt w ktorym ma wyladowac dron (wspolrzedna x)
+ * @param double x_position
+ * @param double angle
+ * @param double lenght
+ * @return double x_of_end
+ */
 double Prostopadl::x_of_end(double x_position, double angle, double lenght){
 
     GranBlock temp;
@@ -319,6 +353,13 @@ double Prostopadl::x_of_end(double x_position, double angle, double lenght){
     return x_of_end;
 }
 
+/**
+ * Funkcja obliczajaca punkt w ktorym ma wyladowac dron (wspolrzedna y)
+ * @param double y_position
+ * @param double angle
+ * @param double lenght
+ * @return double y_of_end
+ */
 double Prostopadl::y_of_end(double y_position, double angle, double lenght){
 
     GranBlock temp;

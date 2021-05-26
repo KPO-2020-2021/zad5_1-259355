@@ -1,0 +1,110 @@
+\hypertarget{class_drone}{}\doxysection{Drone Class Reference}
+\label{class_drone}\index{Drone@{Drone}}
+
+
+Klasa Drona.  
+
+
+
+
+{\ttfamily \#include $<$Drone.\+hh$>$}
+
+Inheritance diagram for Drone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_drone}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_drone_aa87ae9f8629a64a102caccd6e7b1d54a}{Init}} (const char $\ast$Names\+Files\+Local\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{class_drone_a5cc4b408a0c7dc06a37a9e9f42f67c82}{Engage2}} (double angle, double x\+\_\+position, double y\+\_\+position, double z\+\_\+position, const char $\ast$Names\+Files\+Local\mbox{[}$\,$\mbox{]}, const char $\ast$Names\+Files\+Proper\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{class_drone_a0fa1ad81d8dea820a70edfd0e0cbed93}{Relocate}} (\mbox{\hyperlink{class_vector}{Vector3}} begin\+\_\+position, double drone\+\_\+num, double angle, double lenght\+\_\+of\+\_\+path, \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&Lacze, const char $\ast$Names\+Files\+Local\mbox{[}$\,$\mbox{]}, const char $\ast$Names\+Files\+Proper\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector}{Vector3}} \mbox{\hyperlink{class_drone_afc0021a1a1147a0e7537847f657a1660}{position}} \mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa Drona. 
+
+Klasa pozwalajaca operowac na dronie Klasa dziedziczy po klasie \mbox{\hyperlink{class_block}{Block}} oraz \mbox{\hyperlink{class_prostopadl}{Prostopadl}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_drone_a5cc4b408a0c7dc06a37a9e9f42f67c82}\label{class_drone_a5cc4b408a0c7dc06a37a9e9f42f67c82}} 
+\index{Drone@{Drone}!Engage2@{Engage2}}
+\index{Engage2@{Engage2}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{Engage2()}{Engage2()}}
+{\footnotesize\ttfamily void Drone\+::\+Engage2 (\begin{DoxyParamCaption}\item[{double}]{angle,  }\item[{double}]{x\+\_\+position,  }\item[{double}]{y\+\_\+position,  }\item[{double}]{z\+\_\+position,  }\item[{const char $\ast$}]{Names\+Files\+Local\mbox{[}$\,$\mbox{]},  }\item[{const char $\ast$}]{Names\+Files\+Proper\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Funkcja wykonujaca operacje na dronie obraca, inicjuje i transponuje
+
+Funkcja inicjujaca drona Inicjuje prostopadaloscian (cialo drona), obraca go i odpowiada za sposob przelotu Inicjuje poszczegolne rotory oraz odpowiada za ich sposob przelotu wzgledem ciala oraz ich poczatkowy obrot 
+\begin{DoxyParams}{Parameters}
+{\em double} & angle \\
+\hline
+{\em double} & x\+\_\+position \\
+\hline
+{\em double} & y\+\_\+position \\
+\hline
+{\em double} & z\+\_\+position \\
+\hline
+{\em const} & char $\ast$\+Names\+Files\+Local\mbox{[}\mbox{]} \\
+\hline
+{\em const} & char $\ast$\+Names\+Files\+Proper\mbox{[}\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_drone_aa87ae9f8629a64a102caccd6e7b1d54a}\label{class_drone_aa87ae9f8629a64a102caccd6e7b1d54a}} 
+\index{Drone@{Drone}!Init@{Init}}
+\index{Init@{Init}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Drone\+::\+Init (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Names\+Files\+Local\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Funkcja inicjujaca poczatkowego drona
+
+Funkcja inicjujaca poczatkowego drona Inicjuje prostopadaloscian (cialo drona) Inicjuje poszczegolne rotory oraz odpowiada za animacje ich obrotu \mbox{\Hypertarget{class_drone_a0fa1ad81d8dea820a70edfd0e0cbed93}\label{class_drone_a0fa1ad81d8dea820a70edfd0e0cbed93}} 
+\index{Drone@{Drone}!Relocate@{Relocate}}
+\index{Relocate@{Relocate}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{Relocate()}{Relocate()}}
+{\footnotesize\ttfamily void Drone\+::\+Relocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector3}}}]{begin\+\_\+position,  }\item[{double}]{drone\+\_\+num,  }\item[{double}]{angle,  }\item[{double}]{lenght\+\_\+of\+\_\+path,  }\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&}]{Lacze,  }\item[{const char $\ast$}]{Names\+Files\+Local\mbox{[}$\,$\mbox{]},  }\item[{const char $\ast$}]{Names\+Files\+Proper\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Funkcja wykonujaca animacje lotu drona
+
+Funkcja inicjujaca drona Inicjuje prostopadaloscian (cialo drona), obraca go i odpowiada za sposob przelotu Inicjuje poszczegolne rotory oraz odpowiada za ich sposob przelotu wzgledem ciala oraz ich poczatkowy obrot 
+\begin{DoxyParams}{Parameters}
+{\em Vector3} & begin\+\_\+position \\
+\hline
+{\em double} & drone\+\_\+num \\
+\hline
+{\em double} & angle \\
+\hline
+{\em double} & lenght\+\_\+of\+\_\+path \\
+\hline
+{\em \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}}} & \&Lacze \\
+\hline
+{\em const} & char $\ast$\+Names\+Files\+Local\mbox{[}\mbox{]} \\
+\hline
+{\em const} & char $\ast$\+Names\+Files\+Proper\mbox{[}\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_drone_afc0021a1a1147a0e7537847f657a1660}\label{class_drone_afc0021a1a1147a0e7537847f657a1660}} 
+\index{Drone@{Drone}!position@{position}}
+\index{position@{position}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector}{Vector3}} Drone\+::position\mbox{[}2\mbox{]}}
+
+Wektor przetrzymujacy wspolrzedne poczatku lotu i konca 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/adam/\+Programowanie\+\_\+\+Obiektowe/zad5\+\_\+1-\/259355/include/Drone.\+hh\item 
+/home/adam/\+Programowanie\+\_\+\+Obiektowe/zad5\+\_\+1-\/259355/src/Drone.\+cpp\end{DoxyCompactItemize}

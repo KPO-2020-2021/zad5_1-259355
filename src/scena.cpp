@@ -1,5 +1,14 @@
 #include "scena.hh"
 
+
+/**
+ * Funkcja tworzaca i dodajaca sciezke lotu drona 
+ * @param PzG::LaczeDoGNUPlota &Lacze
+ * @param double choosen_drone
+ * @param const char *Name_of_Path
+ * @param double lenght_of_path
+ * @param double angletemp
+ */
 void scena::Make_Path(PzG::LaczeDoGNUPlota &Lacze, double choosen_drone, const char *Name_of_Path, double lenght_of_path, double angletemp){
 
     std::ofstream StrmWy(Name_of_Path); 
