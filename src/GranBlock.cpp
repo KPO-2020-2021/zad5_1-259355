@@ -7,81 +7,81 @@
  |  Zwraca:                                                                   |
  |      GranBlock wypelnione wartoscia 0.                                       |
  */
-GranBlock::GranBlock() {
-    for (int i = 0; i < 28; ++i) {
-        for(int j = 0; j < SIZE; ++j) {
-        figure[i][j] = 0;
-    }
-    }
-}
+// GranBlock::GranBlock() {
+//     for (int i = 0; i < 28; ++i) {
+//         for(int j = 0; j < SIZE; ++j) {
+//         figure[i][j] = 0;
+//     }
+//     }
+// }
 
 
-/**
- * Metoda przyjmujaca jeden argument pozwalajaca poruszac sie po tablicy wierzcholkow
- * @param tablica wektorow 3D
- * @return nothing
- */ 
-GranBlock::GranBlock(Vector3 tmp[28]) {
-    for (int i = 0; i < 28; ++i) {
-        for(int j = 0; j < SIZE; ++j) {
-        figure[i][j] = tmp[i][j];
-    }
-    }
-}
+// /**
+//  * Metoda przyjmujaca jeden argument pozwalajaca poruszac sie po tablicy wierzcholkow
+//  * @param tablica wektorow 3D
+//  * @return nothing
+//  */ 
+// GranBlock::GranBlock(Vector3 tmp[28]) {
+//     for (int i = 0; i < 28; ++i) {
+//         for(int j = 0; j < SIZE; ++j) {
+//         figure[i][j] = tmp[i][j];
+//     }
+//     }
+// }
 
-/**
- * Przeciazenie operatora indeksowania pilnujaca czy nie wychodzi poza zakres
- * Przyjmuje dwa argument: 
- * @param int numer wiersza
- * @param int numer kolumny 
- * @return tablica wierzcholkow
- */ 
-double &GranBlock::operator()(unsigned int row, unsigned int column) {
+// /**
+//  * Przeciazenie operatora indeksowania pilnujaca czy nie wychodzi poza zakres
+//  * Przyjmuje dwa argument: 
+//  * @param int numer wiersza
+//  * @param int numer kolumny 
+//  * @return tablica wierzcholkow
+//  */ 
+// double &GranBlock::operator()(unsigned int row, unsigned int column) {
 
-    if (row >= 28) {
-        throw std::out_of_range("Error: Macierz jest poza zasiegiem");
-    }
+//     if (row >= 28) {
+//         throw std::out_of_range("Error: Macierz jest poza zasiegiem");
+//     }
 
-    if (column >= SIZE) {
-        throw std::out_of_range("Error: Macierz jest poza zasiegiem");
-    }
+//     if (column >= SIZE) {
+//         throw std::out_of_range("Error: Macierz jest poza zasiegiem");
+//     }
 
-    return figure[row][column];
-}
+//     return figure[row][column];
+// }
 
 
-/**
- * Funktor Wektora (const) pilnujacy czy nie wychodzimy poza tablice wektora
- * @param int numer wiersza
- * @return wektor
- */ 
-const Vector3 &GranBlock::operator () (unsigned int row) const {
+// /**
+//  * Funktor Wektora (const) pilnujacy czy nie wychodzimy poza tablice wektora
+//  * @param int numer wiersza
+//  * @return wektor
+//  */ 
+// const Vector3 &GranBlock::operator () (unsigned int row) const {
 
-    if (row >= 28) {
-        throw std::out_of_range("Error: Vector jest poza zasiegiem");
-    }
+//     if (row >= 28) {
+//         throw std::out_of_range("Error: Vector jest poza zasiegiem");
+//     }
 
-    return figure[row];
-}
+//     return figure[row];
+// }
 
-/**
- * Przeciazenie operatora () (const) indeksowania dla GranBlocka z odpowiednimi zabezpieczeniami
- * @param int numer wiersza
- * @param int numer kolumny 
- * @return Tablica wierzcholkow
- */ 
-const double &GranBlock::operator () (unsigned int row, unsigned int column) const {
+// /**
+//  * Przeciazenie operatora () (const) indeksowania dla GranBlocka z odpowiednimi zabezpieczeniami
+//  * @param int numer wiersza
+//  * @param int numer kolumny 
+//  * @return Tablica wierzcholkow
+//  */ 
+// const double &GranBlock::operator () (unsigned int row, unsigned int column) const {
 
-    if (row >= 28) {
-        throw std::out_of_range("Error: Blockoscian jest poza zasiegiem");
-    }
+//     if (row >= 28) {
+//         throw std::out_of_range("Error: Blockoscian jest poza zasiegiem");
+//     }
 
-    if (column >= SIZE) {
-        throw std::out_of_range("Error: Blockoscian jest poza zasiegiem");
-    }
+//     if (column >= SIZE) {
+//         throw std::out_of_range("Error: Blockoscian jest poza zasiegiem");
+//     }
 
-    return figure[row][column];
-}
+//     return figure[row][column];
+// }
 
 /**
  * Funkcja obracajaca punkty x i y wokol osi Oz
@@ -126,7 +126,8 @@ double GranBlock::toradians(double angle){
  */
 GranBlock GranBlock::Init_The_Figure(const char * StrmWe, const char * StrmWy, double num_of_peak, double scalex, double scaley, double scalez,
  double trans_x, double trans_y, double trans_z, double angle){
-    
+// GranBlock::GranBlock(const char * StrmWe, const char * StrmWy, double num_of_peak, double scalex, double scaley, double scalez,
+// double trans_x, double trans_y, double trans_z, double angle){
     std::ifstream FileWe(StrmWe);
     std::ofstream FileWy(StrmWy);
 
@@ -142,21 +143,23 @@ GranBlock GranBlock::Init_The_Figure(const char * StrmWe, const char * StrmWy, d
         FileWe >> x >> y >> z;
         double arg[] = {x,y,z};
         Vector3 vec = Vector3(arg);
-        this->figure[i] = vec;
         vec = matrixturn.after_z() * vec;   
         x = vec[0];
         y = vec[1];
         z = vec[2]; 
-        figure[i][0] = x * scalex + trans_x ;
-        figure[i][1] = y * scaley + trans_y ;
-        figure[i][2] = z * scalez + trans_z ;
-
+        vec[0] = x * scalex + trans_x ;
+        vec[1] = y * scaley + trans_y ;
+        vec[2] = z * scalez + trans_z ;
+        this->figure.push_back(vec);
+        // this->vect_used += figure.size();
         if(i%4 == 0){
         FileWy << std::endl;
         FileWy << figure[i][0] << " " << figure[i][1] << " " << figure[i][2] << std::endl;
         }
         else{
         FileWy << figure[i][0] << " " << figure[i][1] << " " << figure[i][2] << std::endl;}
+        // this->figure.pop_back();
+        // this->vect_in_use += figure.size();
     } 
 
     return *this;

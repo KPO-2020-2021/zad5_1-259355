@@ -326,12 +326,14 @@ Prostopadl Prostopadl::operator - (const Vector3 vec2){
  * @param double tranz
  * @return Prostopadl pro
  */
-Prostopadl Prostopadl::InitPros(const char * StrmWe, const char * StrmWY, 
+// Prostopadl Prostopadl::InitPros(const char * StrmWe, const char * StrmWY, 
+// double scalex, double scaley, double scalez, double angle, double tranx, double trany, double tranz){
+Prostopadl::Prostopadl(const char * StrmWe, const char * StrmWY, 
 double scalex, double scaley, double scalez, double angle, double tranx, double trany, double tranz){
-    
     this->Init_The_Figure(StrmWe,StrmWY,NOPOINTS,scalex,scaley,scalez, tranx, trany, tranz,angle);
-
-    return *this;
+    // this->vect_in_use3 += this->vect_in_use;
+    // this->vect_used3 += this->vect_used;
+    // return *this;
 }
 
 /**

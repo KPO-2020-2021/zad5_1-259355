@@ -19,18 +19,26 @@ class Block : public GranBlock
     
     public:
 
-    Block();    /**< Konstruktor poczatkowy */
+    // double vect_in_use2;
 
-    Block(Vector3 tmp[28]);     /**< Konstruktor */
+	// double vect_used2;
 
-    double &operator()(unsigned int row, unsigned int column); ///<Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach Blocku
+    Block(){};    /**< Konstruktor poczatkowy */
 
-    const double &operator () (unsigned int row, unsigned int column) const;    ///<Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach Blocku
+    // Block(Vector3 tmp[28]);     /**< Konstruktor */
 
-    const Vector3 &operator () (unsigned int row) const;    ///<Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach Blocku
-
-    Block InitOne (const char * StrmWe, const char * StrmWy, 
+    Block(const char * StrmWe, const char * StrmWy, 
     double scalex, double scaley, double scalez, double trans_x, 
-    double trans_y, double trans_z, double angle);  ///<Funkcja inicjujaca figure 
+    double trans_y, double trans_z, double angle);     /**< Konstruktor */
+
+    // double &operator()(unsigned int row, unsigned int column); ///<Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach Blocku
+
+    // const double &operator () (unsigned int row, unsigned int column) const;    ///<Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach Blocku
+
+    // const Vector3 &operator () (unsigned int row) const;    ///<Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach Blocku
+
+    // Block InitOne (const char * StrmWe, const char * StrmWy, 
+    // double scalex, double scaley, double scalez, double trans_x, 
+    // double trans_y, double trans_z, double angle);  ///<Funkcja inicjujaca figure 
 
 };

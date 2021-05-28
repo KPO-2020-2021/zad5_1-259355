@@ -21,6 +21,8 @@ Block.hh
 ../include/Block.hh
 Vector3.hh
 ../include/Vector3.hh
+iomanip
+-
 
 ../include/GranBlock.hh
 Vector3.hh
@@ -38,6 +40,8 @@ cmath
 cassert
 -
 unistd.h
+-
+vector
 -
 
 ../include/Prostopadl.hh
@@ -126,7 +130,15 @@ GranBlock.hh
 Prostopadl.hh
 /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/Prostopadl.hh
 
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/src/matrix3.cpp
+matrix3.hh
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/src/matrix3.hh
+
 /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/scena.cpp
 scena.hh
 /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/scena.hh
+
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/src/vector3.cpp
+Vector3.hh
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/src/Vector3.hh
 

@@ -30,4 +30,5 @@ Vector3 Vector3::operator / (const double &tmp);
 std::istream &operator >> (std::istream &in, Vector3 &tmp);
 std::ostream &operator << (std::ostream &stream, Vector3 const &tmp);
 
+
 #endif

@@ -21,6 +21,8 @@ Block.hh
 ../include/Block.hh
 Vector3.hh
 ../include/Vector3.hh
+iomanip
+-
 
 ../include/GranBlock.hh
 Vector3.hh
@@ -38,6 +40,8 @@ cmath
 cassert
 -
 unistd.h
+-
+vector
 -
 
 ../include/Prostopadl.hh
@@ -131,8 +135,8 @@ exampleConfig.h
 /home/adam/Programowanie_Obiektowe/zad5_1-259355/app/exampleConfig.h
 example.h
 /home/adam/Programowanie_Obiektowe/zad5_1-259355/app/example.h
-vector.hh
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/app/vector.hh
+Vector3.hh
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/app/Vector3.hh
 Prostopadl.hh
 /home/adam/Programowanie_Obiektowe/zad5_1-259355/app/Prostopadl.hh
 Drone.hh

@@ -20,17 +20,25 @@ private:
 
     type size[size_table];     /**< Tablica wektora */
 
+    static unsigned int Vectors_in_use;
+
+    static unsigned int Vectors_used;
+    
 public:
 
     ///<Konstruktor Vector
     /**
      * Wypelnia vector zerami
      */ 
-    Vector(){
-    for (int i = 0; i < SIZE; ++i) {
-        size[i] = 0;
-    }
+    Vector();
+
+    ~Vector(){
+        Vectors_in_use--;
     };
+
+    unsigned int amount_active_vectors(){return Vectors_in_use;};
+
+    unsigned int amount_of_all_vectors(){return Vectors_used;};
 
     ///<Konstruktor wypelniajacy Vector wartosciami
     /** 
@@ -42,6 +50,10 @@ public:
         size[i] = tmp[i];
     }
     };
+
+    // Vector(const Vector &v);
+
+    Vector(const std::initializer_list<type> &Sizelist);
 
     ///<Przeciazenie operatora dodawania wektorow
     /** 
@@ -133,6 +145,39 @@ std::ostream &operator << (std::ostream &stream, Vector<double,2> const &tmp);
 ///<Przeciazenie operatora wejscia Vector2D
 std::istream &operator >> (std::istream &in, Vector<double,2> &tmp);
 
+template<typename type, unsigned int size_table>
+unsigned int Vector<type,size_table>::Vectors_in_use = 0;
+
+template<typename type, unsigned int size_table>
+unsigned int Vector<type,size_table>::Vectors_used = 0;
+
+template<typename type, unsigned int size_table>
+Vector<type,size_table>::Vector(){
+    for (int i = 0; i < SIZE; ++i) {
+        size[i] = 0;
+        ++Vectors_in_use;
+        ++Vectors_used;
+    }
+}
+
+template<typename type, unsigned int size_table>
+Vector<type,size_table>::Vector( const std::initializer_list<type> &Sizelist):
+    Vector()
+{
+    assert(Sizelist.size() <= size_table);
+    int Ind = -1;
+    for(type Size_i : Sizelist) size[++Ind] = Size_i;
+}
+
+
+// template<typename type, unsigned int size_table>
+// Vector<type,size_table>::Vector(const Vector &v){
+//         ++Vectors_in_use;
+//         ++Vectors_used;
+//         for(unsigned int Ind = 0; Ind < size_table; ++Ind){
+//             size[Ind] = v[Ind];
+//         }
+//     }
 
 
 

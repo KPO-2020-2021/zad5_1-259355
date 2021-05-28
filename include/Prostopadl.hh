@@ -31,6 +31,10 @@ class Prostopadl : public GranBlock
   
   public:
 
+  // double vect_in_use3;
+
+	// double vect_used3;
+
   Prostopadl(Vector3 [NOPOINTS]);             //Konstruktor klasy 
 
   Prostopadl();                               // Konstruktor klasy
@@ -41,7 +45,10 @@ class Prostopadl : public GranBlock
 
   Matrix3 matrixtmp;  /**< Macierz obrotu */
 
-  Prostopadl InitPros(const char * StrmWe, const char * StrmWY, double scalex, double scaley, double scalez, double angle, double tranx, double trany, double tranz);
+  // Prostopadl InitPros(const char * StrmWe, const char * StrmWY, double scalex, double scaley, double scalez, double angle, double tranx, double trany, double tranz);
+
+  Prostopadl (const char * StrmWe, const char * StrmWY, double scalex, double scaley, double scalez, double angle, double tranx, double trany, double tranz);
+
 
   void turnagain(); /**< Funkcja obracajaca prostopadloscian jeszcze raz */
 
