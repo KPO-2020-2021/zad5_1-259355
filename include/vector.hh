@@ -51,6 +51,17 @@ public:
     }
     };
 
+    ///<Konstruktor wypelniajacy Vector wartosciami
+    /** 
+     * @param tablica const double tmp[SIZE]
+     * @return Wypelniona tablica wektora
+     */ 
+    Vector(const double tmp[SIZE]){
+    for (int i = 0; i < SIZE; ++i) {
+        size[i] = tmp[i];
+    }
+    };
+
     // Vector(const Vector &v);
 
     Vector(const std::initializer_list<type> &Sizelist);

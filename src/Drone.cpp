@@ -4,6 +4,8 @@
  * Funkcja inicjujaca poczatkowego drona 
  * Inicjuje prostopadaloscian (cialo drona)
  * Inicjuje poszczegolne rotory oraz odpowiada za animacje ich obrotu
+ * @param const char *NamesFilesLocal[]
+ * @param int step
  */
 void Drone::Init(const char *NamesFilesLocal[], int step){
 
@@ -13,19 +15,12 @@ void Drone::Init(const char *NamesFilesLocal[], int step){
     static double angle_rotors_rb = 0;
     static double angletemp = 0;
 
+    new Prostopadl(SZESCIAN_WZ,NamesFilesLocal[0], arg_pros_sc, 0, init_args);
 
-    // this->InitPros(SZESCIAN_WZ,NamesFilesLocal[0], PROSTOPADL_SCALE, 0, 0, 0, 2);
-    new Prostopadl(SZESCIAN_WZ,NamesFilesLocal[0], PROSTOPADL_SCALE, 0, 0, 0, 2);
-
-    // this->rotor[0].InitOne(ROTORY_BEF, NamesFilesLocal[1], ROTATOR_SCALE, TRANSLATION_LEFT_FRONT, angle_rotors_lf);
-    // this->rotor[1].InitOne(ROTORY_BEF, NamesFilesLocal[2], ROTATOR_SCALE, TRANSLATION_RIGHT_FRONT, angle_rotors_rf);
-    // this->rotor[2].InitOne(ROTORY_BEF, NamesFilesLocal[3], ROTATOR_SCALE, TRANSLATION_LEFT_BACK, angle_rotors_lb);
-    // this->rotor[3].InitOne(ROTORY_BEF, NamesFilesLocal[4], ROTATOR_SCALE, TRANSLATION_RIGHT_BACK, angle_rotors_rb);
-
-    this->rotor[0] = new Block(ROTORY_BEF, NamesFilesLocal[1], ROTATOR_SCALE, TRANSLATION_LEFT_FRONT, angle_rotors_lf);
-    this->rotor[1] = new Block(ROTORY_BEF, NamesFilesLocal[2], ROTATOR_SCALE, TRANSLATION_RIGHT_FRONT, angle_rotors_rf);
-    this->rotor[2] = new Block(ROTORY_BEF, NamesFilesLocal[3], ROTATOR_SCALE, TRANSLATION_LEFT_BACK, angle_rotors_lb);
-    this->rotor[3] = new Block(ROTORY_BEF, NamesFilesLocal[4], ROTATOR_SCALE, TRANSLATION_RIGHT_BACK, angle_rotors_rb);
+    this->rotor[0] = new Block(ROTORY_BEF, NamesFilesLocal[1], arg_rotator_sc, arg_lf, angle_rotors_lf);
+    this->rotor[1] = new Block(ROTORY_BEF, NamesFilesLocal[2], arg_rotator_sc, arg_rf, angle_rotors_rf);
+    this->rotor[2] = new Block(ROTORY_BEF, NamesFilesLocal[3], arg_rotator_sc, arg_lb, angle_rotors_lb);
+    this->rotor[3] = new Block(ROTORY_BEF, NamesFilesLocal[4], arg_rotator_sc, arg_rb, angle_rotors_rb);
 
     #define TURN_OF_ROTOR_UP_DOWN 10
     #define TURN_OF_ROTOR_FORWARD_BACK 15
@@ -70,22 +65,18 @@ void Drone::Init(const char *NamesFilesLocal[], int step){
  * Inicjuje prostopadaloscian (cialo drona), obraca go i odpowiada za sposob przelotu
  * Inicjuje poszczegolne rotory oraz odpowiada za ich sposob przelotu wzgledem ciala oraz ich poczatkowy obrot
  * @param double angle
- * @param double x_position
- * @param double y_position
- * @param double z_position
+ * @param Vector3 position
  * @param const char *NamesFilesLocal[]
  * @param const char *NamesFilesProper[]
  */
-void Drone::Engage2(double angle, double x_position, double y_position, double z_position, const char *NamesFilesLocal[], const char *NamesFilesProper[], int step){
-    #define SKALA_JED 1,1,1
+void Drone::Engage2(double angle, Vector3 position, const char *NamesFilesLocal[], const char *NamesFilesProper[], int step){
 
     this->Init(NamesFilesLocal, step);
 
-    new Prostopadl(NamesFilesLocal[0],NamesFilesProper[0], SKALA_JED, angle, x_position, y_position, z_position);
+    new Prostopadl(NamesFilesLocal[0],NamesFilesProper[0], arg_jed, angle, position);
     
     for(unsigned int Idx = 1; NamesFilesLocal[Idx]!= nullptr; ++Idx){
-        rotor[Idx] = new Block(NamesFilesLocal[Idx], NamesFilesProper[Idx], SKALA_JED, x_position, y_position, z_position, angle);
-        // rotor[Idx] = InitOne(NamesFilesLocal[Idx], NamesFilesProper[Idx], SKALA_JED, x_position, y_position, z_position, angle);
+        rotor[Idx] = new Block(NamesFilesLocal[Idx], NamesFilesProper[Idx], arg_jed, position, angle);
     }
 }
 
@@ -104,35 +95,36 @@ void Drone::Engage2(double angle, double x_position, double y_position, double z
 void Drone::Relocate(Vector3 begin_position,double drone_num, double angle, double lenght_of_path, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[])
 {
     int step = 0;
-    double x_position, y_position, z_position;
+    Vector3 position;
+
     if(drone_num == 1){
-        x_position = begin_position[0];
-        y_position = begin_position[1];
-        z_position = begin_position[2];
+        position[0] = begin_position[0];
+        position[1] = begin_position[1];
+        position[2] = begin_position[2];
     }
     else if(drone_num == 2){
-        x_position = begin_position[0];
-        y_position = begin_position[1];
-        z_position = begin_position[2];
+        position[0] = begin_position[0];
+        position[1] = begin_position[1];
+        position[2] = begin_position[2];
     }
     else{}
 
     double angletemp = 0;
 
     std::cout << std::endl << "Up ..." << std::endl;
-    for(;z_position <= 80; z_position += 2){
+    for(;position[2] <= 80; position[2] += 2){
         step = 1;
-        this->Engage2(angletemp,x_position,y_position,z_position, NamesFilesLocal, NamesFilesProper, step);
+        this->Engage2(angletemp,position, NamesFilesLocal, NamesFilesProper, step);
         usleep(100000);
         Lacze.Rysuj();
     }
-    z_position -= 2;
+    position[2] -= 2;
 
     std::cout << "Change of the orientation..." << std::endl;
     if(angle > 0){
     for(; angletemp <= angle; angletemp += 5 ){
         step = 2;
-        this->Engage2(angletemp,x_position,y_position,z_position, NamesFilesLocal, NamesFilesProper, step);
+        this->Engage2(angletemp,position, NamesFilesLocal, NamesFilesProper, step);
         usleep(100000);
         Lacze.Rysuj();
     }
@@ -140,7 +132,7 @@ void Drone::Relocate(Vector3 begin_position,double drone_num, double angle, doub
     else if(angle < 0){
     for(; angletemp >= angle; angletemp -= 5 ){
         step = -2;
-        this->Engage2(angletemp,x_position,y_position,z_position, NamesFilesLocal, NamesFilesProper, step);
+        this->Engage2(angletemp,position, NamesFilesLocal, NamesFilesProper, step);
         usleep(100000);
         Lacze.Rysuj();
     }
@@ -150,25 +142,25 @@ void Drone::Relocate(Vector3 begin_position,double drone_num, double angle, doub
     double x_of_turn = 1;
     double y_of_turn = 1;
 
-    x_of_turn = this->x_of_end(x_position,angletemp,lenght_of_path);
-    x_of_turn = (x_of_turn - x_position)/60;
-    y_of_turn = this->y_of_end(y_position,angletemp,lenght_of_path);
-    y_of_turn = (y_of_turn - y_position)/60;
+    x_of_turn = this->x_of_end(position[0],angletemp,lenght_of_path);
+    x_of_turn = (x_of_turn - position[0])/60;
+    y_of_turn = this->y_of_end(position[1],angletemp,lenght_of_path);
+    y_of_turn = (y_of_turn - position[1])/60;
 
     std::cout << "Going forward ..." << std::endl;
-    for(int i = 0; i <= 60; x_position += x_of_turn, y_position += y_of_turn, ++i){
+    for(int i = 0; i <= 60; position[0] += x_of_turn, position[1] += y_of_turn, ++i){
         step = 3;
-        this->Engage2(angletemp,x_position,y_position,z_position, NamesFilesLocal, NamesFilesProper, step);
+        this->Engage2(angletemp,position, NamesFilesLocal, NamesFilesProper, step);
         usleep(100000);
         Lacze.Rysuj();
     }
-    x_position -= 1;
-    y_position -= 1;
+    position[0] -= 1;
+    position[1] -= 1;
 
     std::cout << "Going down ..." << std::endl;
-    for(;z_position >= 0; z_position -= 2){
+    for(;position[2] >= 0; position[2] -= 2){
         step = 4;
-        this->Engage2(angletemp,x_position,y_position,z_position, NamesFilesLocal, NamesFilesProper, step);
+        this->Engage2(angletemp,position, NamesFilesLocal, NamesFilesProper, step);
         usleep(100000);
         Lacze.Rysuj();
     }

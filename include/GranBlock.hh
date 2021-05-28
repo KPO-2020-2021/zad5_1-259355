@@ -24,30 +24,14 @@ class GranBlock{
 
 	public:
 
-	// double vect_in_use;
-
-	// double vect_used;
-
 	Vector3 operator[](int Ind) const { return figure[Ind];}; ///< wypisywanie
 
 	Vector3 &operator[](int Ind) {return figure[Ind];};	///< wpisywanie
 
-	// GranBlock();	/**< Konstruktor poczatkowy */
-
-    // GranBlock(Vector3 tmp[28]);  /**< Konstruktor */
-
-    // double &operator()(unsigned int row, unsigned int column); ///<Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach figury
-
-    // const double &operator () (unsigned int row, unsigned int column) const;	///<Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach figury
-
-    // const Vector3 &operator () (unsigned int row) const;	///<Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach figury
-
     double toradians(double angle); ///< Funkcja zmieniajaca kat na radiany
 
-	void TurnByOZ(double angle, double &x_position, double &y_position);	///<Funkcja dokonujaca obrotu wokol osi Oz
-
-	GranBlock Init_The_Figure(const char * StrmWe, const char * StrmWy, double num_of_peak, double scalex, double scaley, double scalez,
- 	double trans_x, double trans_y, double trans_z, double angle); ///<Funkcja inicjujaca figury i odpowiednio je zmienia, obraca, wykonuje translacje i skaluje
+	GranBlock Init_The_Figure(const char * StrmWe, const char * StrmWy, double num_of_peak, Vector3 scale,
+ 	Vector3 trans, double angle); ///<Funkcja inicjujaca figury i odpowiednio je zmienia, obraca, wykonuje translacje i skaluje
 
 	// GranBlock (const char * StrmWe, const char * StrmWy, double num_of_peak, double scalex, double scaley, double scalez,
  	// double trans_x, double trans_y, double trans_z, double angle); 

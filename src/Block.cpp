@@ -88,19 +88,15 @@
  * Funkcja inicjujaca poszczegolne Blocki - rotory
  * @param const char *StrmWe
  * @param const char *StrmWy
- * @param double scalex
- * @param double scaley
- * @param double scalez
+ * @param Vector3 scale
  * @param double angle
- * @param double trans_x
- * @param double trans_y
- * @param double trans_z
+ * @param Vector3 trans
  * @return Block rotor
  */
-Block::Block(const char * StrmWe, const char * StrmWy, double scalex, double scaley, double scalez,
- double trans_x, double trans_y, double trans_z, double angle){
+Block::Block(const char * StrmWe, const char * StrmWy, Vector3 scale,
+ Vector3 trans, double angle){
     
-    this->Init_The_Figure(StrmWe,StrmWy,28,scalex,scaley,scalez, trans_x, trans_y, trans_z,angle);
+    this->Init_The_Figure(StrmWe,StrmWy,28,scale, trans, angle);
     // this->vect_in_use2 += this->vect_in_use;
     // this->vect_used2 += this->vect_used;
     // return *this;

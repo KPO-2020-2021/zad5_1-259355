@@ -317,23 +317,16 @@ Prostopadl Prostopadl::operator - (const Vector3 vec2){
  * Funkcja inicjujaca prostopadloscian odpowiednio wyskalowany, przetransponowany i obrocony
  * @param const char *StrmWe
  * @param const char *StrmWY
- * @param double scalex
- * @param double scaley
- * @param double scalez
+ * @param Vector3 scale
  * @param double angle
- * @param double tranx
- * @param double trany
- * @param double tranz
+ * @param Vector3 trans
  * @return Prostopadl pro
  */
 // Prostopadl Prostopadl::InitPros(const char * StrmWe, const char * StrmWY, 
 // double scalex, double scaley, double scalez, double angle, double tranx, double trany, double tranz){
 Prostopadl::Prostopadl(const char * StrmWe, const char * StrmWY, 
-double scalex, double scaley, double scalez, double angle, double tranx, double trany, double tranz){
-    this->Init_The_Figure(StrmWe,StrmWY,NOPOINTS,scalex,scaley,scalez, tranx, trany, tranz,angle);
-    // this->vect_in_use3 += this->vect_in_use;
-    // this->vect_used3 += this->vect_used;
-    // return *this;
+Vector3 scale, double angle, Vector3 trans){
+    this->Init_The_Figure(StrmWe,StrmWY,NOPOINTS,scale, trans,angle);
 }
 
 /**

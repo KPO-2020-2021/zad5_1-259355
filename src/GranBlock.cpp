@@ -83,22 +83,22 @@
 //     return figure[row][column];
 // }
 
-/**
- * Funkcja obracajaca punkty x i y wokol osi Oz
- * @param double angle
- * @param double &x_position
- * @param double &y_position
- */
-void GranBlock::TurnByOZ(double angle, double &x_position, double &y_position){
+// /**
+//  * Funkcja obracajaca punkty x i y wokol osi Oz
+//  * @param double angle
+//  * @param double &x_position
+//  * @param double &y_position
+//  */
+// void GranBlock::TurnByOZ(double angle, double &x_position, double &y_position){
 
-    angle = this->toradians(angle);
+//     angle = this->toradians(angle);
     
-    double sn = sin(angle), cn = cos(angle);
+//     double sn = sin(angle), cn = cos(angle);
 
-    x_position = x_position*cn - y_position*sn;
-    y_position = x_position*sn + y_position*cn; 
+//     x_position = x_position*cn - y_position*sn;
+//     y_position = x_position*sn + y_position*cn; 
 
-}
+// }
 
 /**
  * Funkcja zmieniajaca liczbe na radiany
@@ -115,17 +115,13 @@ double GranBlock::toradians(double angle){
  * @param const char *StrmWe
  * @param const char *StrmWy
  * @param double num_of_peak
- * @param double scalex
- * @param double scaley
- * @param double scalez
+ * @param Vector3 scale
  * @param double angle
- * @param double trans_x
- * @param double trans_y
- * @param double trans_z
+ * @param Vector3 trans
  * @return GranBlock figure
  */
-GranBlock GranBlock::Init_The_Figure(const char * StrmWe, const char * StrmWy, double num_of_peak, double scalex, double scaley, double scalez,
- double trans_x, double trans_y, double trans_z, double angle){
+GranBlock GranBlock::Init_The_Figure(const char * StrmWe, const char * StrmWy, double num_of_peak, Vector3 scale,
+ Vector3 trans, double angle){
 // GranBlock::GranBlock(const char * StrmWe, const char * StrmWy, double num_of_peak, double scalex, double scaley, double scalez,
 // double trans_x, double trans_y, double trans_z, double angle){
     std::ifstream FileWe(StrmWe);
@@ -147,9 +143,9 @@ GranBlock GranBlock::Init_The_Figure(const char * StrmWe, const char * StrmWy, d
         x = vec[0];
         y = vec[1];
         z = vec[2]; 
-        vec[0] = x * scalex + trans_x ;
-        vec[1] = y * scaley + trans_y ;
-        vec[2] = z * scalez + trans_z ;
+        vec[0] = (x * scale[0]) + trans[0] ;
+        vec[1] = (y * scale[1]) + trans[1] ;
+        vec[2] = (z * scale[2]) + trans[2] ;
         this->figure.push_back(vec);
         // this->vect_used += figure.size();
         if(i%4 == 0){

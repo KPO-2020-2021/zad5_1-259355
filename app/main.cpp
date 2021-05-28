@@ -108,10 +108,10 @@ PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
 
   double arg1[] = {20,20,0};
   Scena.drone1.position[0] = Vector3(arg1);
-  Scena.drone1.Engage2(0,20,20,0, NamesFilesLoc_V1, NamesFilesProp_V1,0);
+  Scena.drone1.Engage2(0, Scena.drone1.position[0], NamesFilesLoc_V1, NamesFilesProp_V1,0);
   double arg2[] = {20,60,0};
   Scena.drone2.position[0] = Vector3(arg2);
-  Scena.drone2.Engage2(0,20,60,0, NamesFilesLoc_V2, NamesFilesProp_V2,0);
+  Scena.drone2.Engage2(0, Scena.drone2.position[0], NamesFilesLoc_V2, NamesFilesProp_V2,0);
   Lacze.Rysuj();
   Scena.drone1.position[1] = Scena.drone1.position[0];
   Scena.drone2.position[1] = Scena.drone2.position[0];

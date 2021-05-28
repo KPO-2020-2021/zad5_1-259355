@@ -1,4 +1,5 @@
 #pragma once
+// #include "Vector3.hh"
 
 constexpr int SIZE = 3;
 constexpr int NOPOINTS = 20;
@@ -35,6 +36,15 @@ constexpr double MIN_DIFF = 0.000000001;
 
 #define PROSTOPADL_SCALE 10,8,4
 #define ROTATOR_SCALE 8,8,2
+#define SKALA_JED 1,1,1
+constexpr double arg_jed[] = {1,1,1};
+constexpr double arg_pros_sc[] = {10,8,4};
+constexpr double arg_rotator_sc[] = {8,8,2};
+constexpr double init_args[] = {0,0,2};
+constexpr double arg_lf[] = {5,4,5};
+constexpr double arg_rf[] = {5,-4,5};
+constexpr double arg_lb[] = {-5,4,5};
+constexpr double arg_rb[] = {-5,-4,5};
 
 #define TRANSLATION_LEFT_FRONT 5,4,5
 #define TRANSLATION_RIGHT_FRONT 5,-4,5
@@ -42,3 +52,4 @@ constexpr double MIN_DIFF = 0.000000001;
 #define TRANSLATION_RIGHT_BACK -5,-4,5
 
 #define TRANSLATION_ALL 20,20,0
+const double arg_trans_all[] = {20,20,0};

@@ -45,10 +45,7 @@ class Prostopadl : public GranBlock
 
   Matrix3 matrixtmp;  /**< Macierz obrotu */
 
-  // Prostopadl InitPros(const char * StrmWe, const char * StrmWY, double scalex, double scaley, double scalez, double angle, double tranx, double trany, double tranz);
-
-  Prostopadl (const char * StrmWe, const char * StrmWY, double scalex, double scaley, double scalez, double angle, double tranx, double trany, double tranz);
-
+  Prostopadl (const char * StrmWe, const char * StrmWY, Vector3 scale, double angle, Vector3 trans);
 
   void turnagain(); /**< Funkcja obracajaca prostopadloscian jeszcze raz */
 
