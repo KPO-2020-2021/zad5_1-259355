@@ -18,18 +18,8 @@ Inheritance diagram for Block\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_block_a37658a946bf5067ad01d68d9ff086adc}{Block}} ()
-\item 
-\mbox{\hyperlink{class_block_ab02c80a630078910323797c98641dba8}{Block}} (\mbox{\hyperlink{class_vector}{Vector3}} tmp\mbox{[}28\mbox{]})
-\item 
-double \& \mbox{\hyperlink{class_block_a0ec53fd6e0837a8003e1b19cfc69247a}{operator()}} (unsigned int row, unsigned int column)
-\begin{DoxyCompactList}\small\item\em Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach Blocku. \end{DoxyCompactList}\item 
-const double \& \mbox{\hyperlink{class_block_a5528d5afe7a09aa2d1e80eafcad88a49}{operator()}} (unsigned int row, unsigned int column) const
-\begin{DoxyCompactList}\small\item\em Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach Blocku. \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{class_vector}{Vector3}} \& \mbox{\hyperlink{class_block_a5a8e05bc0597dd1ce906dd022161ccce}{operator()}} (unsigned int row) const
-\begin{DoxyCompactList}\small\item\em Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach Blocku. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_block}{Block}} \mbox{\hyperlink{class_block_ac82a5c71877dc54256657c87423ff2c2}{Init\+One}} (const char $\ast$Strm\+We, const char $\ast$Strm\+Wy, double scalex, double scaley, double scalez, double trans\+\_\+x, double trans\+\_\+y, double trans\+\_\+z, double angle)
-\begin{DoxyCompactList}\small\item\em Funkcja inicjujaca figure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_block_abb0da7e6a60219d7cfda1e23dfdd1b79}{Block}} (const char $\ast$Strm\+We, const char $\ast$Strm\+Wy, \mbox{\hyperlink{class_vector}{Vector3}} scale, \mbox{\hyperlink{class_vector}{Vector3}} trans, double angle)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -38,40 +28,13 @@ Klasa \mbox{\hyperlink{class_block}{Block}}.
 Klasa pozwalajaca operowac na Blocku -\/ Rotorze Klasa dziedziczy po klasie \mbox{\hyperlink{class_gran_block}{Gran\+Block}} 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_block_a37658a946bf5067ad01d68d9ff086adc}\label{class_block_a37658a946bf5067ad01d68d9ff086adc}} 
+\mbox{\Hypertarget{class_block_abb0da7e6a60219d7cfda1e23dfdd1b79}\label{class_block_abb0da7e6a60219d7cfda1e23dfdd1b79}} 
 \index{Block@{Block}!Block@{Block}}
 \index{Block@{Block}!Block@{Block}}
-\doxysubsubsection{\texorpdfstring{Block()}{Block()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Block\+::\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Block()}{Block()}}
+{\footnotesize\ttfamily Block\+::\+Block (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Strm\+We,  }\item[{const char $\ast$}]{Strm\+Wy,  }\item[{\mbox{\hyperlink{class_vector}{Vector3}}}]{scale,  }\item[{\mbox{\hyperlink{class_vector}{Vector3}}}]{trans,  }\item[{double}]{angle }\end{DoxyParamCaption})}
 
-Konstruktor poczatkowy \mbox{\Hypertarget{class_block_ab02c80a630078910323797c98641dba8}\label{class_block_ab02c80a630078910323797c98641dba8}} 
-\index{Block@{Block}!Block@{Block}}
-\index{Block@{Block}!Block@{Block}}
-\doxysubsubsection{\texorpdfstring{Block()}{Block()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Block\+::\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector3}}}]{tmp\mbox{[}28\mbox{]} }\end{DoxyParamCaption})}
-
-Konstruktor
-
-Metoda przyjmujaca jeden argument pozwalajaca poruszac sie po tablicy wierzcholkow 
-\begin{DoxyParams}{Parameters}
-{\em tablica} & wektorow 3D \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-nothing 
-\end{DoxyReturn}
-
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_block_ac82a5c71877dc54256657c87423ff2c2}\label{class_block_ac82a5c71877dc54256657c87423ff2c2}} 
-\index{Block@{Block}!InitOne@{InitOne}}
-\index{InitOne@{InitOne}!Block@{Block}}
-\doxysubsubsection{\texorpdfstring{InitOne()}{InitOne()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_block}{Block}} Block\+::\+Init\+One (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Strm\+We,  }\item[{const char $\ast$}]{Strm\+Wy,  }\item[{double}]{scalex,  }\item[{double}]{scaley,  }\item[{double}]{scalez,  }\item[{double}]{trans\+\_\+x,  }\item[{double}]{trans\+\_\+y,  }\item[{double}]{trans\+\_\+z,  }\item[{double}]{angle }\end{DoxyParamCaption})}
-
-
-
-Funkcja inicjujaca figure. 
+Konstruktor poczatkowy Konstruktor
 
 Funkcja inicjujaca poszczegolne Blocki -\/ rotory 
 \begin{DoxyParams}{Parameters}
@@ -79,85 +42,19 @@ Funkcja inicjujaca poszczegolne Blocki -\/ rotory
 \hline
 {\em const} & char $\ast$\+Strm\+Wy \\
 \hline
-{\em double} & scalex \\
-\hline
-{\em double} & scaley \\
-\hline
-{\em double} & scalez \\
+{\em Vector3} & scale \\
 \hline
 {\em double} & angle \\
 \hline
-{\em double} & trans\+\_\+x \\
-\hline
-{\em double} & trans\+\_\+y \\
-\hline
-{\em double} & trans\+\_\+z \\
+{\em Vector3} & trans \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{class_block}{Block}} rotor 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_block_a5a8e05bc0597dd1ce906dd022161ccce}\label{class_block_a5a8e05bc0597dd1ce906dd022161ccce}} 
-\index{Block@{Block}!operator()@{operator()}}
-\index{operator()@{operator()}!Block@{Block}}
-\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{class_vector}{Vector3}} \& Block\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{row }\end{DoxyParamCaption}) const}
-
-
-
-Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach Blocku. 
-
-Funktor Wektora (const) pilnujacy czy nie wychodzimy poza tablice wektora 
-\begin{DoxyParams}{Parameters}
-{\em int} & numer wiersza \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-wektor 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_block_a0ec53fd6e0837a8003e1b19cfc69247a}\label{class_block_a0ec53fd6e0837a8003e1b19cfc69247a}} 
-\index{Block@{Block}!operator()@{operator()}}
-\index{operator()@{operator()}!Block@{Block}}
-\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily double \& Block\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{row,  }\item[{unsigned int}]{column }\end{DoxyParamCaption})}
-
-
-
-Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach Blocku. 
-
-Przeciazenie operatora indeksowania pilnujaca czy nie wychodzi poza zakres Przyjmuje dwa argument\+: 
-\begin{DoxyParams}{Parameters}
-{\em int} & numer wiersza \\
-\hline
-{\em int} & numer kolumny \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-tablica wierzcholkow 
-\end{DoxyReturn}
-\mbox{\Hypertarget{class_block_a5528d5afe7a09aa2d1e80eafcad88a49}\label{class_block_a5528d5afe7a09aa2d1e80eafcad88a49}} 
-\index{Block@{Block}!operator()@{operator()}}
-\index{operator()@{operator()}!Block@{Block}}
-\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily const double \& Block\+::operator() (\begin{DoxyParamCaption}\item[{unsigned int}]{row,  }\item[{unsigned int}]{column }\end{DoxyParamCaption}) const}
-
-
-
-Odpowiednie operatory indeksowania i poruszania sie po wierzcholkach Blocku. 
-
-Przeciazenie operatora () (const) indeksowania dla Blocka z odpowiednimi zabezpieczeniami 
-\begin{DoxyParams}{Parameters}
-{\em int} & numer wiersza \\
-\hline
-{\em int} & numer kolumny \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Tablica wierzcholkow 
-\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/adam/\+Programowanie\+\_\+\+Obiektowe/zad5\+\_\+1-\/259355/include/Block.\+hh\item 
-/home/adam/\+Programowanie\+\_\+\+Obiektowe/zad5\+\_\+1-\/259355/src/Block.\+cpp\end{DoxyCompactItemize}
+include/Block.\+hh\item 
+src/Block.\+cpp\end{DoxyCompactItemize}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>3D Rotation: /home/adam/Programowanie_Obiektowe/zad5_1-259355/include/Drone.hh Source File</title>
+<title>Dragonfly: include/Drone.hh Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">3D Rotation
+   <div id="projectname">Dragonfly
    </div>
   </td>
  </tr>
@@ -74,30 +74,31 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Prostopadl.hh&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Block.hh&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Vector3.hh&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_drone.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_drone.html">Drone</a>: <span class="keyword">public</span> <a class="code" href="class_block.html">Block</a>, <span class="keyword">public</span> <a class="code" href="class_prostopadl.html">Prostopadl</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_block.html">Block</a> rotor[4]; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_prostopadl.html">Prostopadl</a> corp[NOPOINTS]; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_drone.html#afc0021a1a1147a0e7537847f657a1660">   26</a></span>&#160;    <a class="code" href="class_vector.html">Vector3</a> <a class="code" href="class_drone.html#afc0021a1a1147a0e7537847f657a1660">position</a>[2];    </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drone.html#aa87ae9f8629a64a102caccd6e7b1d54a">Init</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *NamesFilesLocal[]);   </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drone.html#a5cc4b408a0c7dc06a37a9e9f42f67c82">Engage2</a>(<span class="keywordtype">double</span> angle, <span class="keywordtype">double</span> x_position, <span class="keywordtype">double</span> y_position, <span class="keywordtype">double</span> z_position, <span class="keyword">const</span> <span class="keywordtype">char</span> *NamesFilesLocal[], <span class="keyword">const</span> <span class="keywordtype">char</span> *NamesFilesProper[]); </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drone.html#a0fa1ad81d8dea820a70edfd0e0cbed93">Relocate</a>(<a class="code" href="class_vector.html">Vector3</a> begin_position,<span class="keywordtype">double</span> drone_num, <span class="keywordtype">double</span> angle, <span class="keywordtype">double</span> lenght_of_path, <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a> &amp;Lacze, <span class="keyword">const</span> <span class="keywordtype">char</span> *NamesFilesLocal[], <span class="keyword">const</span> <span class="keywordtype">char</span> *NamesFilesProper[]);    </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_drone.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_drone.html">Drone</a>: <span class="keyword">public</span> <a class="code" href="class_block.html">Block</a>, <span class="keyword">public</span> <a class="code" href="class_prostopadl.html">Prostopadl</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_block.html">Block</a> *rotor[4]; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_prostopadl.html">Prostopadl</a> *corp[NOPOINTS]; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_drone.html#afc0021a1a1147a0e7537847f657a1660">   27</a></span>&#160;    <a class="code" href="class_vector.html">Vector3</a> <a class="code" href="class_drone.html#afc0021a1a1147a0e7537847f657a1660">position</a>[2];    </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drone.html#a892cacde4b451e545b02fdef86b9e896">Init</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *NamesFilesLocal[], <span class="keywordtype">int</span> step);   </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drone.html#a9f4765c4081194c2066960e95c51eb20">Engage2</a>(<span class="keywordtype">double</span> angle, <a class="code" href="class_vector.html">Vector3</a> <a class="code" href="class_drone.html#afc0021a1a1147a0e7537847f657a1660">position</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *NamesFilesLocal[], <span class="keyword">const</span> <span class="keywordtype">char</span> *NamesFilesProper[], <span class="keywordtype">int</span> step); </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_drone.html#a0fa1ad81d8dea820a70edfd0e0cbed93">Relocate</a>(<a class="code" href="class_vector.html">Vector3</a> begin_position,<span class="keywordtype">double</span> drone_num, <span class="keywordtype">double</span> angle, <span class="keywordtype">double</span> lenght_of_path, <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a> &amp;Lacze, <span class="keyword">const</span> <span class="keywordtype">char</span> *NamesFilesLocal[], <span class="keyword">const</span> <span class="keywordtype">char</span> *NamesFilesProper[]);    </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
 <div class="ttc" id="aclass_block_html"><div class="ttname"><a href="class_block.html">Block</a></div><div class="ttdoc">Klasa Block.</div><div class="ttdef"><b>Definition:</b> Block.hh:15</div></div>
-<div class="ttc" id="aclass_drone_html"><div class="ttname"><a href="class_drone.html">Drone</a></div><div class="ttdoc">Klasa Drona.</div><div class="ttdef"><b>Definition:</b> Drone.hh:16</div></div>
-<div class="ttc" id="aclass_drone_html_a0fa1ad81d8dea820a70edfd0e0cbed93"><div class="ttname"><a href="class_drone.html#a0fa1ad81d8dea820a70edfd0e0cbed93">Drone::Relocate</a></div><div class="ttdeci">void Relocate(Vector3 begin_position, double drone_num, double angle, double lenght_of_path, PzG::LaczeDoGNUPlota &amp;Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[])</div><div class="ttdef"><b>Definition:</b> Drone.cpp:59</div></div>
-<div class="ttc" id="aclass_drone_html_a5cc4b408a0c7dc06a37a9e9f42f67c82"><div class="ttname"><a href="class_drone.html#a5cc4b408a0c7dc06a37a9e9f42f67c82">Drone::Engage2</a></div><div class="ttdeci">void Engage2(double angle, double x_position, double y_position, double z_position, const char *NamesFilesLocal[], const char *NamesFilesProper[])</div><div class="ttdef"><b>Definition:</b> Drone.cpp:35</div></div>
-<div class="ttc" id="aclass_drone_html_aa87ae9f8629a64a102caccd6e7b1d54a"><div class="ttname"><a href="class_drone.html#aa87ae9f8629a64a102caccd6e7b1d54a">Drone::Init</a></div><div class="ttdeci">void Init(const char *NamesFilesLocal[])</div><div class="ttdef"><b>Definition:</b> Drone.cpp:8</div></div>
-<div class="ttc" id="aclass_drone_html_afc0021a1a1147a0e7537847f657a1660"><div class="ttname"><a href="class_drone.html#afc0021a1a1147a0e7537847f657a1660">Drone::position</a></div><div class="ttdeci">Vector3 position[2]</div><div class="ttdef"><b>Definition:</b> Drone.hh:26</div></div>
+<div class="ttc" id="aclass_drone_html"><div class="ttname"><a href="class_drone.html">Drone</a></div><div class="ttdoc">Klasa Drona.</div><div class="ttdef"><b>Definition:</b> Drone.hh:17</div></div>
+<div class="ttc" id="aclass_drone_html_a0fa1ad81d8dea820a70edfd0e0cbed93"><div class="ttname"><a href="class_drone.html#a0fa1ad81d8dea820a70edfd0e0cbed93">Drone::Relocate</a></div><div class="ttdeci">void Relocate(Vector3 begin_position, double drone_num, double angle, double lenght_of_path, PzG::LaczeDoGNUPlota &amp;Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[])</div><div class="ttdef"><b>Definition:</b> Drone.cpp:95</div></div>
+<div class="ttc" id="aclass_drone_html_a892cacde4b451e545b02fdef86b9e896"><div class="ttname"><a href="class_drone.html#a892cacde4b451e545b02fdef86b9e896">Drone::Init</a></div><div class="ttdeci">void Init(const char *NamesFilesLocal[], int step)</div><div class="ttdef"><b>Definition:</b> Drone.cpp:10</div></div>
+<div class="ttc" id="aclass_drone_html_a9f4765c4081194c2066960e95c51eb20"><div class="ttname"><a href="class_drone.html#a9f4765c4081194c2066960e95c51eb20">Drone::Engage2</a></div><div class="ttdeci">void Engage2(double angle, Vector3 position, const char *NamesFilesLocal[], const char *NamesFilesProper[], int step)</div><div class="ttdef"><b>Definition:</b> Drone.cpp:72</div></div>
+<div class="ttc" id="aclass_drone_html_afc0021a1a1147a0e7537847f657a1660"><div class="ttname"><a href="class_drone.html#afc0021a1a1147a0e7537847f657a1660">Drone::position</a></div><div class="ttdeci">Vector3 position[2]</div><div class="ttdef"><b>Definition:</b> Drone.hh:27</div></div>
 <div class="ttc" id="aclass_prostopadl_html"><div class="ttname"><a href="class_prostopadl.html">Prostopadl</a></div><div class="ttdoc">Klasa Prostopadloscianu.</div><div class="ttdef"><b>Definition:</b> Prostopadl.hh:24</div></div>
-<div class="ttc" id="aclass_pz_g_1_1_lacze_do_g_n_u_plota_html"><div class="ttname"><a href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a></div><div class="ttdoc">Klasa realizuje interfejs do programu GNUPlot.</div><div class="ttdef"><b>Definition:</b> lacze_do_gnuplota.hh:123</div></div>
+<div class="ttc" id="aclass_pz_g_1_1_lacze_do_g_n_u_plota_html"><div class="ttname"><a href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a></div><div class="ttdoc">Klasa realizuje interfejs do programu GNUPlot.</div><div class="ttdef"><b>Definition:</b> lacze_do_gnuplota.hh:334</div></div>
 <div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector&lt; double, 3 &gt;</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

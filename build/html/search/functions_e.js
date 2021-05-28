@@ -1,15 +1,4 @@
 var searchData=
 [
-  ['ustawrotacjex_187',['UstawRotacjeX',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a88324c53a70846fb6bc9d918ce21fd56',1,'PzG::LaczeDoGNUPlota']]],
-  ['ustawrotacjexz_188',['UstawRotacjeXZ',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a94d8527fd78048ed6cb32ffb29e5f903',1,'PzG::LaczeDoGNUPlota']]],
-  ['ustawrotacjez_189',['UstawRotacjeZ',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a458399aa2a8f4b3f00ccd5b272857ea1',1,'PzG::LaczeDoGNUPlota']]],
-  ['ustawskalex_190',['UstawSkaleX',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a855b8338bfe3e5d294d719f24b11090e',1,'PzG::LaczeDoGNUPlota']]],
-  ['ustawskalexz_191',['UstawSkaleXZ',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a4308151b54e105d302803146a3238699',1,'PzG::LaczeDoGNUPlota']]],
-  ['ustawskalez_192',['UstawSkaleZ',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#ab0486db3166d8db6580a221079af241f',1,'PzG::LaczeDoGNUPlota']]],
-  ['ustawzakresx_193',['UstawZakresX',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a9c91987dfc869d6fcea96205c581daef',1,'PzG::LaczeDoGNUPlota']]],
-  ['ustawzakresy_194',['UstawZakresY',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a54c6e9cf9ab2eae479451fd953c2717c',1,'PzG::LaczeDoGNUPlota']]],
-  ['ustawzakresz_195',['UstawZakresZ',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a1dbbb2b86fb13b8632e6bad9df2a82e3',1,'PzG::LaczeDoGNUPlota']]],
-  ['usunostatnianazwe_196',['UsunOstatniaNazwe',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a75f599f17413ea8602c6dbba09f36407',1,'PzG::LaczeDoGNUPlota']]],
-  ['usunwszystkienazwyplikow_197',['UsunWszystkieNazwyPlikow',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a89a1d90d017d264cd26398464d074073',1,'PzG::LaczeDoGNUPlota']]],
-  ['utworzprocespotomny_198',['UtworzProcesPotomny',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a1c7b9acc40de8d8bbb40fb0722512933',1,'PzG::LaczeDoGNUPlota']]]
+  ['vector_265',['Vector',['../class_vector.html#a2e4279f1e908faa5850300b33c864f57',1,'Vector::Vector()'],['../class_vector.html#af5aabba9c04fd3cf195d8d8a9ef49e9a',1,'Vector::Vector(double tmp[SIZE])'],['../class_vector.html#a5f2fb0077963ca860b8a3e9aecf209d6',1,'Vector::Vector(const double tmp[SIZE])'],['../class_vector.html#aff06b19b033267406f16ac17d43754fe',1,'Vector::Vector(const std::initializer_list&lt; type &gt; &amp;Sizelist)']]]
 ];

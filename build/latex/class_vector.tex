@@ -14,10 +14,21 @@ Klasa Wektora\+Przeciazenie operatora wyjscia Vector3D.
 \item 
 \mbox{\hyperlink{class_vector_a2e4279f1e908faa5850300b33c864f57}{Vector}} ()
 \begin{DoxyCompactList}\small\item\em $<$Konstruktor \mbox{\hyperlink{class_vector}{Vector}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vector_ac4801b1454e017956f9710175cfae268}\label{class_vector_ac4801b1454e017956f9710175cfae268}} 
+unsigned int {\bfseries amount\+\_\+active\+\_\+vectors} ()
+\item 
+\mbox{\Hypertarget{class_vector_a3e73391f2a6a2953ba435554f2a41b69}\label{class_vector_a3e73391f2a6a2953ba435554f2a41b69}} 
+unsigned int {\bfseries amount\+\_\+of\+\_\+all\+\_\+vectors} ()
+\item 
 \mbox{\hyperlink{class_vector_af5aabba9c04fd3cf195d8d8a9ef49e9a}{Vector}} (double tmp\mbox{[}SIZE\mbox{]})
 \begin{DoxyCompactList}\small\item\em Konstruktor wypelniajacy \mbox{\hyperlink{class_vector}{Vector}} wartosciami. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_vector}{Vector}} \mbox{\hyperlink{class_vector_a6a23c22eab0e207f26cc88473e993194}{operator+}} (const \mbox{\hyperlink{class_vector}{Vector}} \&v)
+\mbox{\hyperlink{class_vector_a5f2fb0077963ca860b8a3e9aecf209d6}{Vector}} (const double tmp\mbox{[}SIZE\mbox{]})
+\begin{DoxyCompactList}\small\item\em Konstruktor wypelniajacy \mbox{\hyperlink{class_vector}{Vector}} wartosciami. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_vector_aff06b19b033267406f16ac17d43754fe}\label{class_vector_aff06b19b033267406f16ac17d43754fe}} 
+\mbox{\hyperlink{class_vector_aff06b19b033267406f16ac17d43754fe}{Vector}} (const std\+::initializer\+\_\+list$<$ type $>$ \&Sizelist)
 \begin{DoxyCompactList}\small\item\em Przeciazenie operatora dodawania wektorow. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector}{Vector}} \mbox{\hyperlink{class_vector_a6a23c22eab0e207f26cc88473e993194}{operator+}} (const \mbox{\hyperlink{class_vector}{Vector}} \&v)
+\item 
 \mbox{\Hypertarget{class_vector_aea971417fdecc14a33d5b54b37671659}\label{class_vector_aea971417fdecc14a33d5b54b37671659}} 
 double {\bfseries toradians} ()
 \item 
@@ -48,9 +59,9 @@ Klasa pozwalajaca operowac na argumentach wektora Klasa jest szablonem ktory dzi
 \mbox{\Hypertarget{class_vector_a2e4279f1e908faa5850300b33c864f57}\label{class_vector_a2e4279f1e908faa5850300b33c864f57}} 
 \index{Vector$<$ type, size\_table $>$@{Vector$<$ type, size\_table $>$}!Vector@{Vector}}
 \index{Vector@{Vector}!Vector$<$ type, size\_table $>$@{Vector$<$ type, size\_table $>$}}
-\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily template$<$typename type , unsigned int size\+\_\+table$>$ \\
-\mbox{\hyperlink{class_vector}{Vector}}$<$ type, size\+\_\+table $>$\+::\mbox{\hyperlink{class_vector}{Vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{class_vector}{Vector}}$<$ type, size\+\_\+table $>$\+::\mbox{\hyperlink{class_vector}{Vector}}}
 
 
 
@@ -59,7 +70,7 @@ $<$Konstruktor \mbox{\hyperlink{class_vector}{Vector}}
 Wypelnia vector zerami \mbox{\Hypertarget{class_vector_af5aabba9c04fd3cf195d8d8a9ef49e9a}\label{class_vector_af5aabba9c04fd3cf195d8d8a9ef49e9a}} 
 \index{Vector$<$ type, size\_table $>$@{Vector$<$ type, size\_table $>$}!Vector@{Vector}}
 \index{Vector@{Vector}!Vector$<$ type, size\_table $>$@{Vector$<$ type, size\_table $>$}}
-\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily template$<$typename type , unsigned int size\+\_\+table$>$ \\
 \mbox{\hyperlink{class_vector}{Vector}}$<$ type, size\+\_\+table $>$\+::\mbox{\hyperlink{class_vector}{Vector}} (\begin{DoxyParamCaption}\item[{double}]{tmp\mbox{[}\+SIZE\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -70,6 +81,25 @@ Konstruktor wypelniajacy \mbox{\hyperlink{class_vector}{Vector}} wartosciami.
 
 \begin{DoxyParams}{Parameters}
 {\em tablica} & double tmp\mbox{[}SIZE\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wypelniona tablica wektora 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vector_a5f2fb0077963ca860b8a3e9aecf209d6}\label{class_vector_a5f2fb0077963ca860b8a3e9aecf209d6}} 
+\index{Vector$<$ type, size\_table $>$@{Vector$<$ type, size\_table $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!Vector$<$ type, size\_table $>$@{Vector$<$ type, size\_table $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename type , unsigned int size\+\_\+table$>$ \\
+\mbox{\hyperlink{class_vector}{Vector}}$<$ type, size\+\_\+table $>$\+::\mbox{\hyperlink{class_vector}{Vector}} (\begin{DoxyParamCaption}\item[{const double}]{tmp\mbox{[}\+SIZE\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor wypelniajacy \mbox{\hyperlink{class_vector}{Vector}} wartosciami. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tablica} & const double tmp\mbox{[}SIZE\mbox{]} \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -118,10 +148,6 @@ result \mbox{\hyperlink{class_vector}{Vector}}
 \doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
 {\footnotesize\ttfamily template$<$typename type , unsigned int size\+\_\+table$>$ \\
 \mbox{\hyperlink{class_vector}{Vector}} \mbox{\hyperlink{class_vector}{Vector}}$<$ type, size\+\_\+table $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ type, size\+\_\+table $>$ \&}]{v }\end{DoxyParamCaption})}
-
-
-
-Przeciazenie operatora dodawania wektorow. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -226,4 +252,4 @@ Wartosc wektora w danym miejscu tablicy jako stala
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/adam/\+Programowanie\+\_\+\+Obiektowe/zad5\+\_\+1-\/259355/include/vector.\+hh\end{DoxyCompactItemize}
+include/vector.\+hh\end{DoxyCompactItemize}

@@ -14,8 +14,6 @@ class scena : public Drone{
 
     public:
 
-    Vector3 vec_use;
-
     Drone drone1;   ///< Dron nr 1
     
     Drone drone2;   ///< Dron nr 2

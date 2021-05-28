@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['komunikatbledu_156',['KomunikatBledu',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a90056743aeaa546721528005f2cf41e6',1,'PzG::LaczeDoGNUPlota']]]
+  ['make_5fpath_215',['Make_Path',['../classscena.html#a44f8a30fd55ebd1fb763369f950b7f2f',1,'scena']]],
+  ['matrix_216',['Matrix',['../class_matrix.html#ab14039517e51d63b39d68888cb13246b',1,'Matrix::Matrix(double tmp[SIZE][SIZE])'],['../class_matrix.html#a0a2dd2ce4d31060775099033a4e32b23',1,'Matrix::Matrix()']]],
+  ['move_217',['move',['../class_prostopadl.html#a14012554ee30503029f443474b4ab1cf',1,'Prostopadl']]],
+  ['moving_218',['moving',['../class_prostopadl.html#ae6f41649b67b428840e8353d813b2484',1,'Prostopadl']]]
 ];

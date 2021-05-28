@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['matrix_125',['Matrix',['../class_matrix.html',1,'']]],
-  ['matrix_3c_20double_2c_203_20_3e_126',['Matrix&lt; double, 3 &gt;',['../class_matrix.html',1,'']]]
+  ['laczedognuplota_174',['LaczeDoGNUPlota',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html',1,'PzG']]]
 ];

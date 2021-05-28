@@ -20,7 +20,7 @@ Inheritance diagram for Prostopadl\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{class_prostopadl_aa8d0a77ad3348dddb5469a73e6a5fbdf}{Prostopadl}} (\mbox{\hyperlink{class_vector}{Vector3}}\mbox{[}NOPOINTS\mbox{]})
 \item 
-\mbox{\hyperlink{class_prostopadl}{Prostopadl}} \mbox{\hyperlink{class_prostopadl_adcead17162d606a9afb298092d294b8b}{Init\+Pros}} (const char $\ast$Strm\+We, const char $\ast$Strm\+WY, double scalex, double scaley, double scalez, double angle, double tranx, double trany, double tranz)
+\mbox{\hyperlink{class_prostopadl_a7e1571ead5af22806b4b402d824451a6}{Prostopadl}} (const char $\ast$Strm\+We, const char $\ast$Strm\+WY, \mbox{\hyperlink{class_vector}{Vector3}} scale, double angle, \mbox{\hyperlink{class_vector}{Vector3}} trans)
 \item 
 void \mbox{\hyperlink{class_prostopadl_a8dfc742a2d80dacaffff55a2f2461c81}{turnagain}} ()
 \item 
@@ -75,7 +75,7 @@ Klasa pozwalajaca operowac na wierzcholkach prostopadloscianu Klasa dziedziczy p
 \mbox{\Hypertarget{class_prostopadl_aa8d0a77ad3348dddb5469a73e6a5fbdf}\label{class_prostopadl_aa8d0a77ad3348dddb5469a73e6a5fbdf}} 
 \index{Prostopadl@{Prostopadl}!Prostopadl@{Prostopadl}}
 \index{Prostopadl@{Prostopadl}!Prostopadl@{Prostopadl}}
-\doxysubsubsection{\texorpdfstring{Prostopadl()}{Prostopadl()}}
+\doxysubsubsection{\texorpdfstring{Prostopadl()}{Prostopadl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Prostopadl\+::\+Prostopadl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector3}}}]{tmp\mbox{[}\+NOPOINTS\mbox{]} }\end{DoxyParamCaption})}
 
 Metoda przyjmujaca jeden argument pozwalajaca poruszac sie po tablicy wierzcholkow 
@@ -86,14 +86,11 @@ Metoda przyjmujaca jeden argument pozwalajaca poruszac sie po tablicy wierzcholk
 \begin{DoxyReturn}{Returns}
 nothing 
 \end{DoxyReturn}
-
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_prostopadl_adcead17162d606a9afb298092d294b8b}\label{class_prostopadl_adcead17162d606a9afb298092d294b8b}} 
-\index{Prostopadl@{Prostopadl}!InitPros@{InitPros}}
-\index{InitPros@{InitPros}!Prostopadl@{Prostopadl}}
-\doxysubsubsection{\texorpdfstring{InitPros()}{InitPros()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_prostopadl}{Prostopadl}} Prostopadl\+::\+Init\+Pros (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Strm\+We,  }\item[{const char $\ast$}]{Strm\+WY,  }\item[{double}]{scalex,  }\item[{double}]{scaley,  }\item[{double}]{scalez,  }\item[{double}]{angle,  }\item[{double}]{tranx,  }\item[{double}]{trany,  }\item[{double}]{tranz }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_prostopadl_a7e1571ead5af22806b4b402d824451a6}\label{class_prostopadl_a7e1571ead5af22806b4b402d824451a6}} 
+\index{Prostopadl@{Prostopadl}!Prostopadl@{Prostopadl}}
+\index{Prostopadl@{Prostopadl}!Prostopadl@{Prostopadl}}
+\doxysubsubsection{\texorpdfstring{Prostopadl()}{Prostopadl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Prostopadl\+::\+Prostopadl (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Strm\+We,  }\item[{const char $\ast$}]{Strm\+WY,  }\item[{\mbox{\hyperlink{class_vector}{Vector3}}}]{scale,  }\item[{double}]{angle,  }\item[{\mbox{\hyperlink{class_vector}{Vector3}}}]{trans }\end{DoxyParamCaption})}
 
 Funkcja inicjujaca prostopadloscian odpowiednio wyskalowany, przetransponowany i obrocony 
 \begin{DoxyParams}{Parameters}
@@ -101,24 +98,19 @@ Funkcja inicjujaca prostopadloscian odpowiednio wyskalowany, przetransponowany i
 \hline
 {\em const} & char $\ast$\+Strm\+WY \\
 \hline
-{\em double} & scalex \\
-\hline
-{\em double} & scaley \\
-\hline
-{\em double} & scalez \\
+{\em Vector3} & scale \\
 \hline
 {\em double} & angle \\
 \hline
-{\em double} & tranx \\
-\hline
-{\em double} & trany \\
-\hline
-{\em double} & tranz \\
+{\em Vector3} & trans \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{class_prostopadl}{Prostopadl}} pro 
 \end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_prostopadl_a14012554ee30503029f443474b4ab1cf}\label{class_prostopadl_a14012554ee30503029f443474b4ab1cf}} 
 \index{Prostopadl@{Prostopadl}!move@{move}}
 \index{move@{move}!Prostopadl@{Prostopadl}}
@@ -406,5 +398,5 @@ Wspolrzedne srodka prostopadloscianu
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/adam/\+Programowanie\+\_\+\+Obiektowe/zad5\+\_\+1-\/259355/include/Prostopadl.\+hh\item 
-/home/adam/\+Programowanie\+\_\+\+Obiektowe/zad5\+\_\+1-\/259355/src/Prostopadl.\+cpp\end{DoxyCompactItemize}
+include/Prostopadl.\+hh\item 
+src/Prostopadl.\+cpp\end{DoxyCompactItemize}

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['save_179',['Save',['../class_prostopadl.html#a299ee756b8925f96c5e3b78abf49786a',1,'Prostopadl']]],
-  ['skalax_180',['SkalaX',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a4b1eb252fd785a5aeff938e7b2dce2b1',1,'PzG::LaczeDoGNUPlota']]],
-  ['skalaz_181',['SkalaZ',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a44f922ccbc508d6cd7809c669238dae3',1,'PzG::LaczeDoGNUPlota']]]
+  ['toradians_245',['toradians',['../class_gran_block.html#ad21b52edcc318cfe4b8c1330063f5bd3',1,'GranBlock']]],
+  ['turn_246',['turn',['../class_prostopadl.html#a75cb261f920b7ca9346b2c9b1a1d223e',1,'Prostopadl']]],
+  ['turnagain_247',['turnagain',['../class_prostopadl.html#a8dfc742a2d80dacaffff55a2f2461c81',1,'Prostopadl']]],
+  ['turning_248',['turning',['../class_prostopadl.html#a25abdb62783512b14eac67b90bbb710d',1,'Prostopadl']]]
 ];

@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['infoplikudorysowania_41',['InfoPlikuDoRysowania',['../class_pz_g_1_1_info_pliku_do_rysowania.html#a48bc8ad94ef5fd5120b668a566c9172e',1,'PzG::InfoPlikuDoRysowania::InfoPlikuDoRysowania()'],['../class_pz_g_1_1_info_pliku_do_rysowania.html',1,'PzG::InfoPlikuDoRysowania']]],
-  ['inicjalizuj_42',['Inicjalizuj',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a200ce6bdb980c314a9eafe49e8f2dd5e',1,'PzG::LaczeDoGNUPlota']]],
-  ['init_43',['Init',['../class_drone.html#aa87ae9f8629a64a102caccd6e7b1d54a',1,'Drone']]],
-  ['init_5fthe_5ffigure_44',['Init_The_Figure',['../class_gran_block.html#a18953375ddaf2d0a452e3cd01bbf50c7',1,'GranBlock']]],
-  ['initone_45',['InitOne',['../class_block.html#ac82a5c71877dc54256657c87423ff2c2',1,'Block']]],
-  ['initpros_46',['InitPros',['../class_prostopadl.html#adcead17162d606a9afb298092d294b8b',1,'Prostopadl']]]
+  ['infoplikudorysowania_53',['InfoPlikuDoRysowania',['../class_pz_g_1_1_info_pliku_do_rysowania.html#a42f5a6ba16403a4364158fa46176ff7a',1,'PzG::InfoPlikuDoRysowania::InfoPlikuDoRysowania()'],['../class_pz_g_1_1_info_pliku_do_rysowania.html',1,'PzG::InfoPlikuDoRysowania']]],
+  ['infopunktydorysowania_54',['InfoPunktyDoRysowania',['../class_pz_g_1_1_info_punkty_do_rysowania.html#aed0725576cd5cf0ac01fc2e528e2c85b',1,'PzG::InfoPunktyDoRysowania::InfoPunktyDoRysowania()'],['../class_pz_g_1_1_info_punkty_do_rysowania.html',1,'PzG::InfoPunktyDoRysowania']]],
+  ['inicjalizuj_55',['Inicjalizuj',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a200ce6bdb980c314a9eafe49e8f2dd5e',1,'PzG::LaczeDoGNUPlota']]],
+  ['init_56',['Init',['../class_drone.html#a892cacde4b451e545b02fdef86b9e896',1,'Drone']]],
+  ['init_5fthe_5ffigure_57',['Init_The_Figure',['../class_gran_block.html#a318a7ba9488b8d15a74ba0ba9281ebe6',1,'GranBlock']]]
 ];
