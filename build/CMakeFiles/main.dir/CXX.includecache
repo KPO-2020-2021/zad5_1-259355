@@ -99,6 +99,8 @@ Drone.hh
 ../include/Drone.hh
 
 ../include/size.hh
+array
+-
 
 ../include/vector.hh
 size.hh

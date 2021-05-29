@@ -6,48 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../include/GranBlock.hh
-Vector3.hh
-../include/Vector3.hh
-matrix3.hh
-../include/matrix3.hh
-iostream
--
-fstream
--
-iomanip
--
-cmath
--
-cassert
--
-unistd.h
--
-vector
--
-
-../include/Prostopadl.hh
-matrix3.hh
-../include/matrix3.hh
-size.hh
-../include/size.hh
-GranBlock.hh
-../include/GranBlock.hh
-Vector3.hh
-../include/Vector3.hh
-iostream
--
-iomanip
--
-../include/lacze_do_gnuplota.hh
-../include/lacze_do_gnuplota.hh
-unistd.h
--
-fstream
--
-GranBlock.hh
-../include/GranBlock.hh
-
 ../include/Vector3.hh
 vector.hh
 ../include/vector.hh
@@ -55,14 +13,6 @@ vector.hh
 ../include/example.h
 ../tests/doctest/doctest.h
 ../tests/doctest/doctest.h
-
-../include/lacze_do_gnuplota.hh
-string
--
-list
--
-vector
--
 
 ../include/matrix.hh
 size.hh
@@ -83,6 +33,8 @@ matrix.hh
 ../include/matrix.hh
 
 ../include/size.hh
+array
+-
 
 ../include/vector.hh
 size.hh
@@ -92,6 +44,20 @@ iostream
 math.h
 -
 iomanip
+-
+
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/TestMat3.cpp
+../tests/doctest/doctest.h
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/doctest/doctest.h
+matrix3.hh
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/matrix3.hh
+size.hh
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/size.hh
+example.h
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/example.h
+cmath
+-
+fstream
 -
 
 /home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/doctest/doctest.h
@@ -176,21 +142,5 @@ io.h
 sys/time.h
 -
 unistd.h
--
-
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/test1.cpp
-../tests/doctest/doctest.h
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/doctest/doctest.h
-../tests/doctest/doctest.h
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/doctest/doctest.h
-Prostopadl.hh
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/Prostopadl.hh
-size.hh
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/size.hh
-example.h
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/example.h
-cmath
--
-fstream
 -
 

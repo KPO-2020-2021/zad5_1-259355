@@ -167,4 +167,112 @@ void Drone::Relocate(Vector3 begin_position,double drone_num, double angle, doub
 
 }
 
+void Drone::Scouting(Vector3 begin_position,double drone_num, double angle, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[]){
 
+    int step = 0;
+    Vector3 position;
+    double circuit = 0;
+    double tmp = 0;
+
+    if(drone_num == 1){
+        position[0] = begin_position[0];
+        position[1] = begin_position[1];
+        position[2] = begin_position[2];
+    }
+    else if(drone_num == 2){
+        position[0] = begin_position[0];
+        position[1] = begin_position[1];
+        position[2] = begin_position[2];
+    }
+    else{}
+
+    double angletemp = angle;
+
+    std::cout << std::endl << "Up ..." << std::endl;
+    for(;position[2] <= 80; position[2] += 2){
+        step = 1;
+        this->Engage2(angletemp,position, NamesFilesLocal, NamesFilesProper, step);
+        usleep(100000);
+        Lacze.Rysuj();
+    }
+    position[2] -= 2;
+
+    circuit = M_PI * (2*40);
+    tmp = circuit/72;
+
+    double x_of_turn = 1;
+    double y_of_turn = 1;
+
+    x_of_turn = this->x_of_end(position[0],angletemp,40);
+    x_of_turn = (x_of_turn - position[0])/60;
+    y_of_turn = this->y_of_end(position[1],angletemp,40);
+    y_of_turn = (y_of_turn - position[1])/60;
+
+    std::cout << "Going forward ..." << std::endl;
+    for(int i = 0; i <= 60; position[0] += x_of_turn, position[1] += y_of_turn, ++i){
+        step = 3;
+        this->Engage2(angletemp,position, NamesFilesLocal, NamesFilesProper, step);
+        usleep(100000);
+        Lacze.Rysuj();
+    }
+    position[0] -= 1;
+    position[1] -= 1;
+
+    std::cout << "Change of the orientation..." << std::endl;
+    for(; angletemp <= 90+angle; angletemp += 5 ){
+        step = 2;
+        this->Engage2(angletemp,position, NamesFilesLocal, NamesFilesProper, step);
+        usleep(100000);
+        Lacze.Rysuj();
+    }
+
+    angletemp -= 5; 
+    double tmpang;
+    tmpang = angletemp+angle;
+    std::cout << "Change of the orientation..." << std::endl;
+    for(; angletemp <= tmpang+360; angletemp += 5 ){
+        x_of_turn = this->x_of_end(position[0],angletemp,tmp);
+        x_of_turn = (x_of_turn - position[0]);
+        y_of_turn = this->y_of_end(position[1],angletemp,tmp);
+        y_of_turn = (y_of_turn - position[1]);
+        position[0] += x_of_turn;
+        position[1] += y_of_turn;
+        step = 2;
+        this->Engage2(angletemp,position, NamesFilesLocal, NamesFilesProper, step);
+        usleep(100000);
+        Lacze.Rysuj();
+    }
+    angletemp -= 5; 
+    tmpang = angletemp;
+    std::cout << "Change of the orientation..." << std::endl;
+    for(; angletemp <= 90+tmpang; angletemp += 5 ){
+        step = 2;
+        this->Engage2(angletemp,position, NamesFilesLocal, NamesFilesProper, step);
+        usleep(100000);
+        Lacze.Rysuj();
+    }
+    angletemp -= 5; 
+    x_of_turn = this->x_of_end(position[0],angletemp,40);
+    x_of_turn = (x_of_turn - position[0])/60;
+    y_of_turn = this->y_of_end(position[1],angletemp,40);
+    y_of_turn = (y_of_turn - position[1])/60;
+
+    std::cout << "Going forward ..." << std::endl;
+    for(int i = 0; i <= 60; position[0] += x_of_turn, position[1] += y_of_turn, ++i){
+        step = 3;
+        this->Engage2(angletemp,position, NamesFilesLocal, NamesFilesProper, step);
+        usleep(100000);
+        Lacze.Rysuj();
+    }
+    position[0] -= 1;
+    position[1] -= 1;
+
+    std::cout << "Going down ..." << std::endl;
+    for(;position[2] >= 0; position[2] -= 2){
+        step = 4;
+        this->Engage2(angletemp,position, NamesFilesLocal, NamesFilesProper, step);
+        usleep(100000);
+        Lacze.Rysuj();
+    }
+
+}

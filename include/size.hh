@@ -1,4 +1,5 @@
 #pragma once
+#include <array>
 // #include "Vector3.hh"
 
 constexpr int SIZE = 3;
@@ -53,3 +54,10 @@ constexpr double arg_rb[] = {-5,-4,5};
 
 #define TRANSLATION_ALL 20,20,0
 const double arg_trans_all[] = {20,20,0};
+
+// const char *NamesFilesLoc_V1[] = {SZESCIAN_ZM_LOC,ROTORYLOC_1,ROTORYLOC_2,ROTORYLOC_3,ROTORYLOC_4, nullptr};
+// const char *NamesFilesProp_V1[] = {SZESCIAN_ZM,ROTORY_1,ROTORY_2,ROTORY_3,ROTORY_4, nullptr};
+
+// const char *NamesFilesLoc_V2[] = {SZESCIAN_ZM_LOC_V2,ROTORYLOC_1_V2,ROTORYLOC_2_V2,ROTORYLOC_3_V2,ROTORYLOC_4_V2, nullptr};
+// const char *NamesFilesProp_V2[] = {SZESCIAN_ZM_V2,ROTORY_1_V2,ROTORY_2_V2,ROTORY_3_V2,ROTORY_4_V2, nullptr};
+

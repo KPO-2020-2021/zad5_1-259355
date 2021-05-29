@@ -62,8 +62,6 @@ public:
     }
     };
 
-    // Vector(const Vector &v);
-
     Vector(const std::initializer_list<type> &Sizelist);
 
     ///<Przeciazenie operatora dodawania wektorow

@@ -20,7 +20,7 @@ class Drone: public Block, public Prostopadl
 
     Block *rotor[4]; /**< 4 rotory */
 
-    Prostopadl *corp[NOPOINTS]; /**< Korpus Drona */
+    Prostopadl *corp; /**< Korpus Drona */
 
     public:
 
@@ -31,5 +31,7 @@ class Drone: public Block, public Prostopadl
     void Engage2(double angle, Vector3 position, const char *NamesFilesLocal[], const char *NamesFilesProper[], int step); /**< Funkcja wykonujaca operacje na dronie obraca, inicjuje i transponuje */
 
     void Relocate(Vector3 begin_position,double drone_num, double angle, double lenght_of_path, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[]);    /**< Funkcja wykonujaca animacje lotu drona */
+
+    void Scouting(Vector3 begin_position,double drone_num, double angle, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[]);
 
 };

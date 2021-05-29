@@ -3,6 +3,7 @@
 
 #include "../tests/doctest/doctest.h"
 #include "matrix3.hh"
+// #include "matrix4.hh"
 #include "size.hh"
 #include "example.h"
 #include <cmath>
@@ -169,6 +170,17 @@ TEST_CASE("Matrix3 - display"){
     CHECK( "| 3 | | 4 | | 0 | | 4 | | 5 | | 0 | | 0 | | 0 | | 0 | " == stream.str());
 }
 
+// TEST_CASE("Matrix4 - display"){
+//     double a,b,c;
+//     a = 30;
+//     b = 90;
+//     c = 90;
+//     double argm[] = {2,2,2};
+//     Vector3 vec = Vector3(argm);
+//     Matrix4 mat = mat.Rot_and_trans(a,b,c,vec);
+//     CHECK( (mat(2,2) - 0.0) <= MIN_DIFF );
+// }
+
 TEST_CASE("Matrix3 - to radians"){
     double cos1;
     double ang;
@@ -181,7 +193,7 @@ TEST_CASE("Matrix3 - to radians"){
 TEST_CASE("Matrix3 - multiplication by another matrix"){
     double arg[][SIZE] = {{1,1,0}, {2,2,0}, {0,0,0}};
     double arg1[][SIZE] = {{1,2,0}, {1,2,0}, {1,2,0}};
-    double res[][SIZE] = {{3,3,3}, {6,6,6}, {0,0,0}};
+    double res[][SIZE] = {{2,4,0}, {4,8,0}, {0,0,0}};
     Matrix3 mat1 = Matrix3(arg);
     Matrix3 mat2 = Matrix3(arg1);
     Matrix3 tmp(res);

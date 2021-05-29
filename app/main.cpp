@@ -117,7 +117,7 @@ PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
   Scena.drone2.position[1] = Scena.drone2.position[0];
 
   double choice_drone;
-
+  double angle=0;
   char choice = 'a';
   while (choice != 'k'){
   
@@ -125,7 +125,7 @@ PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
     switch( choice ){
 
       case 'p':{ 
-        double angle, lenght;
+        double lenght;
         cout << "Enter the direction (angle in degrees): ";
         cin >> angle;
         cout << "Enter the lenght of the flight: ";
@@ -178,6 +178,7 @@ PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
         cout << "a - choose active drone" << endl;
         cout << "p - parameters of the flight" << endl;
         cout << "w - number of used vectors" << endl;
+        cout << "s - scout" << endl;
         cout << "k - end" << endl;
         break;}
 
@@ -190,6 +191,12 @@ PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
         cout << "Amount of Vectors used: " << Scena.drone2.position[0].amount_of_all_vectors() << endl;}
         break;}
 
+      case 's':{
+        if(choice_drone == 1){
+        Scena.drone1.Scouting(Scena.drone1.position[0], choice_drone, angle, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);}
+        else if(choice_drone == 2){
+        Scena.drone2.Scouting(Scena.drone1.position[0], choice_drone, angle, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);}
+        break;}
 
       case 'k':{
         cout << "the end" << endl;

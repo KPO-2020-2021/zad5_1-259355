@@ -55,6 +55,7 @@ set(TESTFILES        # All .cpp files in tests/
     TestMat3.cpp
     TestVec3.cpp
     TestVec2.cpp
+    drones_tests.cpp
 )
 set(LIBRARY_NAME program)  # Default name for the library built from src/*.cpp (change if you wish)
 
