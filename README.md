@@ -1,4 +1,4 @@
-
+![Class diagram](/diagram.png)
 ## Building
 
 Build by making a build directory (i.e. `build/`), run `cmake` in that dir, and then use `make` to build the desired target.
@@ -19,20 +19,28 @@ Example:
 
 Things to remember:
 * changes to zad3/CMakeLists.txt with new files added, i.e.:
+
 ```cpp
 # --------------------------------------------------------------------------------
 #                         Locate files (change as needed).
 # --------------------------------------------------------------------------------
 set(SOURCES          # All .cpp files in src/
+    src/example.cpp
     src/lacze_do_gnuplota
-    src/Matrix2x2.cpp
-    src/Rectangle .cpp
-    src/Vector2D.cpp
+    src/matrix3.cpp
+    src/vector3.cpp
+    src/Prostopadl.cpp
+    src/Drone.cpp
+    src/GranBlock.cpp
+    src/Block.cpp
+    src/scena.cpp
 )
 set(TESTFILES        # All .cpp files in tests/
-    Vector2D.cpp
-    Matrix2x2.cpp
-    Rectangle.cpp
+    tests/test1.cpp
+    TestMat3.cpp
+    TestVec3.cpp
+    TestVec2.cpp
+    drones_tests.cpp
 )
 set(LIBRARY_NAME zad3)  # Default name for the library built from src/*.cpp (change if you wish)
 ```
@@ -40,10 +48,11 @@ set(LIBRARY_NAME zad3)  # Default name for the library built from src/*.cpp (cha
 ```cpp
 # List all files containing tests. (Change as needed)
 set(TESTFILES        # All .cpp files in tests/
-    main.cpp
-    Wektor2D.cpp
-    Macierz2x2.cpp
-    Prostokat.cpp
+    tests/test1.cpp
+    TestMat3.cpp
+    TestVec3.cpp
+    TestVec2.cpp
+    drones_tests.cpp
 )
 ```
 The `main.cpp` in the folder `tests` is needed. Only there we define `#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN`.

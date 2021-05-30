@@ -1,6 +1,11 @@
 \label{index_md_README}%
 \Hypertarget{index_md_README}%
- Build by making a build directory (i.\+e. {\ttfamily build/}), run {\ttfamily cmake} in that dir, and then use {\ttfamily make} to build the desired target.
+ 
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{diagram.png}%Class diagram
+\end{DoxyInlineImage}
+ \hypertarget{index_autotoc_md0}{}\doxysubsection{Building}\label{index_autotoc_md0}
+Build by making a build directory (i.\+e. {\ttfamily build/}), run {\ttfamily cmake} in that dir, and then use {\ttfamily make} to build the desired target.
 
 Requirements\+: cmake, gnuplot, doxygen + dot
 
@@ -21,34 +26,46 @@ Example\+:
 
 Things to remember\+:
 \begin{DoxyItemize}
-\item changes to zad3/\+CMake\+Lists.\+txt with new files added, i.\+e.\+: 
+\item changes to zad3/\+CMake\+Lists.\+txt with new files added, i.\+e.\+:
+\end{DoxyItemize}
+
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{preprocessor}{\# -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{\textcolor{preprocessor}{\#                         Locate files (change as needed).}}
 \DoxyCodeLine{\textcolor{preprocessor}{\# -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{set(SOURCES          \# All .cpp files in src/}
+\DoxyCodeLine{    src/example.cpp}
 \DoxyCodeLine{    src/lacze\_do\_gnuplota}
-\DoxyCodeLine{    src/Matrix2x2.cpp}
-\DoxyCodeLine{    src/Rectangle .cpp}
-\DoxyCodeLine{    src/Vector2D.cpp}
+\DoxyCodeLine{    src/matrix3.cpp}
+\DoxyCodeLine{    src/vector3.cpp}
+\DoxyCodeLine{    src/\mbox{\hyperlink{class_prostopadl}{Prostopadl}}.cpp}
+\DoxyCodeLine{    src/\mbox{\hyperlink{class_drone}{Drone}}.cpp}
+\DoxyCodeLine{    src/\mbox{\hyperlink{class_gran_block}{GranBlock}}.cpp}
+\DoxyCodeLine{    src/\mbox{\hyperlink{class_block}{Block}}.cpp}
+\DoxyCodeLine{    src/\mbox{\hyperlink{classscena}{scena}}.cpp}
 \DoxyCodeLine{)}
 \DoxyCodeLine{set(TESTFILES        \textcolor{preprocessor}{\# All .cpp files in tests/}}
-\DoxyCodeLine{    Vector2D.cpp}
-\DoxyCodeLine{    Matrix2x2.cpp}
-\DoxyCodeLine{    Rectangle.cpp}
+\DoxyCodeLine{    tests/test1.cpp}
+\DoxyCodeLine{    TestMat3.cpp}
+\DoxyCodeLine{    TestVec3.cpp}
+\DoxyCodeLine{    TestVec2.cpp}
+\DoxyCodeLine{    drones\_tests.cpp}
 \DoxyCodeLine{)}
 \DoxyCodeLine{set(LIBRARY\_NAME zad3)  \textcolor{preprocessor}{\# Default name for the library built from src}\textcolor{comment}{/*.cpp (change if you wish)}}
 
 \end{DoxyCode}
 
+\begin{DoxyItemize}
 \item changes to zad3/tests/\+CMake\+Lists.\+txt with new files added, i.\+e.\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{preprocessor}{\# List all files containing tests. (Change as needed)}}
 \DoxyCodeLine{set(TESTFILES        \# All .cpp files in tests/}
-\DoxyCodeLine{    main.cpp}
-\DoxyCodeLine{    Wektor2D.cpp}
-\DoxyCodeLine{    Macierz2x2.cpp}
-\DoxyCodeLine{    Prostokat.cpp}
+\DoxyCodeLine{    tests/test1.cpp}
+\DoxyCodeLine{    TestMat3.cpp}
+\DoxyCodeLine{    TestVec3.cpp}
+\DoxyCodeLine{    TestVec2.cpp}
+\DoxyCodeLine{    drones\_tests.cpp}
 \DoxyCodeLine{)}
 
 \end{DoxyCode}
