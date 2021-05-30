@@ -228,7 +228,7 @@ void Drone::Scouting(Vector3 begin_position,double drone_num, double angle, PzG:
 
     angletemp -= 5; 
     double tmpang;
-    tmpang = angletemp+angle;
+    tmpang = angletemp;
     std::cout << "Change of the orientation..." << std::endl;
     for(; angletemp <= tmpang+360; angletemp += 5 ){
         x_of_turn = this->x_of_end(position[0],angletemp,tmp);
