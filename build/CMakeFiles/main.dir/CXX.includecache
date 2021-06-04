@@ -97,6 +97,10 @@ Prostopadl.hh
 ../include/Prostopadl.hh
 Drone.hh
 ../include/Drone.hh
+string.h
+-
+list
+-
 
 ../include/size.hh
 array

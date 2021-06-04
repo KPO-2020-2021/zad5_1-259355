@@ -48,3 +48,19 @@ TEST_CASE("Inheritance of functions"){
    pro.Init_The_Figure(NamesFilesLoc_V1[0],NamesFilesProp_V1[0], num_peaks, scale, trans, angle);
    CHECK( 1 == 1 ); 
 }
+
+TEST_CASE("Scout landing in same spot "){
+
+   PzG::LaczeDoGNUPlota Lacze;
+    Drone drone1;
+    double arg1[] = {20,20,0};
+    drone1.position[0] = Vector3(arg1);
+    drone1.Engage2(0, drone1.position[0], NamesFilesLoc_V1, NamesFilesProp_V1,0);
+    double angle, lenght, choice_drone;
+    angle = 35;
+    lenght = 100;
+    choice_drone = 1;
+    drone1.Scouting(drone1.position[0], choice_drone, angle, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);
+
+   CHECK( drone1.position[0] = drone1.position[1] ); 
+}

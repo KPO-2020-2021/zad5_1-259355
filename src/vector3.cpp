@@ -26,7 +26,7 @@ std::istream &operator >> (std::istream &in, Vector3 &tmp) {
     for (int i = 0; i < 3; ++i) {
         in >> tmp[i];
     }
-    std::cout << std::endl;
+    // std::cout << std::endl;
     return in;
 }
 

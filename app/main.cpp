@@ -44,12 +44,6 @@ int main() {
             << PROJECT_VERSION_TWEAK /* zmiany estetyczne itd. */
             << std::endl;
 
-const char *NamesFilesLoc_V1[] = {SZESCIAN_ZM_LOC,ROTORYLOC_1,ROTORYLOC_2,ROTORYLOC_3,ROTORYLOC_4, nullptr};
-const char *NamesFilesProp_V1[] = {SZESCIAN_ZM,ROTORY_1,ROTORY_2,ROTORY_3,ROTORY_4, nullptr};
-
-const char *NamesFilesLoc_V2[] = {SZESCIAN_ZM_LOC_V2,ROTORYLOC_1_V2,ROTORYLOC_2_V2,ROTORYLOC_3_V2,ROTORYLOC_4_V2, nullptr};
-const char *NamesFilesProp_V2[] = {SZESCIAN_ZM_V2,ROTORY_1_V2,ROTORY_2_V2,ROTORY_3_V2,ROTORY_4_V2, nullptr};
-
 PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
                                 // rysunku Prostopadla
 
@@ -104,6 +98,9 @@ PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
   cout << "a - choose active drone" << endl;
   cout << "p - parameters of the flight" << endl;
   cout << "w - number of used vectors" << endl;
+  cout << "s - scout" << endl;
+  cout << "a - add obstacle" << endl;
+  cout << "d - delete obstacle" << endl;
   cout << "k - end" << endl;
 
   double arg1[] = {20,20,0};
@@ -148,30 +145,6 @@ PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
           cout << "You have choosen wrong drone " << endl;
         }
       break;}
-      // case 'b':{ 
-      //   double angle1, angle2, lenght1, lenght2;
-      //   cout << "Enter the direction for drone 1 (angle in degrees): " << endl << Scena.drone1.position[0] << endl;
-      //   cin >> angle1;
-      //   cout << "Enter the lenght of the flight: ";
-      //   cin >> lenght2;
-      //   cout << "Enter the direction for drone 2 (angle in degrees): " << endl << Scena.drone2.position[0] << endl;
-      //   cin >> angle2;
-      //   cout << "Enter the lenght of the flight: ";
-      //   cin >> lenght2;
-      //   choice_drone = 1;
-      //     Scena.Make_Path(Lacze, choice_drone, Path_V1, lenght1, angle1);
-      //     Lacze.Rysuj();
-      //     Scena.drone1.Relocate(Scena.drone1.position[0], choice_drone, angle1, lenght1, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);
-      //     Scena.drone1.position[0] = Scena.drone1.position[1];
-      //     Lacze.UsunNazwePliku(Path_V1);
-        
-      //     Scena.Make_Path(Lacze, choice_drone, Path_V2, lenght2, angle2);
-      //     Lacze.Rysuj();
-      //     Scena.drone2.Relocate(Scena.drone2.position[0],choice_drone, angle2,lenght2, Lacze, NamesFilesLoc_V2, NamesFilesProp_V2);
-      //     Scena.drone2.position[0] = Scena.drone2.position[1];
-      //     Lacze.UsunNazwePliku(Path_V2);
-
-      // break;}
 
       case 'm':{
         cout << "m - menu" << endl;
@@ -179,6 +152,8 @@ PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
         cout << "p - parameters of the flight" << endl;
         cout << "w - number of used vectors" << endl;
         cout << "s - scout" << endl;
+        cout << "a - add obstacle" << endl;
+        cout << "d - delete obstacle" << endl;
         cout << "k - end" << endl;
         break;}
 
@@ -201,9 +176,39 @@ PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
       case 'k':{
         cout << "the end" << endl;
         break;}
-
+      case 'o':{
+        char obs_choice;
+        Vector3 beg_position;
+        Vector3 scale;
+        cout << "which type of obstacle you want to add ? You can choose 1,2,3 " << endl;
+        cin >> obs_choice;
+        cout << "where do you want the middle of obstacle write position x,y,z" << endl;
+        cin >> beg_position[0];
+        cin >> beg_position[1];
+        cout << "Choose the scale on x side, y side, z side (for example 10 10 60): " << std::endl;
+        cin >> scale;
+        // Scena.full_by_ones();
+        Scena.make_obstacle1(Lacze,beg_position,scale,obs_choice);
+        break;
+      }
+      case 'd':{
+        int i = 1;
+        unsigned int num_obs;
+        list<string>::iterator it = Scena.Obstacles.begin();
+        cout << "choose which obstacle you want to delete : " << endl;
+        for( string n : Scena.Obstacles){
+        cout << i << " " << n << endl;
+        ++i;}
+        cin >> num_obs;
+        advance(it,num_obs-1);
+        Lacze.UsunNazwePliku(*it);
+        Scena.Obstacles.erase(it);
+        Lacze.Rysuj();
+        break;
+      }
       case 'a':{
         choice_drone = '_';
+        while(choice_drone != 1 && choice_drone != 2){
         cout << "choose which drone would you fly" << endl;
         cin >> choice_drone;
         if(choice_drone == 1){
@@ -216,8 +221,7 @@ PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
         } 
         else{
           cerr << "You have choosen wrong one, try again: " << endl;
-          choice = 'a';
-        }
+        }}
         break;}
 
       default:{

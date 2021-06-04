@@ -122,8 +122,7 @@ double GranBlock::toradians(double angle){
  */
 GranBlock GranBlock::Init_The_Figure(const char * StrmWe, const char * StrmWy, double num_of_peak, Vector3 scale,
  Vector3 trans, double angle){
-// GranBlock::GranBlock(const char * StrmWe, const char * StrmWy, double num_of_peak, double scalex, double scaley, double scalez,
-// double trans_x, double trans_y, double trans_z, double angle){
+
     std::ifstream FileWe(StrmWe);
     std::ofstream FileWy(StrmWy);
 
@@ -147,16 +146,15 @@ GranBlock GranBlock::Init_The_Figure(const char * StrmWe, const char * StrmWy, d
         vec[1] = (y * scale[1]) + trans[1] ;
         vec[2] = (z * scale[2]) + trans[2] ;
         this->figure.push_back(vec);
-        // this->vect_used += figure.size();
         if(i%4 == 0){
         FileWy << std::endl;
         FileWy << figure[i][0] << " " << figure[i][1] << " " << figure[i][2] << std::endl;
         }
         else{
         FileWy << figure[i][0] << " " << figure[i][1] << " " << figure[i][2] << std::endl;}
-        // this->figure.pop_back();
-        // this->vect_in_use += figure.size();
     } 
+    FileWe.close();
+    FileWy.close();
 
     return *this;
 }

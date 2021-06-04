@@ -3,6 +3,14 @@
 
 #include "Prostopadl.hh"
 #include "Drone.hh"
+#include <string.h>
+#include <list>
+
+const char *NamesFilesLoc_V1[] = {SZESCIAN_ZM_LOC,ROTORYLOC_1,ROTORYLOC_2,ROTORYLOC_3,ROTORYLOC_4, nullptr};
+const char *NamesFilesProp_V1[] = {SZESCIAN_ZM,ROTORY_1,ROTORY_2,ROTORY_3,ROTORY_4, nullptr};
+
+const char *NamesFilesLoc_V2[] = {SZESCIAN_ZM_LOC_V2,ROTORYLOC_1_V2,ROTORYLOC_2_V2,ROTORYLOC_3_V2,ROTORYLOC_4_V2, nullptr};
+const char *NamesFilesProp_V2[] = {SZESCIAN_ZM_V2,ROTORY_1_V2,ROTORY_2_V2,ROTORY_3_V2,ROTORY_4_V2, nullptr};
 
 /**
  * \brief Klasa sceny
@@ -11,8 +19,12 @@
  * 
  */
 class scena : public Drone{
-
+    
     public:
+
+    std::list<std::string> Obstacles;
+
+    std::list<Prostopadl> Obstacles1;
 
     Drone drone1;   ///< Dron nr 1
     
@@ -20,10 +32,12 @@ class scena : public Drone{
 
     void Make_Path(PzG::LaczeDoGNUPlota &Lacze, double choosen_drone, const char *Name_of_Path, double lenght_of_path, double angletemp);   ///<Funkcja rysujaca i wpisujaca do pliku trase przelotu
     
-    void Engage2_both(double angle1, double angle2, double x_position, double y_position, double z_position, double x_position2, double y_position2, double z_position2, const char *NamesFilesLocal1[],const char *NamesFilesLocal2[], const char *NamesFilesProper1[], const char *NamesFilesProper2[], int step);
+    void make_obstacle1(PzG::LaczeDoGNUPlota &Lacze, Vector3 begin_position, Vector3 scale, char choice);
 
-    // void Relocate_both(Vector3 begin_position, double angle1, double angle2, double lenght_of_path1, double lenght_of_path2, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal1[], const char *NamesFilesProper1[], const char *NamesFilesLocal2[], const char *NamesFilesProper2[]);
+    void Init_The_Obstacle(const char * StrmWe, const char * StrmWy, double num_of_peak, Vector3 scale,
+    Vector3 trans, char choice);
 
 };
+
 
 #endif

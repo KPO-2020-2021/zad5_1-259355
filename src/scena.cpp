@@ -25,7 +25,7 @@ void scena::Make_Path(PzG::LaczeDoGNUPlota &Lacze, double choosen_drone, const c
     drone2.position[1][1] = drone2.y_of_end(drone2.position[0][1],angletemp,lenght_of_path) ;
 
     if(choosen_drone == 1){
-    StrmWy << this->drone1.position[0] << std::endl
+    StrmWy << drone1.position[0] << std::endl
            << this->drone1.position[0][0] << " " << this->drone1.position[0][1] << " 80" << std::endl
            << drone1.position[1][0] << " " << drone1.position[1][1] << " 80" << std::endl
            << drone1.position[1][0] << " " << drone1.position[1][1] << " 0" << std::endl;
@@ -40,107 +40,102 @@ void scena::Make_Path(PzG::LaczeDoGNUPlota &Lacze, double choosen_drone, const c
     Lacze.Rysuj();}
 }
 
-// void scena::Engage2_both(double angle1, double angle2, double x_position, double y_position, double z_position, double x_position2, double y_position2, double z_position2, const char *NamesFilesLocal1[],const char *NamesFilesLocal2[], const char *NamesFilesProper1[], const char *NamesFilesProper2[], int step){
-//     #define SKALA_JED 1,1,1
+void scena::make_obstacle1(PzG::LaczeDoGNUPlota &Lacze,Vector3 begin_position, Vector3 scale, char choice){
+    static int count1 = 1, count2 = 1, count3 = 1;
+    Prostopadl temp;
+    Vector3 begin_vec;
+    double arg[] = {1,1,1};
+    begin_vec = Vector3(arg);
+    switch(choice){
+        case '1':{
+            std::string stream1 = "../dat/gora_z_dluga_grania" + std::to_string(count1) + ".dat"; 
+            char *strm1 = new char[stream1.size() + 1];
+            strcpy(strm1, stream1.c_str());
+            std::cout << "Init obstacle type 1" << std::endl;
+            Init_The_Obstacle("../bryly_wzorcowe/gora_z_dluga_grania.dat",strm1,NOPOINTS,scale,begin_position,'1');
+            Lacze.DodajNazwePliku(strm1);
+            this->Obstacles.push_back(stream1);
+            Lacze.Rysuj();
+            count1 += 1;
+        break;}
 
-//     drone1.Init(NamesFilesLocal1, step);
-//     drone2.Init(NamesFilesLocal2, step);
+        case '2':{
+            std::string stream2 = "../dat/gora_z_ostrym_szczytem" + std::to_string(count2) + ".dat"; 
+            char *strm2 = new char[stream2.size() + 1];
+            strcpy(strm2, stream2.c_str());
+            std::cout << "Init obstacle type 2" << std::endl;
+            Init_The_Obstacle("../bryly_wzorcowe/gora_z_ostrym_szczytem.dat",strm2,NOPOINTS,scale,begin_position,'2');
+            Lacze.DodajNazwePliku(strm2);
+            this->Obstacles.push_back(stream2);
+            Lacze.Rysuj();
+            count2 += 1;
+        break;}
+
+        case '3':{
+            std::string stream3 = "../dat/plaskowyz" + std::to_string(count3) + ".dat"; 
+            char *strm3 = new char[stream3.size() + 1];
+            strcpy(strm3, stream3.c_str());
+            std::cout << "Init obstacle type 3" << std::endl;
+            Init_The_Obstacle("../bryly_wzorcowe/plaskowyz.dat",strm3,NOPOINTS,scale,begin_position,'3');
+            this->Obstacles.push_back(stream3);           
+            Lacze.DodajNazwePliku(strm3);
+            Lacze.Rysuj();
+            count3 += 1;
+        break;}
+    }
+    // this->Obstacles.push_back(temp);
+}
 
 
-//     drone1.InitPros(NamesFilesLocal1[0],NamesFilesProper1[0], SKALA_JED, angle1, x_position, y_position, z_position);
-//     drone2.InitPros(NamesFilesLocal2[0],NamesFilesProper2[0], SKALA_JED, angle2, x_position2, y_position2, z_position2);
+void scena::Init_The_Obstacle(const char * StrmWe, const char * StrmWy, double num_of_peak, Vector3 scale,
+ Vector3 trans, char choice){
+// GranBlock::GranBlock(const char * StrmWe, const char * StrmWy, double num_of_peak, double scalex, double scaley, double scalez,
+// double trans_x, double trans_y, double trans_z, double angle){
+    std::ifstream FileWe(StrmWe);
+    std::ofstream FileWy(StrmWy);
+    FileWe.clear();
+    FileWe.seekg(0);
+    double x,y,z;
+    assert(FileWe.good());
+    assert(FileWy.good());
+    for(int i = 0; i < num_of_peak; ++i){
+        FileWe >> x >> y >> z;
+        switch (choice){
+            case '1':{
+                if(z > 0.5){
+                    if(x < 0){ x = fabs(x);}
+                }
+            break;}
+            case '2':{
+                if(z > 0.5){
+                    x = 0;
+                    y = 0;
+                }
+                else if(z == 0.5){
+                    x /= 2;
+                    y /= 2;
+                }
+            break;}
+        }
+        double arg[] = {x,y,z};
+        Vector3 vec = Vector3(arg);
+        x = vec[0];
+        y = vec[1];
+        z = vec[2]; 
+        vec[0] = (x * scale[0]) + trans[0] ;
+        vec[1] = (y * scale[1]) + trans[1] ;
+        vec[2] = (z * scale[2]) + trans[2] ;
 
-//     for(unsigned int Idx = 1; NamesFilesLocal1[Idx]!= nullptr; ++Idx){
-//         drone1.InitOne(NamesFilesLocal1[Idx], NamesFilesProper1[Idx], SKALA_JED, x_position, y_position, z_position, angle1);
-//         drone2.InitOne(NamesFilesLocal2[Idx], NamesFilesProper2[Idx], SKALA_JED, x_position2, y_position2, z_position2, angle2);
-//     }
-// }
-
-
-
-/**
- * Funkcja inicjujaca drona
- * Inicjuje prostopadaloscian (cialo drona), obraca go i odpowiada za sposob przelotu
- * Inicjuje poszczegolne rotory oraz odpowiada za ich sposob przelotu wzgledem ciala oraz ich poczatkowy obrot
- * @param Vector3 begin_position
- * @param double drone_num
- * @param double angle
- * @param double lenght_of_path
- * @param PzG::LaczeDoGNUPlota &Lacze
- * @param const char *NamesFilesLocal[]
- * @param const char *NamesFilesProper[]
- */
-// void scena::Relocate_both(Vector3 begin_position, double angle1, double angle2, double lenght_of_path1, double lenght_of_path2, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal1[], const char *NamesFilesProper1[], const char *NamesFilesLocal2[], const char *NamesFilesProper2[]){
-// {
-    // int step = 0;
-    // double x_position1, y_position1, z_position1;
-    // double x_position2, y_position2, z_position2;
-
-    //     x_position1 = drone1.position[0][0];
-    //     y_position1 = drone1.position[0][1];
-    //     z_position1 = drone1.position[0][2];
-    
-    //     x_position2 = drone2.position[0][0];
-    //     y_position2 = drone2.position[0][1];
-    //     z_position2 = drone2.position[0][2];
-    
-
-    // double angletemp1 = 0;
-    // double angletemp2 = 0;
-
-    // std::cout << std::endl << "Up ..." << std::endl;
-    // for(;z_position1 <= 80; z_position1 += 2, z_position2 += 2){
-    //     step = 1;
-    //     this->Engage2_both(angletemp1, angletemp2 ,x_position1,y_position1,z_position1,x_position2,y_position2,z_position2, NamesFilesLocal1, NamesFilesProper1, NamesFilesLocal2, NamesFilesProper2, step);
-    //     usleep(100000);
-    //     Lacze.Rysuj();
-    // }
-    // z_position1 -= 2;
-    // z_position2 -= 2;
-
-    // std::cout << "Change of the orientation..." << std::endl;
-    // if(angle > 0){
-    // for(; angletemp <= angle; angletemp += 5 ){
-    //     step = 2;
-    //     this->Engage2_both(angletemp1, angletemp2 ,x_position1,y_position1,z_position1,x_position2,y_position2,z_position2, NamesFilesLocal1, NamesFilesProper1, NamesFilesLocal2, NamesFilesProper2, step);
-    //     usleep(100000);
-    //     Lacze.Rysuj();
-    // }
-    // angletemp -= 5;}
-    // else if(angle < 0){
-    // for(; angletemp >= angle; angletemp -= 5 ){
-    //     step = -2;
-    //     this->Engage2_both(angletemp1, angletemp2 ,x_position1,y_position1,z_position1,x_position2,y_position2,z_position2, NamesFilesLocal1, NamesFilesProper1, NamesFilesLocal2, NamesFilesProper2, step);
-    //     usleep(100000);
-    //     Lacze.Rysuj();
-    // }
-    // angletemp += 5; 
-    // }
-
-    // double x_of_turn = 1;
-    // double y_of_turn = 1;
-
-    // x_of_turn = this->x_of_end(x_position,angletemp,lenght_of_path);
-    // x_of_turn = (x_of_turn - x_position)/60;
-    // y_of_turn = this->y_of_end(y_position,angletemp,lenght_of_path);
-    // y_of_turn = (y_of_turn - y_position)/60;
-
-    // std::cout << "Going forward ..." << std::endl;
-    // for(int i = 0; i <= 60; x_position += x_of_turn, y_position += y_of_turn, ++i){
-    //     step = 3;
-    //     this->Engage2_both(angletemp1, angletemp2 ,x_position1,y_position1,z_position1,x_position2,y_position2,z_position2, NamesFilesLocal1, NamesFilesProper1, NamesFilesLocal2, NamesFilesProper2, step);
-    //     usleep(100000);
-    //     Lacze.Rysuj();
-    // }
-    // x_position -= 1;
-    // y_position -= 1;
-
-    // std::cout << "Going down ..." << std::endl;
-    // for(;z_position1 >= 0; z_position1 -= 2, z_position2 -=2){
-    //     step = 4;
-    //     this->Engage2_both(angletemp1, angletemp2 ,x_position1,y_position1,z_position1,x_position2,y_position2,z_position2, NamesFilesLocal1, NamesFilesProper1, NamesFilesLocal2, NamesFilesProper2, step);
-    //     usleep(100000);
-    //     Lacze.Rysuj();
-    // }
-
-// }
+        // this->vect_used += figure.size();
+        if(i%4 == 0){
+        FileWy << std::endl;
+        FileWy << vec << std::endl;
+        }
+        else{
+        FileWy << vec << std::endl;}
+        // this->figure.pop_back();
+        // this->vect_in_use += figure.size();
+    } 
+    FileWe.close();
+    FileWy.close();
+}
