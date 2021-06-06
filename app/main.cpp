@@ -18,8 +18,6 @@
 #include "exampleConfig.h"
 #include "example.h"
 #include "Vector3.hh"
-#include "Prostopadl.hh"
-#include "Drone.hh"
 #include "matrix.hh"
 #include "../include/lacze_do_gnuplota.hh"
 
@@ -47,7 +45,7 @@ int main() {
 PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
                                 // rysunku Prostopadla
 
- scena Scena;
+scena Scena;
 
   Lacze.ZmienTrybRys(PzG::TR_3D);
   Lacze.Inicjalizuj();
@@ -103,17 +101,23 @@ PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
   cout << "d - delete obstacle" << endl;
   cout << "k - end" << endl;
 
-  double arg1[] = {20,20,0};
-  Scena.drone1.position[0] = Vector3(arg1);
-  Scena.drone1.Engage2(0, Scena.drone1.position[0], NamesFilesLoc_V1, NamesFilesProp_V1,0);
-  double arg2[] = {20,60,0};
-  Scena.drone2.position[0] = Vector3(arg2);
-  Scena.drone2.Engage2(0, Scena.drone2.position[0], NamesFilesLoc_V2, NamesFilesProp_V2,0);
-  Lacze.Rysuj();
-  Scena.drone1.position[1] = Scena.drone1.position[0];
-  Scena.drone2.position[1] = Scena.drone2.position[0];
+  Drone drone1, drone2;
+  Drone *drn;
 
-  double choice_drone;
+  double arg1[] = {20,20,0};
+  drone1.position[0] = Vector3(arg1);
+  drone1.Engage2(0, drone1.position[0], NamesFilesLoc_V1, NamesFilesProp_V1,0);
+  double arg2[] = {20,60,0};
+  drone2.position[0] = Vector3(arg2);
+  drone2.Engage2(0, drone2.position[0], NamesFilesLoc_V2, NamesFilesProp_V2,0);
+  Lacze.Rysuj();
+  drone1.position[1] = drone1.position[0];
+  drone2.position[1] = drone2.position[0];
+
+  Scena.Add_drone(drone1);
+  Scena.Add_drone(drone2);
+
+  double choice_drone = 0;
   double angle=0;
   char choice = 'a';
   while (choice != 'k'){
@@ -130,15 +134,15 @@ PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
         if(choice_drone == 1){
           Scena.Make_Path(Lacze, choice_drone, Path_V1, lenght, angle);
           Lacze.Rysuj();
-          Scena.drone1.Relocate(Scena.drone1.position[0], choice_drone, angle, lenght, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);
-          Scena.drone1.position[0] = Scena.drone1.position[1];
+          (*drn).Relocate( angle, lenght, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);
+          (*drn).position[0] = (*drn).position[1];
           Lacze.UsunNazwePliku(Path_V1);
           }
         else if(choice_drone == 2){
           Scena.Make_Path(Lacze, choice_drone, Path_V2, lenght, angle);
           Lacze.Rysuj();
-          Scena.drone2.Relocate(Scena.drone2.position[0],choice_drone, angle,lenght, Lacze, NamesFilesLoc_V2, NamesFilesProp_V2);
-          Scena.drone2.position[0] = Scena.drone2.position[1];
+          (*drn).Relocate(angle,lenght, Lacze, NamesFilesLoc_V2, NamesFilesProp_V2);
+          (*drn).position[0] = (*drn).position[1];
           Lacze.UsunNazwePliku(Path_V2);
         }
         else{
@@ -158,19 +162,19 @@ PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
         break;}
 
       case 'w':{
-        if(choice_drone == 1){
-        cout << "Amount of Vectors in use: " << Scena.drone1.position[0].amount_active_vectors() << endl;
-        cout << "Amount of Vectors used: " << Scena.drone1.position[0].amount_of_all_vectors() << endl;}
-        else if(choice_drone == 2){
-        cout << "Amount of Vectors in use: " << Scena.drone2.position[0].amount_active_vectors() << endl;
-        cout << "Amount of Vectors used: " << Scena.drone2.position[0].amount_of_all_vectors() << endl;}
+        // if(choice_drone == 1){
+        cout << "Amount of Vectors in use: " << drn->position[0].amount_active_vectors() << endl;
+        cout << "Amount of Vectors used: " << drn->position[0].amount_of_all_vectors() << endl;
+        // else if(choice_drone == 2){
+        // cout << "Amount of Vectors in use: " << Scena.drone2.position[0].amount_active_vectors() << endl;
+        // cout << "Amount of Vectors used: " << Scena.drone2.position[0].amount_of_all_vectors() << endl;}
         break;}
 
       case 's':{
         if(choice_drone == 1){
-        Scena.drone1.Scouting(Scena.drone1.position[0], choice_drone, angle, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);}
+        (*drn).Scouting( angle, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);}
         else if(choice_drone == 2){
-        Scena.drone2.Scouting(Scena.drone1.position[0], choice_drone, angle, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);}
+        (*drn).Scouting(angle, Lacze, NamesFilesLoc_V2, NamesFilesProp_V2);}
         break;}
 
       case 'k':{
@@ -207,28 +211,31 @@ PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
         break;
       }
       case 'a':{
-        choice_drone = '_';
+        choice_drone = 0;
         while(choice_drone != 1 && choice_drone != 2){
-        cout << "choose which drone would you fly" << endl;
+        cout << "choose which drone would you fly (1,2)" << endl;
         cin >> choice_drone;
-        if(choice_drone == 1){
-          cout << "You have choosen first drone at the position: " << endl;
-          cout << Scena.drone1.position[0] << endl;
-          }
-        else if(choice_drone == 2){
-          cout << "You have choosen first drone at the position: " << endl;
-          cout << Scena.drone2.position[0] << endl;
-        } 
-        else{
-          cerr << "You have choosen wrong one, try again: " << endl;
-        }}
+        if(choice_drone == 1 || choice_drone == 2){
+          cout << "You have choosen drone at the position: " << endl;
+          Scena.choose_drone(choice_drone);
+          drn = Scena.getdrone();
+          cout << drn->position[0] << endl;}
+          else{
+            cout << "Wrong choice" << endl;
+          }}
         break;}
 
       default:{
         cout << "Wrong Option" << endl;
       }}
-      cout << "Your choice?  (m-menu) >" << endl;
+      cout << "Your choice (m-menu)" << endl;
       cin >> choice;
+      if(choice_drone == 1){
+          Scena.GetActiveDrone(0) = *drn;
+        }
+      else if(choice_drone == 2){
+        Scena.GetActiveDrone(1) = *drn;
+        } 
     }
 
   Dummy d = Dummy();

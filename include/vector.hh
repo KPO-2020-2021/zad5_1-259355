@@ -33,7 +33,7 @@ public:
     Vector();
 
     ~Vector(){
-        Vectors_in_use--;
+        --Vectors_in_use;
     };
 
     unsigned int amount_active_vectors(){return Vectors_in_use;};

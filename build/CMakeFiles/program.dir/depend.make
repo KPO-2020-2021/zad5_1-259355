@@ -54,17 +54,6 @@ CMakeFiles/program.dir/src/matrix3.cpp.o: ../include/size.hh
 CMakeFiles/program.dir/src/matrix3.cpp.o: ../include/vector.hh
 CMakeFiles/program.dir/src/matrix3.cpp.o: ../src/matrix3.cpp
 
-CMakeFiles/program.dir/src/scena.cpp.o: ../include/Block.hh
-CMakeFiles/program.dir/src/scena.cpp.o: ../include/Drone.hh
-CMakeFiles/program.dir/src/scena.cpp.o: ../include/GranBlock.hh
-CMakeFiles/program.dir/src/scena.cpp.o: ../include/Prostopadl.hh
-CMakeFiles/program.dir/src/scena.cpp.o: ../include/Vector3.hh
-CMakeFiles/program.dir/src/scena.cpp.o: ../include/lacze_do_gnuplota.hh
-CMakeFiles/program.dir/src/scena.cpp.o: ../include/matrix.hh
-CMakeFiles/program.dir/src/scena.cpp.o: ../include/matrix3.hh
-CMakeFiles/program.dir/src/scena.cpp.o: ../include/scena.hh
-CMakeFiles/program.dir/src/scena.cpp.o: ../include/size.hh
-CMakeFiles/program.dir/src/scena.cpp.o: ../include/vector.hh
 CMakeFiles/program.dir/src/scena.cpp.o: ../src/scena.cpp
 
 CMakeFiles/program.dir/src/vector3.cpp.o: ../include/Vector3.hh

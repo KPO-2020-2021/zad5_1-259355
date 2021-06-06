@@ -24,14 +24,18 @@ class Drone: public Block, public Prostopadl
 
     public:
 
+    Drone (){};
+
     Vector3 position[2];    /**< Wektor przetrzymujacy wspolrzedne poczatku lotu i konca*/
 
     void Init(const char *NamesFilesLocal[], int step);   /**< Funkcja inicjujaca poczatkowego drona */
 
     void Engage2(double angle, Vector3 position, const char *NamesFilesLocal[], const char *NamesFilesProper[], int step); /**< Funkcja wykonujaca operacje na dronie obraca, inicjuje i transponuje */
 
-    void Relocate(Vector3 begin_position,double drone_num, double angle, double lenght_of_path, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[]);    /**< Funkcja wykonujaca animacje lotu drona */
+    // void Relocate(Vector3 begin_position,double drone_num, double angle, double lenght_of_path, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[]);    /**< Funkcja wykonujaca animacje lotu drona */
 
-    void Scouting(Vector3 begin_position,double drone_num, double angle, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[]);
+    void Relocate( double angle, double lenght_of_path, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[]);
+
+    void Scouting(double angle, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[]);
 
 };
