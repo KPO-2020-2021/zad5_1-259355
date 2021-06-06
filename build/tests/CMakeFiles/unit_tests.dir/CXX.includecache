@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+../include/Block.hh
+GranBlock.hh
+../include/GranBlock.hh
+Vector3.hh
+../include/Vector3.hh
+matrix3.hh
+../include/matrix3.hh
+
+../include/Drone.hh
+Prostopadl.hh
+../include/Prostopadl.hh
+Block.hh
+../include/Block.hh
+Vector3.hh
+../include/Vector3.hh
+iomanip
+-
+
 ../include/GranBlock.hh
 Vector3.hh
 ../include/Vector3.hh
@@ -52,10 +70,6 @@ GranBlock.hh
 vector.hh
 ../include/vector.hh
 
-../include/example.h
-../tests/doctest/doctest.h
-../tests/doctest/doctest.h
-
 ../include/lacze_do_gnuplota.hh
 string
 -
@@ -82,6 +96,14 @@ stdexcept
 matrix.hh
 ../include/matrix.hh
 
+../include/scena.hh
+Drone.hh
+../include/Drone.hh
+string.h
+-
+list
+-
+
 ../include/size.hh
 array
 -
@@ -94,34 +116,6 @@ iostream
 math.h
 -
 iomanip
--
-
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/TestMat3.cpp
-../tests/doctest/doctest.h
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/doctest/doctest.h
-matrix3.hh
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/matrix3.hh
-size.hh
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/size.hh
-example.h
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/example.h
-cmath
--
-fstream
--
-
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/TestVec3.cpp
-../tests/doctest/doctest.h
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/doctest/doctest.h
-Vector3.hh
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/Vector3.hh
-size.hh
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/size.hh
-example.h
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/example.h
-cmath
--
-fstream
 -
 
 /home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/doctest/doctest.h
@@ -208,19 +202,9 @@ sys/time.h
 unistd.h
 -
 
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/test1.cpp
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/drones_tests.cpp
 ../tests/doctest/doctest.h
 /home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/doctest/doctest.h
-../tests/doctest/doctest.h
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/doctest/doctest.h
-Prostopadl.hh
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/Prostopadl.hh
-size.hh
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/size.hh
-example.h
-/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/example.h
-cmath
--
-fstream
--
+scena.hh
+/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/scena.hh
 

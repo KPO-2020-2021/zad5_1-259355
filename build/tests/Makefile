@@ -205,6 +205,33 @@ TestVec3.cpp.s:
 	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/TestVec3.cpp.s
 .PHONY : TestVec3.cpp.s
 
+drones_tests.o: drones_tests.cpp.o
+
+.PHONY : drones_tests.o
+
+# target to build an object file
+drones_tests.cpp.o:
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.o
+.PHONY : drones_tests.cpp.o
+
+drones_tests.i: drones_tests.cpp.i
+
+.PHONY : drones_tests.i
+
+# target to preprocess a source file
+drones_tests.cpp.i:
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.i
+.PHONY : drones_tests.cpp.i
+
+drones_tests.s: drones_tests.cpp.s
+
+.PHONY : drones_tests.s
+
+# target to generate assembly for a file
+drones_tests.cpp.s:
+	cd /home/adam/Programowanie_Obiektowe/zad5_1-259355/build && $(MAKE) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.s
+.PHONY : drones_tests.cpp.s
+
 dummy.o: dummy.cpp.o
 
 .PHONY : dummy.o
@@ -276,6 +303,9 @@ help:
 	@echo "... TestVec3.o"
 	@echo "... TestVec3.i"
 	@echo "... TestVec3.s"
+	@echo "... drones_tests.o"
+	@echo "... drones_tests.i"
+	@echo "... drones_tests.s"
 	@echo "... dummy.o"
 	@echo "... dummy.i"
 	@echo "... dummy.s"

@@ -176,6 +176,7 @@ scena Scena;
       case 'k':{
         cout << "the end" << endl;
         break;}
+
       case 'o':{
         char obs_choice;
         Vector3 beg_position;
@@ -203,8 +204,8 @@ scena Scena;
         Lacze.UsunNazwePliku(*it);
         Scena.Obstacles.erase(it);
         Lacze.Rysuj();
-        break;
-      }
+        break;}
+
       case 'a':{
         choice_drone = 0;
         while(choice_drone != 1 && choice_drone != 2){
@@ -223,8 +224,10 @@ scena Scena;
       default:{
         cout << "Wrong Option" << endl;
       }}
+
       cout << "Your choice (m-menu)" << endl;
       cin >> choice;
+      
       if(choice_drone == 1){
           Scena.GetActiveDrone(0) = *drn;
         }

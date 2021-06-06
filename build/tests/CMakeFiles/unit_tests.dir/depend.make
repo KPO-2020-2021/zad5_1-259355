@@ -17,6 +17,20 @@ tests/CMakeFiles/unit_tests.dir/TestVec3.cpp.o: ../include/vector.hh
 tests/CMakeFiles/unit_tests.dir/TestVec3.cpp.o: ../tests/TestVec3.cpp
 tests/CMakeFiles/unit_tests.dir/TestVec3.cpp.o: ../tests/doctest/doctest.h
 
+tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.o: ../include/Block.hh
+tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.o: ../include/Drone.hh
+tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.o: ../include/GranBlock.hh
+tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.o: ../include/Prostopadl.hh
+tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.o: ../include/Vector3.hh
+tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.o: ../include/lacze_do_gnuplota.hh
+tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.o: ../include/matrix.hh
+tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.o: ../include/matrix3.hh
+tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.o: ../include/scena.hh
+tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.o: ../include/size.hh
+tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.o: ../include/vector.hh
+tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.o: ../tests/doctest/doctest.h
+tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.o: ../tests/drones_tests.cpp
+
 tests/CMakeFiles/unit_tests.dir/dummy.cpp.o: ../include/example.h
 tests/CMakeFiles/unit_tests.dir/dummy.cpp.o: ../tests/doctest/doctest.h
 tests/CMakeFiles/unit_tests.dir/dummy.cpp.o: ../tests/dummy.cpp

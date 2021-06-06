@@ -7,6 +7,7 @@ set(TESTFILES        # All .cpp files in tests/
     test1.cpp
     TestMat3.cpp
     TestVec3.cpp
+    drones_tests.cpp
 )
 
 set(TEST_MAIN unit_tests)   # Default name for test executable (change if you wish).

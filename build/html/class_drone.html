@@ -98,6 +98,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0c90eac6d59c5053da662613805db3cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d5904620e3a47a19a8e3d71349685d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drone.html#a3d5904620e3a47a19a8e3d71349685d8">Scouting</a> (double angle, <a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a> &amp;Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[])</td></tr>
 <tr class="separator:a3d5904620e3a47a19a8e3d71349685d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a60be8c09b7065da68e6183b2043438"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drone.html#a1a60be8c09b7065da68e6183b2043438">GoForward</a> (double angletemp, double lenght_of_path, <a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a> &amp;Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[])</td></tr>
+<tr class="separator:a1a60be8c09b7065da68e6183b2043438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a021ce0fed8e0e349ce4dc5babf7f83c6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drone.html#a021ce0fed8e0e349ce4dc5babf7f83c6">Orientation</a> (double angle, <a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a> &amp;Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[])</td></tr>
+<tr class="separator:a021ce0fed8e0e349ce4dc5babf7f83c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf784d4ede9a7b9b2965cacb78207a2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drone.html#adf784d4ede9a7b9b2965cacb78207a2c">GoDownAndUp</a> (double up_down, double angletemp, <a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a> &amp;Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[])</td></tr>
+<tr class="separator:adf784d4ede9a7b9b2965cacb78207a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_block"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_block')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_block.html">Block</a></td></tr>
 <tr class="memitem:abb0da7e6a60219d7cfda1e23dfdd1b79 inherit pub_methods_class_block"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block.html#abb0da7e6a60219d7cfda1e23dfdd1b79">Block</a> (const char *StrmWe, const char *StrmWy, <a class="el" href="class_vector.html">Vector3</a> scale, <a class="el" href="class_vector.html">Vector3</a> trans, double angle)</td></tr>
 <tr class="separator:abb0da7e6a60219d7cfda1e23dfdd1b79 inherit pub_methods_class_block"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -237,6 +243,118 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="adf784d4ede9a7b9b2965cacb78207a2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf784d4ede9a7b9b2965cacb78207a2c">&#9670;&nbsp;</a></span>GoDownAndUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Drone::GoDownAndUp </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>up_down</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>angletemp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a> &amp;&#160;</td>
+          <td class="paramname"><em>Lacze</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>NamesFilesLocal</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>NamesFilesProper</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Funkcja przemieszczajaca drona w gore badz w dol </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">double</td><td>up_down </td></tr>
+    <tr><td class="paramname">double</td><td>angletemp </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html" title="Klasa realizuje interfejs do programu GNUPlot.">PzG::LaczeDoGNUPlota</a></td><td>&amp;Lacze </td></tr>
+    <tr><td class="paramname">const</td><td>char *NamesFilesLocal[] </td></tr>
+    <tr><td class="paramname">const</td><td>char *NamesFilesProper[] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1a60be8c09b7065da68e6183b2043438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a60be8c09b7065da68e6183b2043438">&#9670;&nbsp;</a></span>GoForward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Drone::GoForward </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>angletemp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lenght_of_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a> &amp;&#160;</td>
+          <td class="paramname"><em>Lacze</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>NamesFilesLocal</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>NamesFilesProper</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Funkcja przemieszczajaca drona wprzod </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">double</td><td>angletemp </td></tr>
+    <tr><td class="paramname">double</td><td>lenght_of_path </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html" title="Klasa realizuje interfejs do programu GNUPlot.">PzG::LaczeDoGNUPlota</a></td><td>&amp;Lacze </td></tr>
+    <tr><td class="paramname">const</td><td>char *NamesFilesLocal[] </td></tr>
+    <tr><td class="paramname">const</td><td>char *NamesFilesProper[] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a892cacde4b451e545b02fdef86b9e896"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a892cacde4b451e545b02fdef86b9e896">&#9670;&nbsp;</a></span>Init()</h2>
 
@@ -270,6 +388,56 @@ Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a021ce0fed8e0e349ce4dc5babf7f83c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a021ce0fed8e0e349ce4dc5babf7f83c6">&#9670;&nbsp;</a></span>Orientation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Drone::Orientation </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a> &amp;&#160;</td>
+          <td class="paramname"><em>Lacze</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>NamesFilesLocal</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>NamesFilesProper</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Funkcja zmieniajaca orientacje drona </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">double</td><td>angle </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html" title="Klasa realizuje interfejs do programu GNUPlot.">PzG::LaczeDoGNUPlota</a></td><td>&amp;Lacze </td></tr>
+    <tr><td class="paramname">const</td><td>char *NamesFilesLocal[] </td></tr>
+    <tr><td class="paramname">const</td><td>char *NamesFilesProper[] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double angletemp </dd></dl>
 
 </div>
 </div>

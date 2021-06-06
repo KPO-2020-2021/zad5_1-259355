@@ -63,5 +63,10 @@
   "directory": "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/tests",
   "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_1-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_1-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_1-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/TestVec3.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/TestVec3.cpp",
   "file": "/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/TestVec3.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/tests",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_1-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_1-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_1-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/drones_tests.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/drones_tests.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/drones_tests.cpp"
 }
 ]

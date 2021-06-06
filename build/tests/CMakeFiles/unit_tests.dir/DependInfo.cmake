@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/TestMat3.cpp" "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/tests/CMakeFiles/unit_tests.dir/TestMat3.cpp.o"
   "/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/TestVec3.cpp" "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/tests/CMakeFiles/unit_tests.dir/TestVec3.cpp.o"
+  "/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/drones_tests.cpp" "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/tests/CMakeFiles/unit_tests.dir/drones_tests.cpp.o"
   "/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/dummy.cpp" "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/tests/CMakeFiles/unit_tests.dir/dummy.cpp.o"
   "/home/adam/Programowanie_Obiektowe/zad5_1-259355/tests/test1.cpp" "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/tests/CMakeFiles/unit_tests.dir/test1.cpp.o"
   )
