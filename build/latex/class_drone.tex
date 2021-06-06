@@ -22,10 +22,9 @@ void \mbox{\hyperlink{class_drone_a892cacde4b451e545b02fdef86b9e896}{Init}} (con
 \item 
 void \mbox{\hyperlink{class_drone_a9f4765c4081194c2066960e95c51eb20}{Engage2}} (double angle, \mbox{\hyperlink{class_vector}{Vector3}} \mbox{\hyperlink{class_drone_afc0021a1a1147a0e7537847f657a1660}{position}}, const char $\ast$Names\+Files\+Local\mbox{[}$\,$\mbox{]}, const char $\ast$Names\+Files\+Proper\mbox{[}$\,$\mbox{]}, int step)
 \item 
-void \mbox{\hyperlink{class_drone_a0fa1ad81d8dea820a70edfd0e0cbed93}{Relocate}} (\mbox{\hyperlink{class_vector}{Vector3}} begin\+\_\+position, double drone\+\_\+num, double angle, double lenght\+\_\+of\+\_\+path, \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&Lacze, const char $\ast$Names\+Files\+Local\mbox{[}$\,$\mbox{]}, const char $\ast$Names\+Files\+Proper\mbox{[}$\,$\mbox{]})
+void \mbox{\hyperlink{class_drone_a0c90eac6d59c5053da662613805db3cd}{Relocate}} (double angle, double lenght\+\_\+of\+\_\+path, \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&Lacze, const char $\ast$Names\+Files\+Local\mbox{[}$\,$\mbox{]}, const char $\ast$Names\+Files\+Proper\mbox{[}$\,$\mbox{]})
 \item 
-\mbox{\Hypertarget{class_drone_a108e59568d283ad8fce1e6a70c2edba2}\label{class_drone_a108e59568d283ad8fce1e6a70c2edba2}} 
-void {\bfseries Scouting} (\mbox{\hyperlink{class_vector}{Vector3}} begin\+\_\+position, double drone\+\_\+num, double angle, \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&Lacze, const char $\ast$Names\+Files\+Local\mbox{[}$\,$\mbox{]}, const char $\ast$Names\+Files\+Proper\mbox{[}$\,$\mbox{]})
+void \mbox{\hyperlink{class_drone_a3d5904620e3a47a19a8e3d71349685d8}{Scouting}} (double angle, \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&Lacze, const char $\ast$Names\+Files\+Local\mbox{[}$\,$\mbox{]}, const char $\ast$Names\+Files\+Proper\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -74,20 +73,33 @@ Funkcja inicjujaca poczatkowego drona Inicjuje prostopadaloscian (cialo drona) I
 {\em int} & step \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_drone_a0fa1ad81d8dea820a70edfd0e0cbed93}\label{class_drone_a0fa1ad81d8dea820a70edfd0e0cbed93}} 
+\mbox{\Hypertarget{class_drone_a0c90eac6d59c5053da662613805db3cd}\label{class_drone_a0c90eac6d59c5053da662613805db3cd}} 
 \index{Drone@{Drone}!Relocate@{Relocate}}
 \index{Relocate@{Relocate}!Drone@{Drone}}
 \doxysubsubsection{\texorpdfstring{Relocate()}{Relocate()}}
-{\footnotesize\ttfamily void Drone\+::\+Relocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector3}}}]{begin\+\_\+position,  }\item[{double}]{drone\+\_\+num,  }\item[{double}]{angle,  }\item[{double}]{lenght\+\_\+of\+\_\+path,  }\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&}]{Lacze,  }\item[{const char $\ast$}]{Names\+Files\+Local\mbox{[}$\,$\mbox{]},  }\item[{const char $\ast$}]{Names\+Files\+Proper\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Drone\+::\+Relocate (\begin{DoxyParamCaption}\item[{double}]{angle,  }\item[{double}]{lenght\+\_\+of\+\_\+path,  }\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&}]{Lacze,  }\item[{const char $\ast$}]{Names\+Files\+Local\mbox{[}$\,$\mbox{]},  }\item[{const char $\ast$}]{Names\+Files\+Proper\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
-Funkcja wykonujaca animacje lotu drona
-
-Funkcja inicjujaca drona Inicjuje prostopadaloscian (cialo drona), obraca go i odpowiada za sposob przelotu Inicjuje poszczegolne rotory oraz odpowiada za ich sposob przelotu wzgledem ciala oraz ich poczatkowy obrot 
+Funkcja przemieszczajaca drona Inicjuje prostopadaloscian (cialo drona), obraca go i odpowiada za sposob przelotu Inicjuje poszczegolne rotory oraz odpowiada za ich sposob przelotu wzgledem ciala oraz ich poczatkowy obrot 
 \begin{DoxyParams}{Parameters}
-{\em Vector3} & begin\+\_\+position \\
+{\em double} & angle \\
 \hline
-{\em double} & drone\+\_\+num \\
+{\em double} & lenght\+\_\+of\+\_\+path \\
 \hline
+{\em \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}}} & \&Lacze \\
+\hline
+{\em const} & char $\ast$\+Names\+Files\+Local\mbox{[}\mbox{]} \\
+\hline
+{\em const} & char $\ast$\+Names\+Files\+Proper\mbox{[}\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_drone_a3d5904620e3a47a19a8e3d71349685d8}\label{class_drone_a3d5904620e3a47a19a8e3d71349685d8}} 
+\index{Drone@{Drone}!Scouting@{Scouting}}
+\index{Scouting@{Scouting}!Drone@{Drone}}
+\doxysubsubsection{\texorpdfstring{Scouting()}{Scouting()}}
+{\footnotesize\ttfamily void Drone\+::\+Scouting (\begin{DoxyParamCaption}\item[{double}]{angle,  }\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&}]{Lacze,  }\item[{const char $\ast$}]{Names\+Files\+Local\mbox{[}$\,$\mbox{]},  }\item[{const char $\ast$}]{Names\+Files\+Proper\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Funkcja wykonujaca zwiad drona Inicjuje prostopadaloscian (cialo drona), obraca go i odpowiada za sposob przelotu Inicjuje poszczegolne rotory oraz odpowiada za ich sposob przelotu wzgledem ciala oraz ich poczatkowy obrot 
+\begin{DoxyParams}{Parameters}
 {\em double} & angle \\
 \hline
 {\em double} & lenght\+\_\+of\+\_\+path \\

@@ -82,11 +82,9 @@ void Drone::Engage2(double angle, Vector3 position, const char *NamesFilesLocal[
 }
 
 /**
- * Funkcja inicjujaca drona
+ * Funkcja przemieszczajaca drona
  * Inicjuje prostopadaloscian (cialo drona), obraca go i odpowiada za sposob przelotu
  * Inicjuje poszczegolne rotory oraz odpowiada za ich sposob przelotu wzgledem ciala oraz ich poczatkowy obrot
- * @param Vector3 begin_position
- * @param double drone_num
  * @param double angle
  * @param double lenght_of_path
  * @param PzG::LaczeDoGNUPlota &Lacze
@@ -154,6 +152,16 @@ void Drone::Relocate(double angle, double lenght_of_path, PzG::LaczeDoGNUPlota &
 
 }
 
+/**
+ * Funkcja wykonujaca zwiad drona
+ * Inicjuje prostopadaloscian (cialo drona), obraca go i odpowiada za sposob przelotu
+ * Inicjuje poszczegolne rotory oraz odpowiada za ich sposob przelotu wzgledem ciala oraz ich poczatkowy obrot
+ * @param double angle
+ * @param double lenght_of_path
+ * @param PzG::LaczeDoGNUPlota &Lacze
+ * @param const char *NamesFilesLocal[]
+ * @param const char *NamesFilesProper[]
+ */
 void Drone::Scouting( double angle, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[]){
 
     int step = 0;

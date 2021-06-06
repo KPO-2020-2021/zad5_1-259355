@@ -54,7 +54,7 @@ TEST_CASE("Scout landing in same spot "){
     angle = 35;
     lenght = 100;
     choice_drone = 1;
-    drone1.Scouting(drone1.position[0], choice_drone, angle, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);
+    drone1.Scouting(angle, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);
 
    CHECK( drone1.position[0] = drone1.position[1] ); 
 }

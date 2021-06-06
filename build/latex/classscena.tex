@@ -18,20 +18,32 @@ Inheritance diagram for scena\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classscena_a8d862f860ebfcd59cac680ae48ce1a4e}\label{classscena_a8d862f860ebfcd59cac680ae48ce1a4e}} 
+\mbox{\hyperlink{class_drone}{Drone}} $\ast$ {\bfseries getdrone} ()
+\item 
+\mbox{\Hypertarget{classscena_a366feddb1dc2cfff3edef389791e333d}\label{classscena_a366feddb1dc2cfff3edef389791e333d}} 
+\mbox{\hyperlink{class_drone}{Drone}} \mbox{\hyperlink{classscena_a366feddb1dc2cfff3edef389791e333d}{Get\+Active\+Drone}} (int ind)
+\begin{DoxyCompactList}\small\item\em Funkcja dajaca dostep do danego drona. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classscena_a602ff71155273b3f90af1d916b72c4ec}\label{classscena_a602ff71155273b3f90af1d916b72c4ec}} 
+void {\bfseries choose\+\_\+drone} (unsigned int choice)
+\item 
+\mbox{\Hypertarget{classscena_a7f4aab95ca9de924bc6e033c4fd58d69}\label{classscena_a7f4aab95ca9de924bc6e033c4fd58d69}} 
+void \mbox{\hyperlink{classscena_a7f4aab95ca9de924bc6e033c4fd58d69}{Add\+\_\+drone}} (\mbox{\hyperlink{class_drone}{Drone}} tmp)
+\begin{DoxyCompactList}\small\item\em Funkcja zwracajaca index wybranego drona. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classscena_a44f8a30fd55ebd1fb763369f950b7f2f}{Make\+\_\+\+Path}} (\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&Lacze, double choosen\+\_\+drone, const char $\ast$Name\+\_\+of\+\_\+\+Path, double lenght\+\_\+of\+\_\+path, double angletemp)
-\begin{DoxyCompactList}\small\item\em Funkcja rysujaca i wpisujaca do pliku trase przelotu. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classscena_a21fdf77d94b20d3c9c4784ed65b192b7}\label{classscena_a21fdf77d94b20d3c9c4784ed65b192b7}} 
-void {\bfseries Engage2\+\_\+both} (double angle1, double angle2, double x\+\_\+position, double y\+\_\+position, double z\+\_\+position, double x\+\_\+position2, double y\+\_\+position2, double z\+\_\+position2, const char $\ast$Names\+Files\+Local1\mbox{[}$\,$\mbox{]}, const char $\ast$Names\+Files\+Local2\mbox{[}$\,$\mbox{]}, const char $\ast$Names\+Files\+Proper1\mbox{[}$\,$\mbox{]}, const char $\ast$Names\+Files\+Proper2\mbox{[}$\,$\mbox{]}, int step)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Funkcja dodajaca drona do kontenera. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classscena_adb4497b8a49e7d0be6a9df7d1bd2990f}\label{classscena_adb4497b8a49e7d0be6a9df7d1bd2990f}} 
+void \mbox{\hyperlink{classscena_adb4497b8a49e7d0be6a9df7d1bd2990f}{make\+\_\+obstacle1}} (\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&Lacze, \mbox{\hyperlink{class_vector}{Vector3}} begin\+\_\+position, \mbox{\hyperlink{class_vector}{Vector3}} scale, char choice)
+\begin{DoxyCompactList}\small\item\em Funkcja tworzaca przeszkode i dodajaca ja do lacza. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classscena_a4a2a11a1c8bfdd44e447cf0bbefcf1a9}\label{classscena_a4a2a11a1c8bfdd44e447cf0bbefcf1a9}} 
+void \mbox{\hyperlink{classscena_a4a2a11a1c8bfdd44e447cf0bbefcf1a9}{Init\+\_\+\+The\+\_\+\+Obstacle}} (const char $\ast$Strm\+We, const char $\ast$Strm\+Wy, double num\+\_\+of\+\_\+peak, \mbox{\hyperlink{class_vector}{Vector3}} scale, \mbox{\hyperlink{class_vector}{Vector3}} trans, char choice)
+\begin{DoxyCompactList}\small\item\em Funkcja odpowiednio zmieniajaca wierzcholki z pliku tak by powstala odpowiednia przeszkoda. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classscena_aa1720e7b45b49c4d8912e8d2f4cf09bf}\label{classscena_aa1720e7b45b49c4d8912e8d2f4cf09bf}} 
-\mbox{\hyperlink{class_drone}{Drone}} \mbox{\hyperlink{classscena_aa1720e7b45b49c4d8912e8d2f4cf09bf}{drone1}}
-\begin{DoxyCompactList}\small\item\em Dron nr 1. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classscena_a4786eb5b758f30ed1c788e6bec46471a}\label{classscena_a4786eb5b758f30ed1c788e6bec46471a}} 
-\mbox{\hyperlink{class_drone}{Drone}} \mbox{\hyperlink{classscena_a4786eb5b758f30ed1c788e6bec46471a}{drone2}}
-\begin{DoxyCompactList}\small\item\em Dron nr 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classscena_aaddf1fffef1a55a7ffd47296c6eee793}\label{classscena_aaddf1fffef1a55a7ffd47296c6eee793}} 
+std\+::list$<$ std\+::string $>$ \mbox{\hyperlink{classscena_aaddf1fffef1a55a7ffd47296c6eee793}{Obstacles}}
+\begin{DoxyCompactList}\small\item\em Lista mieszczaca przeszkody. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -44,28 +56,14 @@ Klasa pozwalajaca operowac na odpowiednich figurach
 \index{scena@{scena}!Make\_Path@{Make\_Path}}
 \index{Make\_Path@{Make\_Path}!scena@{scena}}
 \doxysubsubsection{\texorpdfstring{Make\_Path()}{Make\_Path()}}
-{\footnotesize\ttfamily void scena\+::\+Make\+\_\+\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&}]{Lacze,  }\item[{double}]{choosen\+\_\+drone,  }\item[{const char $\ast$}]{Name\+\_\+of\+\_\+\+Path,  }\item[{double}]{lenght\+\_\+of\+\_\+path,  }\item[{double}]{angletemp }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void scena\+::\+Make\+\_\+\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&}]{Lacze,  }\item[{double}]{choosen\+\_\+drone,  }\item[{const char $\ast$}]{Name\+\_\+of\+\_\+\+Path,  }\item[{double}]{lenght\+\_\+of\+\_\+path,  }\item[{double}]{angletemp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Funkcja rysujaca i wpisujaca do pliku trase przelotu. 
+Funkcja dodajaca drona do kontenera. 
 
-Funkcja tworzaca i dodajaca sciezke lotu drona 
-\begin{DoxyParams}{Parameters}
-{\em \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}}} & \&Lacze \\
-\hline
-{\em double} & choosen\+\_\+drone \\
-\hline
-{\em const} & char $\ast$\+Name\+\_\+of\+\_\+\+Path \\
-\hline
-{\em double} & lenght\+\_\+of\+\_\+path \\
-\hline
-{\em double} & angletemp \\
-\hline
-\end{DoxyParams}
+Funkcja tworzaca sciezke przelotu drona 
 
-
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/scena.\+hh\item 
-src/scena.\+cpp\end{DoxyCompactItemize}
+include/scena.\+hh\end{DoxyCompactItemize}

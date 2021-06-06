@@ -766,33 +766,6 @@ src/matrix3.cpp.s:
 	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/matrix3.cpp.s
 .PHONY : src/matrix3.cpp.s
 
-src/scena.o: src/scena.cpp.o
-
-.PHONY : src/scena.o
-
-# target to build an object file
-src/scena.cpp.o:
-	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/scena.cpp.o
-.PHONY : src/scena.cpp.o
-
-src/scena.i: src/scena.cpp.i
-
-.PHONY : src/scena.i
-
-# target to preprocess a source file
-src/scena.cpp.i:
-	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/scena.cpp.i
-.PHONY : src/scena.cpp.i
-
-src/scena.s: src/scena.cpp.s
-
-.PHONY : src/scena.s
-
-# target to generate assembly for a file
-src/scena.cpp.s:
-	$(MAKE) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/scena.cpp.s
-.PHONY : src/scena.cpp.s
-
 src/vector3.o: src/vector3.cpp.o
 
 .PHONY : src/vector3.o
@@ -886,9 +859,6 @@ help:
 	@echo "... src/matrix3.o"
 	@echo "... src/matrix3.i"
 	@echo "... src/matrix3.s"
-	@echo "... src/scena.o"
-	@echo "... src/scena.i"
-	@echo "... src/scena.s"
 	@echo "... src/vector3.o"
 	@echo "... src/vector3.i"
 	@echo "... src/vector3.s"

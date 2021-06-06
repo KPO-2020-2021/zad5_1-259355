@@ -161,19 +161,6 @@ CMakeFiles/program.dir/src/Block.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Block.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/Block.cpp -o CMakeFiles/program.dir/src/Block.cpp.s
 
-CMakeFiles/program.dir/src/scena.cpp.o: CMakeFiles/program.dir/flags.make
-CMakeFiles/program.dir/src/scena.cpp.o: ../src/scena.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/program.dir/src/scena.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/scena.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/scena.cpp
-
-CMakeFiles/program.dir/src/scena.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/scena.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/scena.cpp > CMakeFiles/program.dir/src/scena.cpp.i
-
-CMakeFiles/program.dir/src/scena.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/scena.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adam/Programowanie_Obiektowe/zad5_1-259355/src/scena.cpp -o CMakeFiles/program.dir/src/scena.cpp.s
-
 program: CMakeFiles/program.dir/src/example.cpp.o
 program: CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o
 program: CMakeFiles/program.dir/src/matrix3.cpp.o
@@ -182,7 +169,6 @@ program: CMakeFiles/program.dir/src/Prostopadl.cpp.o
 program: CMakeFiles/program.dir/src/Drone.cpp.o
 program: CMakeFiles/program.dir/src/GranBlock.cpp.o
 program: CMakeFiles/program.dir/src/Block.cpp.o
-program: CMakeFiles/program.dir/src/scena.cpp.o
 program: CMakeFiles/program.dir/build.make
 
 .PHONY : program

@@ -162,12 +162,8 @@ scena Scena;
         break;}
 
       case 'w':{
-        // if(choice_drone == 1){
         cout << "Amount of Vectors in use: " << drn->position[0].amount_active_vectors() << endl;
         cout << "Amount of Vectors used: " << drn->position[0].amount_of_all_vectors() << endl;
-        // else if(choice_drone == 2){
-        // cout << "Amount of Vectors in use: " << Scena.drone2.position[0].amount_active_vectors() << endl;
-        // cout << "Amount of Vectors used: " << Scena.drone2.position[0].amount_of_all_vectors() << endl;}
         break;}
 
       case 's':{
@@ -191,7 +187,6 @@ scena Scena;
         cin >> beg_position[1];
         cout << "Choose the scale on x side, y side, z side (for example 10 10 60): " << std::endl;
         cin >> scale;
-        // Scena.full_by_ones();
         Scena.make_obstacle1(Lacze,beg_position,scale,obs_choice);
         break;
       }

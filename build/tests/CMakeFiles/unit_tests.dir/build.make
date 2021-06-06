@@ -125,8 +125,7 @@ unit_tests_EXTERNAL_OBJECTS = \
 "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/program.dir/src/Prostopadl.cpp.o" \
 "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/program.dir/src/Drone.cpp.o" \
 "/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/program.dir/src/GranBlock.cpp.o" \
-"/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/program.dir/src/Block.cpp.o" \
-"/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/program.dir/src/scena.cpp.o"
+"/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles/program.dir/src/Block.cpp.o"
 
 unit_tests: tests/CMakeFiles/unit_tests.dir/dummy.cpp.o
 unit_tests: tests/CMakeFiles/unit_tests.dir/test1.cpp.o
@@ -140,7 +139,6 @@ unit_tests: CMakeFiles/program.dir/src/Prostopadl.cpp.o
 unit_tests: CMakeFiles/program.dir/src/Drone.cpp.o
 unit_tests: CMakeFiles/program.dir/src/GranBlock.cpp.o
 unit_tests: CMakeFiles/program.dir/src/Block.cpp.o
-unit_tests: CMakeFiles/program.dir/src/scena.cpp.o
 unit_tests: tests/CMakeFiles/unit_tests.dir/build.make
 unit_tests: tests/CMakeFiles/unit_tests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/adam/Programowanie_Obiektowe/zad5_1-259355/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../unit_tests"

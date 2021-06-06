@@ -21,28 +21,23 @@ class scena : public Drone{
     
     private:
 
-    std::vector<Drone> drones;
+    std::vector<Drone> drones;  ///<Kontener dronow
 
-    unsigned int Active_drone;
+    unsigned int Active_drone;  ///<Aktywny dron
 
     public:
 
-    std::list<std::string> Obstacles;
+    std::list<std::string> Obstacles;   ///<Lista mieszczaca przeszkody
 
-    std::list<Prostopadl> Obstacles1;
+    Drone *getdrone(){return (&drones[Active_drone]);}; ///<Funkcja dajaca dostep do danego drona
 
-    // Drone drone1;   ///< Dron nr 1
-    
-    // Drone drone2;   ///< Dron nr 2
+    Drone GetActiveDrone(int ind){return(drones[ind]);};    ///<
 
-    Drone *getdrone(){return (&drones[Active_drone]);};
+    void choose_drone(unsigned int choice){ Active_drone = choice - 1;};    ///<Funkcja zwracajaca index wybranego drona
 
-    Drone GetActiveDrone(int ind){return(drones[ind]);};
+    void Add_drone(Drone tmp){ drones.push_back(tmp);}; ///<Funkcja dodajaca drona do kontenera
 
-    void choose_drone(unsigned int choice){ Active_drone = choice - 1;};
-
-    void Add_drone(Drone tmp){ drones.push_back(tmp);};
-
+///<Funkcja tworzaca sciezke przelotu drona
 void Make_Path(PzG::LaczeDoGNUPlota &Lacze, double choosen_drone, const char *Name_of_Path, double lenght_of_path, double angletemp){    
 
     std::ofstream StrmWy(Name_of_Path); 
@@ -79,7 +74,7 @@ void Make_Path(PzG::LaczeDoGNUPlota &Lacze, double choosen_drone, const char *Na
     Lacze.Rysuj();}
 };
 
-
+///<Funkcja tworzaca przeszkode i dodajaca ja do lacza
 void make_obstacle1(PzG::LaczeDoGNUPlota &Lacze,Vector3 begin_position, Vector3 scale, char choice){
     static int count1 = 1, count2 = 1, count3 = 1;
     Prostopadl temp;
@@ -126,6 +121,7 @@ void make_obstacle1(PzG::LaczeDoGNUPlota &Lacze,Vector3 begin_position, Vector3 
     // this->Obstacles.push_back(temp);
 };
 
+///<Funkcja odpowiednio zmieniajaca wierzcholki z pliku tak by powstala odpowiednia przeszkoda
 void Init_The_Obstacle(const char * StrmWe, const char * StrmWy, double num_of_peak, Vector3 scale,
  Vector3 trans, char choice){
 // GranBlock::GranBlock(const char * StrmWe, const char * StrmWy, double num_of_peak, double scalex, double scaley, double scalez,

@@ -54,8 +54,6 @@ CMakeFiles/program.dir/src/matrix3.cpp.o: ../include/size.hh
 CMakeFiles/program.dir/src/matrix3.cpp.o: ../include/vector.hh
 CMakeFiles/program.dir/src/matrix3.cpp.o: ../src/matrix3.cpp
 
-CMakeFiles/program.dir/src/scena.cpp.o: ../src/scena.cpp
-
 CMakeFiles/program.dir/src/vector3.cpp.o: ../include/Vector3.hh
 CMakeFiles/program.dir/src/vector3.cpp.o: ../include/size.hh
 CMakeFiles/program.dir/src/vector3.cpp.o: ../include/vector.hh

@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['relocate_237',['Relocate',['../class_drone.html#a0fa1ad81d8dea820a70edfd0e0cbed93',1,'Drone']]],
-  ['rotacjax_238',['RotacjaX',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#addf0b844f626f3f5220de70efcbbdbb3',1,'PzG::LaczeDoGNUPlota']]],
-  ['rotacjaz_239',['RotacjaZ',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a9dac73754fab10644b287756003e9c79',1,'PzG::LaczeDoGNUPlota']]],
-  ['rysuj_240',['Rysuj',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a065f5b8402737cc62b0ad4f66d028335',1,'PzG::LaczeDoGNUPlota']]],
-  ['rysujdopliku_241',['RysujDoPliku',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#aacb7ae45d283c741fb330f27b132e1a3',1,'PzG::LaczeDoGNUPlota']]]
+  ['pokazos_5fox_241',['PokazOs_OX',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a11421d7c67deab6b7524cc492407e897',1,'PzG::LaczeDoGNUPlota::PokazOs_OX(bool Pokaz)'],['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#ae112972af57167c3b053bf922bce6bbf',1,'PzG::LaczeDoGNUPlota::PokazOs_OX() const']]],
+  ['pokazos_5foy_242',['PokazOs_OY',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a7c3db909b266fc30808e86406c04b516',1,'PzG::LaczeDoGNUPlota::PokazOs_OY(bool Pokaz)'],['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a7298f469f6932f5c808dcf620650b4b8',1,'PzG::LaczeDoGNUPlota::PokazOs_OY() const']]],
+  ['prostopadl_243',['Prostopadl',['../class_prostopadl.html#aa8d0a77ad3348dddb5469a73e6a5fbdf',1,'Prostopadl::Prostopadl(Vector3[NOPOINTS])'],['../class_prostopadl.html#a7e1571ead5af22806b4b402d824451a6',1,'Prostopadl::Prostopadl(const char *StrmWe, const char *StrmWY, Vector3 scale, double angle, Vector3 trans)']]],
+  ['przeslijdognuplota_244',['PrzeslijDoGNUPlota',['../class_pz_g_1_1_lacze_do_g_n_u_plota.html#a5063854b7232a7951d120a21df63f2b7',1,'PzG::LaczeDoGNUPlota']]]
 ];
