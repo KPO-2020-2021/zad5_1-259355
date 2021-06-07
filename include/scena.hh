@@ -27,7 +27,9 @@ class scena : public Drone{
 
     public:
 
-    std::list<std::string> Obstacles;   ///<Lista mieszczaca przeszkody
+    std::list<Prostopadl> Obstacles;   ///<Lista mieszczaca przeszkody
+
+    std::list<std::string> Obstacles_names;   ///<Lista mieszczaca przeszkody
 
     Drone *getdrone(){return (&drones[Active_drone]);}; ///<Funkcja dajaca dostep do danego drona
 
@@ -77,7 +79,6 @@ void Make_Path(PzG::LaczeDoGNUPlota &Lacze, double choosen_drone, const char *Na
 ///<Funkcja tworzaca przeszkode i dodajaca ja do lacza
 void make_obstacle1(PzG::LaczeDoGNUPlota &Lacze,Vector3 begin_position, Vector3 scale, char choice){
     static int count1 = 1, count2 = 1, count3 = 1;
-    Prostopadl temp;
     Vector3 begin_vec;
     double arg[] = {1,1,1};
     begin_vec = Vector3(arg);
@@ -87,9 +88,9 @@ void make_obstacle1(PzG::LaczeDoGNUPlota &Lacze,Vector3 begin_position, Vector3 
             char *strm1 = new char[stream1.size() + 1];
             strcpy(strm1, stream1.c_str());
             std::cout << "Init obstacle type 1" << std::endl;
-            Init_The_Obstacle("../bryly_wzorcowe/gora_z_dluga_grania.dat",strm1,NOPOINTS,scale,begin_position,'1');
             Lacze.DodajNazwePliku(strm1);
-            this->Obstacles.push_back(stream1);
+            this->Obstacles_names.push_back(strm1);
+            this->Obstacles.push_back(Init_The_Obstacle("../bryly_wzorcowe/gora_z_dluga_grania.dat",strm1,NOPOINTS,scale,begin_position,'1'));
             Lacze.Rysuj();
             count1 += 1;
         break;}
@@ -99,9 +100,9 @@ void make_obstacle1(PzG::LaczeDoGNUPlota &Lacze,Vector3 begin_position, Vector3 
             char *strm2 = new char[stream2.size() + 1];
             strcpy(strm2, stream2.c_str());
             std::cout << "Init obstacle type 2" << std::endl;
-            Init_The_Obstacle("../bryly_wzorcowe/gora_z_ostrym_szczytem.dat",strm2,NOPOINTS,scale,begin_position,'2');
             Lacze.DodajNazwePliku(strm2);
-            this->Obstacles.push_back(stream2);
+            this->Obstacles_names.push_back(strm2);
+            this->Obstacles.push_back(Init_The_Obstacle("../bryly_wzorcowe/gora_z_ostrym_szczytem.dat",strm2,NOPOINTS,scale,begin_position,'2'));
             Lacze.Rysuj();
             count2 += 1;
         break;}
@@ -111,21 +112,19 @@ void make_obstacle1(PzG::LaczeDoGNUPlota &Lacze,Vector3 begin_position, Vector3 
             char *strm3 = new char[stream3.size() + 1];
             strcpy(strm3, stream3.c_str());
             std::cout << "Init obstacle type 3" << std::endl;
-            Init_The_Obstacle("../bryly_wzorcowe/plaskowyz.dat",strm3,NOPOINTS,scale,begin_position,'3');
-            this->Obstacles.push_back(stream3);           
+            this->Obstacles_names.push_back(strm3);
+            this->Obstacles.push_back(Init_The_Obstacle("../bryly_wzorcowe/plaskowyz.dat",strm3,NOPOINTS,scale,begin_position,'3'));           
             Lacze.DodajNazwePliku(strm3);
             Lacze.Rysuj();
             count3 += 1;
         break;}
     }
-    // this->Obstacles.push_back(temp);
 };
 
 ///<Funkcja odpowiednio zmieniajaca wierzcholki z pliku tak by powstala odpowiednia przeszkoda
-void Init_The_Obstacle(const char * StrmWe, const char * StrmWy, double num_of_peak, Vector3 scale,
- Vector3 trans, char choice){
-// GranBlock::GranBlock(const char * StrmWe, const char * StrmWy, double num_of_peak, double scalex, double scaley, double scalez,
-// double trans_x, double trans_y, double trans_z, double angle){
+Prostopadl Init_The_Obstacle(const char * StrmWe, const char * StrmWy, double num_of_peak, Vector3 scale,
+Vector3 trans, char choice){
+    Prostopadl temp;
     std::ifstream FileWe(StrmWe);
     std::ofstream FileWy(StrmWy);
     FileWe.clear();
@@ -138,7 +137,9 @@ void Init_The_Obstacle(const char * StrmWe, const char * StrmWy, double num_of_p
         switch (choice){
             case '1':{
                 if(z > 0.5){
-                    if(x < 0){ x = fabs(x);}
+                    if(x < 0){ 
+                        x = fabs(x);
+                    }
                 }
             break;}
             case '2':{
@@ -157,22 +158,21 @@ void Init_The_Obstacle(const char * StrmWe, const char * StrmWy, double num_of_p
         x = vec[0];
         y = vec[1];
         z = vec[2]; 
-        vec[0] = (x * scale[0]) + trans[0] ;
-        vec[1] = (y * scale[1]) + trans[1] ;
-        vec[2] = (z * scale[2]) + trans[2] ;
+        temp(i,0) = (x * scale[0]) + trans[0] ;
+        temp(i,1) = (y * scale[1]) + trans[1] ;
+        temp(i,2) = (z * scale[2]) + trans[2] ;
 
-        // this->vect_used += figure.size();
         if(i%4 == 0){
         FileWy << std::endl;
-        FileWy << vec << std::endl;
+        FileWy << temp(i) << std::endl;
         }
         else{
-        FileWy << vec << std::endl;}
-        // this->figure.pop_back();
-        // this->vect_in_use += figure.size();
+        FileWy << temp(i) << std::endl;}
     } 
     FileWe.close();
     FileWy.close();
+
+    return temp;
 };
 
 };

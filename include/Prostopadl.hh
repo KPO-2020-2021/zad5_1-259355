@@ -31,10 +31,6 @@ class Prostopadl : public GranBlock
   
   public:
 
-  // double vect_in_use3;
-
-	// double vect_used3;
-
   Prostopadl(Vector3 [NOPOINTS]);             //Konstruktor klasy 
 
   Prostopadl();                               // Konstruktor klasy

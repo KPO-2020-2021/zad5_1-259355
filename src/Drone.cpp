@@ -15,7 +15,7 @@ void Drone::Init(const char *NamesFilesLocal[], int step){
     static double angle_rotors_rb = 0;
     static double angletemp = 0;
 
-    new Prostopadl(SZESCIAN_WZ,NamesFilesLocal[0], arg_pros_sc, 0, init_args);
+    // new Prostopadl(SZESCIAN_WZ,NamesFilesLocal[0], arg_pros_sc, 0, init_args);
 
     this->rotor[0] = new Block(ROTORY_BEF, NamesFilesLocal[1], arg_rotator_sc, arg_lf, angle_rotors_lf);
     this->rotor[1] = new Block(ROTORY_BEF, NamesFilesLocal[2], arg_rotator_sc, arg_rf, angle_rotors_rf);
@@ -149,10 +149,10 @@ void Drone::GoDownAndUp(double up_down, double angletemp, PzG::LaczeDoGNUPlota &
  * @param const char *NamesFilesProper[]
  * @return double angletemp
  */
-double Drone::Orientation(double angle, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[]){
+void Drone::Orientation(double angle, double angletemp, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[]){
     std::cout << "Change of the orientation..." << std::endl;
-    double angletemp = 0;
     double step;
+    std::cout << angletemp;
     if(angle > 0){
     for(; angletemp <= angle; angletemp += 5 ){
         step = 2;
@@ -170,7 +170,6 @@ double Drone::Orientation(double angle, PzG::LaczeDoGNUPlota &Lacze, const char 
     }
     angletemp += 5; 
     }
-    return angletemp;
 }
 
 /**
@@ -185,11 +184,12 @@ double Drone::Orientation(double angle, PzG::LaczeDoGNUPlota &Lacze, const char 
  */
 void Drone::Relocate(double angle, double lenght_of_path, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[])
 {
-    double angletemp;
-    this->GoDownAndUp(1,0,Lacze,NamesFilesLocal,NamesFilesProper);
-    angletemp = this->Orientation(angle,Lacze,NamesFilesLocal,NamesFilesProper);
-    this->GoForward(angletemp,lenght_of_path,Lacze,NamesFilesLocal,NamesFilesProper);
-    this->GoDownAndUp(2,angletemp,Lacze,NamesFilesLocal,NamesFilesProper);
+    static double angletemp=0;
+    this->GoDownAndUp(1,angletemp,Lacze,NamesFilesLocal,NamesFilesProper);
+    this->Orientation(angle, angletemp, Lacze,NamesFilesLocal,NamesFilesProper);
+    this->GoForward(angle,lenght_of_path,Lacze,NamesFilesLocal,NamesFilesProper);
+    this->GoDownAndUp(2,angle,Lacze,NamesFilesLocal,NamesFilesProper);
+    angletemp += angle;
 }
 
 /**

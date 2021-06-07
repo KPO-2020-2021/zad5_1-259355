@@ -97,7 +97,7 @@ scena Scena;
   cout << "p - parameters of the flight" << endl;
   cout << "w - number of used vectors" << endl;
   cout << "s - scout" << endl;
-  cout << "a - add obstacle" << endl;
+  cout << "o - add obstacle" << endl;
   cout << "d - delete obstacle" << endl;
   cout << "k - end" << endl;
 
@@ -118,7 +118,8 @@ scena Scena;
   Scena.Add_drone(drone2);
 
   double choice_drone = 0;
-  double angle=0;
+  double angle1=0, angle2=0;
+  double tmp1 = 0, tmp2 = 0;
   char choice = 'a';
   while (choice != 'k'){
   
@@ -127,23 +128,31 @@ scena Scena;
 
       case 'p':{ 
         double lenght;
-        cout << "Enter the direction (angle in degrees): ";
-        cin >> angle;
-        cout << "Enter the lenght of the flight: ";
-        cin >> lenght;
         if(choice_drone == 1){
-          Scena.Make_Path(Lacze, choice_drone, Path_V1, lenght, angle);
+          cout << "Enter the direction (angle in degrees): ";
+          cin >> angle1;
+          cout << "Enter the lenght of the flight: ";
+          cin >> lenght;
+          angle1 += tmp1;
+          Scena.Make_Path(Lacze, choice_drone, Path_V1, lenght, angle1);
           Lacze.Rysuj();
-          (*drn).Relocate( angle, lenght, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);
+          (*drn).Relocate( angle1, lenght, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);
           (*drn).position[0] = (*drn).position[1];
           Lacze.UsunNazwePliku(Path_V1);
+          tmp1 = angle1;
           }
         else if(choice_drone == 2){
-          Scena.Make_Path(Lacze, choice_drone, Path_V2, lenght, angle);
+          cout << "Enter the direction (angle in degrees): ";
+          cin >> angle2;
+          cout << "Enter the lenght of the flight: ";
+          cin >> lenght;
+          angle2 += tmp2;
+          Scena.Make_Path(Lacze, choice_drone, Path_V2, lenght, angle2);
           Lacze.Rysuj();
-          (*drn).Relocate(angle,lenght, Lacze, NamesFilesLoc_V2, NamesFilesProp_V2);
+          (*drn).Relocate(angle2,lenght, Lacze, NamesFilesLoc_V2, NamesFilesProp_V2);
           (*drn).position[0] = (*drn).position[1];
           Lacze.UsunNazwePliku(Path_V2);
+          tmp2 = angle2;
         }
         else{
           cout << "You have choosen wrong drone " << endl;
@@ -156,7 +165,7 @@ scena Scena;
         cout << "p - parameters of the flight" << endl;
         cout << "w - number of used vectors" << endl;
         cout << "s - scout" << endl;
-        cout << "a - add obstacle" << endl;
+        cout << "o - add obstacle" << endl;
         cout << "d - delete obstacle" << endl;
         cout << "k - end" << endl;
         break;}
@@ -168,9 +177,9 @@ scena Scena;
 
       case 's':{
         if(choice_drone == 1){
-        (*drn).Scouting( angle, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);}
+        (*drn).Scouting(angle1, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);}
         else if(choice_drone == 2){
-        (*drn).Scouting(angle, Lacze, NamesFilesLoc_V2, NamesFilesProp_V2);}
+        (*drn).Scouting(angle2, Lacze, NamesFilesLoc_V2, NamesFilesProp_V2);}
         break;}
 
       case 'k':{
@@ -194,15 +203,15 @@ scena Scena;
       case 'd':{
         int i = 1;
         unsigned int num_obs;
-        list<string>::iterator it = Scena.Obstacles.begin();
+        list<string>::iterator it = Scena.Obstacles_names.begin();
         cout << "choose which obstacle you want to delete : " << endl;
-        for( string n : Scena.Obstacles){
+        for( string n : Scena.Obstacles_names){
         cout << i << " " << n << endl;
         ++i;}
         cin >> num_obs;
         advance(it,num_obs-1);
         Lacze.UsunNazwePliku(*it);
-        Scena.Obstacles.erase(it);
+        Scena.Obstacles_names.erase(it);
         Lacze.Rysuj();
         break;}
 
@@ -227,7 +236,7 @@ scena Scena;
 
       cout << "Your choice (m-menu)" << endl;
       cin >> choice;
-      
+
       if(choice_drone == 1){
           Scena.GetActiveDrone(0) = *drn;
         }
